@@ -49,6 +49,7 @@
             provinceText = new TextBox();
             cityText = new TextBox();
             barangayText = new TextBox();
+            nextBut = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -80,12 +81,13 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(43, 12);
+            pictureBox1.Location = new Point(37, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(67, 44);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox2
             // 
@@ -133,7 +135,7 @@
             // 
             // lastName
             // 
-            lastName.Location = new Point(25, 90);
+            lastName.Location = new Point(25, 88);
             lastName.Name = "lastName";
             lastName.Size = new Size(140, 23);
             lastName.TabIndex = 7;
@@ -242,11 +244,25 @@
             barangayText.Size = new Size(140, 23);
             barangayText.TabIndex = 19;
             // 
+            // nextBut
+            // 
+            nextBut.BackColor = Color.Transparent;
+            nextBut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            nextBut.ForeColor = Color.White;
+            nextBut.Location = new Point(668, 407);
+            nextBut.Name = "nextBut";
+            nextBut.Size = new Size(120, 31);
+            nextBut.TabIndex = 20;
+            nextBut.Text = "NEXT ->";
+            nextBut.UseVisualStyleBackColor = false;
+            nextBut.Click += nextBut_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(nextBut);
             Controls.Add(barangayText);
             Controls.Add(cityText);
             Controls.Add(provinceText);
@@ -268,7 +284,10 @@
             Controls.Add(label1);
             Controls.Add(backBut);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -299,5 +318,6 @@
         private TextBox provinceText;
         private TextBox cityText;
         private TextBox barangayText;
+        private Button nextBut;
     }
 }

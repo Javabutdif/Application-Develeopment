@@ -188,6 +188,7 @@
             MaximumSize = new Size(818, 489);
             MinimumSize = new Size(818, 489);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";
             Load += Form1_Load;
             panel2.ResumeLayout(false);

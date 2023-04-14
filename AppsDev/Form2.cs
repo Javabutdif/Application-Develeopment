@@ -16,21 +16,23 @@ namespace AppsDev
         public Form2()
         {
             InitializeComponent();
-            backBut.BackColor  = ColorTranslator.FromHtml("#107874");
-          
+            backBut.BackColor = ColorTranslator.FromHtml("#107874");
+            nextBut.BackColor = ColorTranslator.FromHtml("#107874");
+
+
 
         }
-        
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#107874");
         }
-       
+
 
         private void backBut_Click(object sender, EventArgs e)
         {
-            
+
 
             this.Close();
 
@@ -38,7 +40,18 @@ namespace AppsDev
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void nextBut_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

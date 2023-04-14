@@ -1,16 +1,19 @@
 using Microsoft.VisualBasic;
 using System.Diagnostics.Tracing;
 using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace AppsDev
 {
-    
+   
     public partial class Form1 : Form
     {
-        private string userName = "james123";
+      
+
+        private string userName = File.ReadAllText(@"C:\Users\james\desktop\Application\AppsDev\Database\userNameRecord.txt");
         private string passWord = "123";
-     
-       
+
+
 
         public Form1()
         {
@@ -79,14 +82,18 @@ namespace AppsDev
             else
             {
                 MessageBox.Show("Invalid");
+                MessageBox.Show(userName);
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Form1 form = new Form1();
+            form.Close();
             Form2 form2 = new Form2();
             form2.Show();
-          
+
+
         }
     }
 }
