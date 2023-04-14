@@ -1,0 +1,5 @@
+C:\Users\james\Desktop\AppsDev.exe
+C:\Users\james\Desktop\AppsDev.dll
+C:\Users\james\Desktop\AppsDev.deps.json
+C:\Users\james\Desktop\AppsDev.runtimeconfig.json
+C:\Users\james\Desktop\AppsDev.pdb
