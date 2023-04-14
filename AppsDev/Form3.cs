@@ -17,20 +17,16 @@ namespace AppsDev
             InitializeComponent();
             backBut.BackColor = ColorTranslator.FromHtml("#107874");
             signUp.BackColor = ColorTranslator.FromHtml("#107874");
-          
-        }
-       
-     
 
-        public string fullPath ()
-        {
-            string folder = @"C:\Users\james\desktop\Application\AppsDev\Database\";
-            string userFile = "userNameRecord.txt";
-            string fullpath = folder + userFile;
-
-            return fullpath;
         }
-       
+        string userIn = "";
+        string passIn = "";
+        string confirm = "";
+
+
+
+
+
 
 
         private void Form3_Load(object sender, EventArgs e)
@@ -47,20 +43,34 @@ namespace AppsDev
 
         private void signUp_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            form4.Show();
-            this.Close();
+            if (passIn.Equals(confirm))
+            {
+
+                new Form1(userIn, passIn);
+                Form4 form4 = new Form4();
+                form4.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Confirm Password");
+
+            }
         }
 
         private void userInput_TextChanged(object sender, EventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(fullPath()))
-            {
-                string user1 = userInput.Text;
-                writer.WriteLine(user1);
-            }
-           
+            userIn = userInput.Text;
+        }
 
+        private void newPass_TextChanged(object sender, EventArgs e)
+        {
+            passIn = newPass.Text;
+        }
+
+        private void confirmPass_TextChanged(object sender, EventArgs e)
+        {
+            confirm = confirmPass.Text;
         }
     }
 }

@@ -115,6 +115,7 @@
             newPass.Size = new Size(237, 23);
             newPass.TabIndex = 28;
             newPass.TextAlign = HorizontalAlignment.Center;
+            newPass.TextChanged += newPass_TextChanged;
             // 
             // label2
             // 
@@ -133,6 +134,7 @@
             confirmPass.Size = new Size(237, 23);
             confirmPass.TabIndex = 30;
             confirmPass.TextAlign = HorizontalAlignment.Center;
+            confirmPass.TextChanged += confirmPass_TextChanged;
             // 
             // label3
             // 

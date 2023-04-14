@@ -8,10 +8,17 @@ namespace AppsDev
    
     public partial class Form1 : Form
     {
-      
 
-        private string userName = File.ReadAllText(@"C:\Users\james\desktop\Application\AppsDev\Database\userNameRecord.txt");
-        private string passWord = "123";
+        string getUser = "";
+        string getPass = "";
+        private string userName = "";
+        private string passWord = "";
+
+        public Form1(string userName1, string passWord1)
+        {
+            this.userName = userName1;
+            this.passWord = passWord1;
+        }
 
 
 
@@ -25,8 +32,7 @@ namespace AppsDev
 
 
         }
-        string getUser = "";
-        string getPass = "";
+       
 
 
         private void Form1_Load(object sender, EventArgs e)
