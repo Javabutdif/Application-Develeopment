@@ -8,17 +8,12 @@ namespace AppsDev
    
     public partial class Form1 : Form
     {
-
+        Class1 stored = new Class1();
         string getUser = "";
         string getPass = "";
-        private string userName = "";
-        private string passWord = "";
+        
 
-        public Form1(string userName1, string passWord1)
-        {
-            this.userName = userName1;
-            this.passWord = passWord1;
-        }
+        
 
 
 
@@ -81,14 +76,16 @@ namespace AppsDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (getUser.Equals(userName) && getPass.Equals(passWord))
+            if (getUser.Equals(stored.getUser()) && getPass.Equals(stored.getPass()))
             {
-                MessageBox.Show("Login In");
+                
+                Form5 dashBoard = new Form5();
+                dashBoard.Show();
             }
             else
             {
                 MessageBox.Show("Invalid");
-                MessageBox.Show(userName);
+              
             }
         }
 

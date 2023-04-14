@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             signUp = new Button();
             pictureBox2 = new PictureBox();
@@ -39,8 +40,10 @@
             label2 = new Label();
             confirmPass = new TextBox();
             label3 = new Label();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // signUp
@@ -135,6 +138,7 @@
             confirmPass.TabIndex = 30;
             confirmPass.TextAlign = HorizontalAlignment.Center;
             confirmPass.TextChanged += confirmPass_TextChanged;
+            confirmPass.Validating += confirmPass_Validating;
             // 
             // label3
             // 
@@ -145,6 +149,10 @@
             label3.Size = new Size(124, 15);
             label3.TabIndex = 29;
             label3.Text = "CONFIRM PASSWORD";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // Form3
             // 
@@ -170,6 +178,7 @@
             Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -186,5 +195,6 @@
         private Label label2;
         private TextBox confirmPass;
         private Label label3;
+        private ErrorProvider errorProvider1;
     }
 }

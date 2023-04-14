@@ -45,8 +45,7 @@ namespace AppsDev
         {
             if (passIn.Equals(confirm))
             {
-
-                new Form1(userIn, passIn);
+                new Class1(userIn, passIn);
                 Form4 form4 = new Form4();
                 form4.Show();
                 this.Close();
@@ -71,6 +70,26 @@ namespace AppsDev
         private void confirmPass_TextChanged(object sender, EventArgs e)
         {
             confirm = confirmPass.Text;
+        }
+
+        private void confirmPass_Validating(object sender, CancelEventArgs e)
+        {
+            Validate();
+        }
+        private bool Validate()
+        {
+            bool valid = true;
+
+            if (!passIn.Equals(confirm))
+            {
+                errorProvider1.SetError(confirmPass, "Please enter again ");
+                valid = false;
+            }
+            else
+                errorProvider1.SetError(confirmPass, "");
+
+            return valid;
+
         }
     }
 }
