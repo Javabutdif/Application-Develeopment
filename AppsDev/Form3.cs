@@ -19,13 +19,15 @@ namespace AppsDev
             signUp.BackColor = ColorTranslator.FromHtml("#107874");
 
         }
+        static Generate code = new Generate();
         string userIn = "";
         string passIn = "";
         string confirm = "";
+        static string loc = @"D:\";
+        string userName = "";
+        string passW = "";
 
-
-
-
+      
 
 
 
@@ -43,16 +45,35 @@ namespace AppsDev
 
         private void signUp_Click(object sender, EventArgs e)
         {
-            if (passIn.Equals(confirm))
+            if (userIn != "" && passIn != "")
             {
-                new Class1(userIn, passIn);
-                Form4 form4 = new Form4();
-                form4.Show();
-                this.Close();
+                if (passIn.Equals(confirm))
+                {
+                    string reference = code.getReference();
+                    userName = loc + userIn + ".txt";
+                    passW = loc + passIn + ".txt";
+                    using (StreamWriter name = new(userName))
+                    {
+                        name.WriteLine(reference);
+                    }
+                    using (StreamWriter pass = new StreamWriter(passW))
+                    {
+                        pass.WriteLine(reference);
+                    }
+
+                    Form4 form4 = new Form4();
+                    form4.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Confirm Password");
+
+                }
             }
             else
             {
-                MessageBox.Show("Invalid Confirm Password");
+                MessageBox.Show("Must contain username and password");
 
             }
         }

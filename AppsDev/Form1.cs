@@ -8,12 +8,12 @@ namespace AppsDev
    
     public partial class Form1 : Form
     {
-        Class1 stored = new Class1();
+       
         string getUser = "";
         string getPass = "";
-        
 
-        
+
+      
 
 
 
@@ -55,10 +55,10 @@ namespace AppsDev
             }
             getUser = textBox1.Text;
 
-
+           
 
         }
-
+     
 
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -73,20 +73,39 @@ namespace AppsDev
             }
             getPass = textBox2.Text;
         }
-
+        static string loc = @"D:\";
         private void button1_Click(object sender, EventArgs e)
         {
-            if (getUser.Equals(stored.getUser()) && getPass.Equals(stored.getPass()))
+            try
             {
-                
-                Form5 dashBoard = new Form5();
-                dashBoard.Show();
-            }
-            else
+                if (getUser != "" && getPass != "")
+                {
+                    if (File.ReadAllText(loc + getUser + ".txt").Equals(File.ReadAllText(loc + getPass + ".txt")))
+                    {
+                        Form5 dashboard = new Form5();
+                        dashboard.Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid");
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Must contain valid username and password");
+                }
+            }catch(Exception ee)
             {
                 MessageBox.Show("Invalid");
-              
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
+         
+          
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
