@@ -82,6 +82,8 @@ namespace AppsDev
                 {
                     if (File.ReadAllText(loc + getUser + ".txt").Equals(File.ReadAllText(loc + getPass + ".txt")))
                     {
+                        textBox1.Text = "";
+                        textBox2.Text = "";
                         Form5 dashboard = new Form5();
                         dashboard.Show();
 

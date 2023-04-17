@@ -45,9 +45,22 @@ namespace AppsDev
 
         private void nextBut_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Close();
+            if (lastName.Text != "" && firstName.Text != "" && middleName.Text != "" && governID.Text != "" && regionText.Text != "" && provinceText.Text != "" && cityText.Text != "" && barangayText.Text != "")
+            {
+                string accountName = @"D:\" + lastName.Text + ".txt";
+                using (StreamWriter write = new StreamWriter(accountName))
+                {
+                    write.WriteLine(lastName.Text + " " + firstName.Text + " " + middleName.Text + " " + governID.Text + " " + regionText.Text + " " + provinceText.Text + " " + cityText.Text + " " + barangayText.Text);
+                }
+
+                Form3 form3 = new Form3();
+                form3.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Must complete the account");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

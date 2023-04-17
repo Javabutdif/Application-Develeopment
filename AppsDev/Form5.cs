@@ -37,7 +37,13 @@ namespace AppsDev
 
         private void logOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult d;
+            d = MessageBox.Show("Do you want to log out? ","Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if(d == DialogResult.OK)
+            {
+                this.Close();
+            }
+           
         }
     }
 }
