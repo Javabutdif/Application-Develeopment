@@ -112,9 +112,8 @@ namespace AppsDev
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form1 form = new Form1();
-            form.Close();
-            Form2 form2 = new Form2();
+            this.Hide();
+            Form2 form2 = new Form2(this);
             form2.Show();
 
 

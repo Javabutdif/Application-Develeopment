@@ -12,12 +12,13 @@ namespace AppsDev
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        private Form2 previous;
+        public Form3(Form2 form)
         {
             InitializeComponent();
             backBut.BackColor = ColorTranslator.FromHtml("#107874");
             signUp.BackColor = ColorTranslator.FromHtml("#107874");
-
+            previous = form;
         }
         static Generate code = new Generate();
         string userIn = "";
@@ -38,7 +39,7 @@ namespace AppsDev
 
         private void backBut_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(previous);
             form2.Show();
             this.Close();
         }

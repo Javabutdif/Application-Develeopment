@@ -12,13 +12,14 @@ namespace AppsDev
 {
     public partial class Form2 : Form
     {
+        private Form previous;
 
-        public Form2()
+        public Form2(Form form)
         {
             InitializeComponent();
             backBut.BackColor = ColorTranslator.FromHtml("#107874");
             nextBut.BackColor = ColorTranslator.FromHtml("#107874");
-
+            previous = form;
 
 
         }
@@ -35,6 +36,7 @@ namespace AppsDev
 
 
             this.Close();
+            previous.Show();
 
         }
 
@@ -53,7 +55,7 @@ namespace AppsDev
                     write.WriteLine(lastName.Text + " " + firstName.Text + " " + middleName.Text + " " + governID.Text + " " + regionText.Text + " " + provinceText.Text + " " + cityText.Text + " " + barangayText.Text);
                 }
 
-                Form3 form3 = new Form3();
+                Form3 form3 = new Form3(this);                     
                 form3.Show();
                 this.Close();
             }
