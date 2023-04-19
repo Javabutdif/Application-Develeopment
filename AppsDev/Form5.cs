@@ -12,9 +12,14 @@ namespace AppsDev
 {
     public partial class Form5 : Form
     {
+        string value = "";
         public Form5()
         {
             InitializeComponent();
+        }
+        public Form5(string data)
+        {
+            this.value = data;
         }
         Hover color = new Hover();
 
@@ -75,6 +80,53 @@ namespace AppsDev
             this.panel1.BackColor = color.darker();
             this.BackColor = color.lighter();
             this.panel2.BackColor = color.lightDark();
+        }
+        Class2 loc = new Class2();
+        int[] spaces;
+
+
+        public void location()
+        {
+            char[] references = File.ReadAllText(loc.getLocation() + value).ToCharArray;
+            int count = 0;
+
+           for(int i =0; i < references.Length; i++)
+            {
+                if (references[i] == ' ')
+                {
+                    count++;
+                }
+            }
+           spaces = new int[count];
+
+        }
+        
+
+        string last = "";
+        string first = "";
+        string mid = "";
+        string govern = "";
+        string reg = "";
+        string prov = "";
+        string city = "";
+        string barangay = "";
+
+
+
+
+        private void lastNameDash_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameDash_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void middleNameDash_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

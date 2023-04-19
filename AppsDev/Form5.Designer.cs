@@ -37,8 +37,12 @@
             this.records = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.middleNameDash = new System.Windows.Forms.Label();
+            this.firstNameDash = new System.Windows.Forms.Label();
+            this.lastNameDash = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,10 +135,48 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.middleNameDash);
+            this.panel2.Controls.Add(this.firstNameDash);
+            this.panel2.Controls.Add(this.lastNameDash);
             this.panel2.Location = new System.Drawing.Point(13, 63);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 352);
             this.panel2.TabIndex = 1;
+            // 
+            // middleNameDash
+            // 
+            this.middleNameDash.AutoSize = true;
+            this.middleNameDash.ForeColor = System.Drawing.Color.White;
+            this.middleNameDash.Location = new System.Drawing.Point(119, 41);
+            this.middleNameDash.Name = "middleNameDash";
+            this.middleNameDash.Size = new System.Drawing.Size(38, 15);
+            this.middleNameDash.TabIndex = 2;
+            this.middleNameDash.Text = "label1";
+            this.middleNameDash.Click += new System.EventHandler(this.middleNameDash_Click);
+            // 
+            // firstNameDash
+            // 
+            this.firstNameDash.AutoSize = true;
+            this.firstNameDash.BackColor = System.Drawing.SystemColors.Control;
+            this.firstNameDash.ForeColor = System.Drawing.Color.White;
+            this.firstNameDash.Location = new System.Drawing.Point(75, 41);
+            this.firstNameDash.Name = "firstNameDash";
+            this.firstNameDash.Size = new System.Drawing.Size(38, 15);
+            this.firstNameDash.TabIndex = 1;
+            this.firstNameDash.Text = "label1";
+            this.firstNameDash.Click += new System.EventHandler(this.firstNameDash_Click);
+            // 
+            // lastNameDash
+            // 
+            this.lastNameDash.AutoSize = true;
+            this.lastNameDash.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lastNameDash.ForeColor = System.Drawing.Color.White;
+            this.lastNameDash.Location = new System.Drawing.Point(71, 9);
+            this.lastNameDash.Name = "lastNameDash";
+            this.lastNameDash.Size = new System.Drawing.Size(106, 30);
+            this.lastNameDash.TabIndex = 0;
+            this.lastNameDash.Text = "LastName";
+            this.lastNameDash.Click += new System.EventHandler(this.lastNameDash_Click);
             // 
             // Form5
             // 
@@ -153,6 +195,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +211,8 @@
         private Label search;
         private Label logOut;
         private Panel panel2;
+        private Label lastNameDash;
+        private Label middleNameDash;
+        private Label firstNameDash;
     }
 }

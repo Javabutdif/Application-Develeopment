@@ -1,6 +1,7 @@
 using Microsoft.VisualBasic;
 using System.Diagnostics.Tracing;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace AppsDev
@@ -90,14 +91,23 @@ namespace AppsDev
        
         private void button1_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 if (getUser != "" && getPass != "")
                 {
                     if (File.ReadAllText(loc.getLocation() + getUser + ".txt").Equals(File.ReadAllText(loc.getLocation() + getPass + ".txt")))
                     {
+                      
+                        
+                        Form5 form5 = new Form5(File.ReadAllText(loc.getLocation() + getUser + ".txt"));
+                        
+
+
+
                         textBox1.Text = "";
                         textBox2.Text = "";
+                        this.Hide();
                         Form5 dashboard = new Form5();
                         dashboard.Show();
                         
