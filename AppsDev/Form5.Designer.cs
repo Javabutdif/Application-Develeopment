@@ -29,125 +29,132 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            panel1 = new Panel();
-            logOut = new Label();
-            register = new Label();
-            search = new Label();
-            dashB = new Label();
-            records = new Label();
-            pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.logOut = new System.Windows.Forms.Label();
+            this.register = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.Label();
+            this.dashB = new System.Windows.Forms.Label();
+            this.records = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(logOut);
-            panel1.Controls.Add(register);
-            panel1.Controls.Add(search);
-            panel1.Controls.Add(dashB);
-            panel1.Controls.Add(records);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-3, -1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(804, 47);
-            panel1.TabIndex = 0;
+            this.panel1.Controls.Add(this.logOut);
+            this.panel1.Controls.Add(this.register);
+            this.panel1.Controls.Add(this.search);
+            this.panel1.Controls.Add(this.dashB);
+            this.panel1.Controls.Add(this.records);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-3, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(804, 47);
+            this.panel1.TabIndex = 0;
             // 
             // logOut
             // 
-            logOut.AutoSize = true;
-            logOut.BorderStyle = BorderStyle.FixedSingle;
-            logOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            logOut.ForeColor = Color.White;
-            logOut.Location = new Point(711, 10);
-            logOut.Name = "logOut";
-            logOut.Size = new Size(80, 23);
-            logOut.TabIndex = 4;
-            logOut.Text = "LOG OUT";
-            logOut.Click += logOut_Click;
+            this.logOut.AutoSize = true;
+            this.logOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.logOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.logOut.ForeColor = System.Drawing.Color.White;
+            this.logOut.Location = new System.Drawing.Point(711, 10);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(80, 23);
+            this.logOut.TabIndex = 4;
+            this.logOut.Text = "LOG OUT";
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
             // register
             // 
-            register.AutoSize = true;
-            register.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            register.ForeColor = Color.White;
-            register.Location = new Point(543, 10);
-            register.Name = "register";
-            register.Size = new Size(79, 25);
-            register.TabIndex = 2;
-            register.Text = "Register";
+            this.register.AutoSize = true;
+            this.register.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.register.ForeColor = System.Drawing.Color.White;
+            this.register.Location = new System.Drawing.Point(543, 10);
+            this.register.Name = "register";
+            this.register.Size = new System.Drawing.Size(79, 25);
+            this.register.TabIndex = 2;
+            this.register.Text = "Register";
+            this.register.MouseLeave += new System.EventHandler(this.register_MouseLeave);
+            this.register.MouseHover += new System.EventHandler(this.register_MouseHover);
             // 
             // search
             // 
-            search.AutoSize = true;
-            search.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            search.ForeColor = Color.White;
-            search.Location = new Point(443, 10);
-            search.Name = "search";
-            search.Size = new Size(69, 25);
-            search.TabIndex = 3;
-            search.Text = "Search";
+            this.search.AutoSize = true;
+            this.search.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.search.ForeColor = System.Drawing.Color.White;
+            this.search.Location = new System.Drawing.Point(443, 10);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(69, 25);
+            this.search.TabIndex = 3;
+            this.search.Text = "Search";
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // dashB
             // 
-            dashB.AutoSize = true;
-            dashB.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dashB.ForeColor = Color.White;
-            dashB.Location = new Point(157, 10);
-            dashB.Name = "dashB";
-            dashB.Size = new Size(104, 25);
-            dashB.TabIndex = 2;
-            dashB.Text = "Dashboard";
-            dashB.MouseLeave += dashL;
-            dashB.MouseHover += dashH;
+            this.dashB.AutoSize = true;
+            this.dashB.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dashB.ForeColor = System.Drawing.Color.White;
+            this.dashB.Location = new System.Drawing.Point(157, 10);
+            this.dashB.Name = "dashB";
+            this.dashB.Size = new System.Drawing.Size(104, 25);
+            this.dashB.TabIndex = 2;
+            this.dashB.Text = "Dashboard";
+            this.dashB.MouseLeave += new System.EventHandler(this.dashL);
+            this.dashB.MouseHover += new System.EventHandler(this.dashH);
             // 
             // records
             // 
-            records.AutoSize = true;
-            records.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            records.ForeColor = Color.White;
-            records.Location = new Point(289, 10);
-            records.Name = "records";
-            records.Size = new Size(78, 25);
-            records.TabIndex = 1;
-            records.Text = "Records";
+            this.records.AutoSize = true;
+            this.records.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.records.ForeColor = System.Drawing.Color.White;
+            this.records.Location = new System.Drawing.Point(289, 10);
+            this.records.Name = "records";
+            this.records.Size = new System.Drawing.Size(78, 25);
+            this.records.TabIndex = 1;
+            this.records.Text = "Records";
+            this.records.MouseLeave += new System.EventHandler(this.records_MouseLeave);
+            this.records.MouseHover += new System.EventHandler(this.records_MouseHover);
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.lg;
-            pictureBox1.Location = new Point(373, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 41);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = global::AppsDev.Properties.Resources.lg;
+            this.pictureBox1.Location = new System.Drawing.Point(373, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
-            panel2.Location = new Point(13, 63);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 352);
-            panel2.TabIndex = 1;
+            this.panel2.Location = new System.Drawing.Point(13, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 352);
+            this.panel2.TabIndex = 1;
             // 
             // Form5
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximumSize = new Size(816, 489);
-            MinimumSize = new Size(816, 489);
-            Name = "Form5";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Barangay Registration";
-            Load += Form5_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.Name = "Form5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Barangay Registration";
+            this.Load += new System.EventHandler(this.Form5_Load_1);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

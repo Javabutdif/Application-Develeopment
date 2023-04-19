@@ -8,19 +8,19 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\oo128\\.nuget\\packages\\": {}
+    "C:\\Users\\OO128\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\OO128\\New folder\\AppsDev\\AppsDev.csproj",
+      "projectUniqueName": "C:\\Users\\OO128\\Desktop\\AppsDevvv\\AppsDev\\AppsDev.csproj",
       "projectName": "AppsDev",
-      "projectPath": "Z:\\OO128\\New folder\\AppsDev\\AppsDev.csproj",
-      "packagesPath": "C:\\Users\\oo128\\.nuget\\packages\\",
-      "outputPath": "Z:\\OO128\\New folder\\AppsDev\\obj\\",
+      "projectPath": "C:\\Users\\OO128\\Desktop\\AppsDevvv\\AppsDev\\AppsDev.csproj",
+      "packagesPath": "C:\\Users\\OO128\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\OO128\\Desktop\\AppsDevvv\\AppsDev\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\oo128\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\OO128\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

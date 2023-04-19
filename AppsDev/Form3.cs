@@ -20,7 +20,7 @@ namespace AppsDev
             signUp.BackColor = ColorTranslator.FromHtml("#107874");
             previous = form;
         }
-        static Generate code = new Generate();
+   
         string userIn = "";
         string passIn = "";
         string confirm = "";
@@ -43,23 +43,25 @@ namespace AppsDev
             form2.Show();
             this.Close();
         }
-
+        static Class2 location  = new Class2();
+        static Form2 refer = new Form2(refer);
         private void signUp_Click(object sender, EventArgs e)
         {
             if (userIn != "" && passIn != "")
             {
                 if (passIn.Equals(confirm))
                 {
-                    string reference = code.getReference();
+                    
+                    
                     userName = loc + userIn + ".txt";
                     passW = loc + passIn + ".txt";
                     using (StreamWriter name = new(userName))
                     {
-                        name.WriteLine(reference);
+                        name.WriteLine(refer.getReference());
                     }
                     using (StreamWriter pass = new StreamWriter(passW))
                     {
-                        pass.WriteLine(reference);
+                        pass.WriteLine(refer.getReference());
                     }
 
                     Form4 form4 = new Form4();

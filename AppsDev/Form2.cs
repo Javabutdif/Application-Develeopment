@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,12 +45,19 @@ namespace AppsDev
         {
 
         }
-
+        Class2 loc = new Class2();
+        static Generate referenceCode = new Generate();
+        static string refer = referenceCode.getReference();
         private void nextBut_Click(object sender, EventArgs e)
         {
             if (lastName.Text != "" && firstName.Text != "" && middleName.Text != "" && governID.Text != "" && regionText.Text != "" && provinceText.Text != "" && cityText.Text != "" && barangayText.Text != "")
             {
-                string accountName = @"D:\" + lastName.Text + ".txt";
+               
+                string accountName = loc.getLocation() +refer + ".txt";
+                using (StreamWriter refers = new StreamWriter(loc.getLocation()+refer+".txt"))
+                {
+                    refers.WriteLine(refer);
+                }
                 using (StreamWriter write = new StreamWriter(accountName))
                 {
                     write.WriteLine(lastName.Text + " " + firstName.Text + " " + middleName.Text + " " + governID.Text + " " + regionText.Text + " " + provinceText.Text + " " + cityText.Text + " " + barangayText.Text);
@@ -63,6 +71,12 @@ namespace AppsDev
             {
                 MessageBox.Show("Must complete the account");
             }
+
+            
+        }
+        public string getReference()
+        {
+            return refer;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

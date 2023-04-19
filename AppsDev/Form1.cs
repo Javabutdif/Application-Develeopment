@@ -12,6 +12,19 @@ namespace AppsDev
         string getUser = "";
         string getPass = "";
 
+        /*
+         * Form1 = Login Form
+         * Form2 = Admin Registration
+         * Form3 = Username and Password Registration
+         * Form4 = Successful Page
+         * Form5 = Dashboard
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         */
 
       
 
@@ -73,20 +86,21 @@ namespace AppsDev
             }
             getPass = textBox2.Text;
         }
-        static string loc = @"D:\";
+       static Class2 loc = new Class2();
+       
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 if (getUser != "" && getPass != "")
                 {
-                    if (File.ReadAllText(loc + getUser + ".txt").Equals(File.ReadAllText(loc + getPass + ".txt")))
+                    if (File.ReadAllText(loc.getLocation() + getUser + ".txt").Equals(File.ReadAllText(loc.getLocation() + getPass + ".txt")))
                     {
                         textBox1.Text = "";
                         textBox2.Text = "";
                         Form5 dashboard = new Form5();
                         dashboard.Show();
-
+                        
                     }
                     else
                     {
@@ -101,7 +115,7 @@ namespace AppsDev
                 }
             }catch(Exception ee)
             {
-                MessageBox.Show("Invalid");
+                MessageBox.Show("Must input correct username and password");
                 textBox1.Text = "";
                 textBox2.Text = "";
             }

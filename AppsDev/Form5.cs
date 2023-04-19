@@ -18,13 +18,7 @@ namespace AppsDev
         }
         Hover color = new Hover();
 
-        private void Form5_Load(object sender, EventArgs e)
-        {
-            this.panel1.BackColor = color.darker();
-            this.BackColor = color.lighter();
-            this.panel2.BackColor = color.lightDark();
-
-        }
+      
         private void dashH(object sender, EventArgs e)
         {
             dashB.BackColor = color.lighter();
@@ -44,6 +38,43 @@ namespace AppsDev
                 this.Close();
             }
            
+        }
+
+        private void records_MouseHover(object sender, EventArgs e)
+        {
+            records.BackColor= color.lighter();
+        }
+
+        private void records_MouseLeave(object sender, EventArgs e)
+        {
+            records.BackColor= color.darker();
+        }
+
+        private void search_MouseHover(object sender, EventArgs e)
+        {
+            search.BackColor= color.lighter();  
+        }
+
+        private void search_MouseLeave(object sender, EventArgs e)
+        {
+            search.BackColor= color.darker();   
+        }
+
+        private void register_MouseHover(object sender, EventArgs e)
+        {
+            register.BackColor= color.lighter();    
+        }
+
+        private void register_MouseLeave(object sender, EventArgs e)
+        {
+            register.BackColor= color.darker();   
+        }
+
+        private void Form5_Load_1(object sender, EventArgs e)
+        {
+            this.panel1.BackColor = color.darker();
+            this.BackColor = color.lighter();
+            this.panel2.BackColor = color.lightDark();
         }
     }
 }
