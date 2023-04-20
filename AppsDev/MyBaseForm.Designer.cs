@@ -1,6 +1,6 @@
 ﻿namespace AppsDev
 {
-    partial class Form5
+    partial class MyBaseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            this.panel2 = new System.Windows.Forms.Panel();
             this.logOut = new System.Windows.Forms.Label();
             this.register = new System.Windows.Forms.Label();
             this.search = new System.Windows.Forms.Label();
             this.dashB = new System.Windows.Forms.Label();
             this.records = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.lastNameDash = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.logOut);
+            this.panel2.Controls.Add(this.register);
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.dashB);
+            this.panel2.Controls.Add(this.records);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(804, 47);
+            this.panel2.TabIndex = 1;
             // 
             // logOut
             // 
@@ -53,6 +65,7 @@
             this.logOut.Size = new System.Drawing.Size(80, 23);
             this.logOut.TabIndex = 4;
             this.logOut.Text = "LOG OUT";
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
             // register
             // 
@@ -64,6 +77,8 @@
             this.register.Size = new System.Drawing.Size(79, 25);
             this.register.TabIndex = 2;
             this.register.Text = "Register";
+            this.register.MouseLeave += new System.EventHandler(this.register_MouseLeave);
+            this.register.MouseHover += new System.EventHandler(this.register_MouseHover);
             // 
             // search
             // 
@@ -75,6 +90,8 @@
             this.search.Size = new System.Drawing.Size(69, 25);
             this.search.TabIndex = 3;
             this.search.Text = "Search";
+            this.search.MouseLeave += new System.EventHandler(this.search_MouseLeave);
+            this.search.MouseHover += new System.EventHandler(this.search_MouseHover);
             // 
             // dashB
             // 
@@ -86,6 +103,9 @@
             this.dashB.Size = new System.Drawing.Size(104, 25);
             this.dashB.TabIndex = 2;
             this.dashB.Text = "Dashboard";
+            this.dashB.Click += new System.EventHandler(this.dashB_Click);
+            this.dashB.MouseLeave += new System.EventHandler(this.dashL);
+            this.dashB.MouseHover += new System.EventHandler(this.dashH);
             // 
             // records
             // 
@@ -97,6 +117,8 @@
             this.records.Size = new System.Drawing.Size(78, 25);
             this.records.TabIndex = 1;
             this.records.Text = "Records";
+            this.records.MouseLeave += new System.EventHandler(this.records_MouseLeave);
+            this.records.MouseHover += new System.EventHandler(this.records_MouseHover);
             // 
             // pictureBox1
             // 
@@ -108,64 +130,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel12
+            // pictureBox2
             // 
-            this.panel12.Controls.Add(this.lastNameDash);
-            this.panel12.Location = new System.Drawing.Point(13, 63);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 352);
-            this.panel12.TabIndex = 1;
+            this.pictureBox2.Image = global::AppsDev.Properties.Resources.opacity20;
+            this.pictureBox2.Location = new System.Drawing.Point(282, 117);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(284, 260);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // lastNameDash
-            // 
-            this.lastNameDash.AutoSize = true;
-            this.lastNameDash.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lastNameDash.ForeColor = System.Drawing.Color.White;
-            this.lastNameDash.Location = new System.Drawing.Point(71, 9);
-            this.lastNameDash.Name = "lastNameDash";
-            this.lastNameDash.Size = new System.Drawing.Size(106, 30);
-            this.lastNameDash.TabIndex = 0;
-            this.lastNameDash.Text = "LastName";
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(13, 63);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 66);
-            this.panel3.TabIndex = 1;
-            // 
-            // Form5
+            // MyBaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel12);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "Form5";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Barangay Registration";
-            this.Load += new System.EventHandler(this.Form5_Load);
-            this.Controls.SetChildIndex(this.panel12, 0);
-            this.Controls.SetChildIndex(this.panel3, 0);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel2);
+            this.Name = "MyBaseForm";
+            this.Text = "MyBaseForm";
+            this.Load += new System.EventHandler(this.MyBaseForm_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private PictureBox pictureBox1;
-        private Label records;
-        private Label dashB;
+
+        private Panel panel2;
+        private Label logOut;
         private Label register;
         private Label search;
-        private Label logOut;
-        private Panel panel12;
-        private Label lastNameDash;
-        private Panel panel3;
+        private Label dashB;
+        private Label records;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
