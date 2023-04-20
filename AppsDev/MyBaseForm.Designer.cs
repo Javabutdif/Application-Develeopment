@@ -78,6 +78,7 @@
             this.register.Size = new System.Drawing.Size(79, 25);
             this.register.TabIndex = 2;
             this.register.Text = "Register";
+            this.register.Click += new System.EventHandler(this.register_Click);
             this.register.MouseLeave += new System.EventHandler(this.register_MouseLeave);
             this.register.MouseHover += new System.EventHandler(this.register_MouseHover);
             // 

@@ -97,6 +97,7 @@ namespace AppsDev
             Form5 dashBoard = new Form5();
             this.Close();
             dashBoard.Show();
+            dashBoard.dashB.BackColor = color.lighter();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -110,6 +111,13 @@ namespace AppsDev
             search1.Show();
             this.Close();
          
+        }
+
+        private void register_Click(object sender, EventArgs e)
+        {
+            Registration register = new Registration();
+            register.Show();   
+            this.Close();
         }
     }
 }

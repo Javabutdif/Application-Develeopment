@@ -26,6 +26,7 @@ namespace AppsDev
 
         private void Form5_Load(object sender, EventArgs e)
         {
+           
             this.panel3.BackColor = color.lighter();
             this.panel12.BackColor = color.lightDark();
             this.panel1.BackColor= color.lightDark();
