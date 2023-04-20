@@ -8,14 +8,16 @@ namespace AppsDev
 {
     internal class Hover
     {
-        System.Drawing.Color light = ColorTranslator.FromHtml("#107874");
-        System.Drawing.Color dark = ColorTranslator.FromHtml("#062e2c");
-        System.Drawing.Color lightD = ColorTranslator.FromHtml("#116F6A");
+        
         public Hover() {
         
         }
+        System.Drawing.Color light = ColorTranslator.FromHtml("#107874");
+        System.Drawing.Color dark = ColorTranslator.FromHtml("#062e2c");
+        System.Drawing.Color lightD = ColorTranslator.FromHtml("#116F6A");
+        System.Drawing.Color recent = ColorTranslator.FromHtml("#1E6966");
 
-         public System.Drawing.Color lighter()
+        public System.Drawing.Color lighter()
         {
             return this.light;
         }
@@ -26,6 +28,9 @@ namespace AppsDev
         public System.Drawing.Color lightDark()
         {
             return this.lightD;
+        }
+        public System.Drawing.Color lighterDark() {
+            return this.recent;
         }
     }
 }

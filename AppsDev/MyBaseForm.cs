@@ -18,10 +18,12 @@ namespace AppsDev
         public MyBaseForm()
         {
             InitializeComponent();
-       
+      
 
         }
         Hover color = new Hover();
+       
+      
 
 
 
@@ -85,12 +87,16 @@ namespace AppsDev
            
             this.BackColor = color.lighter();
             this.panel2.BackColor = color.darker();
+            
+
 
         }
 
         private void dashB_Click(object sender, EventArgs e)
         {
-
+            Form5 dashBoard = new Form5();
+            this.Close();
+            dashBoard.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -98,6 +104,12 @@ namespace AppsDev
 
         }
 
-      
+        private void search_Click(object sender, EventArgs e)
+        {
+            Search search1 = new Search();
+            search1.Show();
+            this.Close();
+         
+        }
     }
 }

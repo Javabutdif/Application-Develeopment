@@ -28,6 +28,9 @@ namespace AppsDev
         {
             this.panel3.BackColor = color.lighter();
             this.panel12.BackColor = color.lightDark();
+            this.panel1.BackColor= color.lightDark();
+            this.panel4.BackColor= color.lightDark();
+           this.panel5.BackColor= color.lighterDark();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
