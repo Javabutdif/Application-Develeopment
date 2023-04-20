@@ -338,11 +338,11 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(649, 368);
+            this.button1.Location = new System.Drawing.Point(688, 375);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 48);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 43;
             this.button1.Text = "REGISTER";
             this.button1.UseVisualStyleBackColor = true;
