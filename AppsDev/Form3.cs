@@ -24,9 +24,8 @@ namespace AppsDev
         string userIn = "";
         string passIn = "";
         string confirm = "";
-        static string loc = @"D:\";
-        string userName = "";
-        string passW = "";
+
+
 
       
 
@@ -43,26 +42,26 @@ namespace AppsDev
             form2.Show();
             this.Close();
         }
-        static Class2 location  = new Class2();
-        static Form2 refer = new Form2(refer);
+        Form2 getR = new Form2();
+        
         private void signUp_Click(object sender, EventArgs e)
         {
             if (userIn != "" && passIn != "")
             {
                 if (passIn.Equals(confirm))
                 {
+
                     
+                    Users admin = new Users(getR.getReference (), userIn, passIn, Form2.firstInfo);
+                  
                     
-                    userName = loc + userIn + ".txt";
-                    passW = loc + passIn + ".txt";
-                    using (StreamWriter name = new(userName))
+
+                    using(StreamWriter writeData = new StreamWriter(@"D:\Users"))
                     {
-                        name.WriteLine(refer.getReference());
+                        writeData.WriteLine(admin.getData());
                     }
-                    using (StreamWriter pass = new StreamWriter(passW))
-                    {
-                        pass.WriteLine(refer.getReference());
-                    }
+                    
+                   
 
                     Form4 form4 = new Form4();
                     form4.Show();
@@ -98,9 +97,9 @@ namespace AppsDev
 
         private void confirmPass_Validating(object sender, CancelEventArgs e)
         {
-            Validate();
+            Validate1();
         }
-        private bool Validate()
+        private bool Validate1()
         {
             bool valid = true;
 

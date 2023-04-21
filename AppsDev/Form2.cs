@@ -24,6 +24,10 @@ namespace AppsDev
 
 
         }
+        public Form2()
+        {
+            this.InitializeComponent();
+        }
 
 
         private void Form2_Load(object sender, EventArgs e)
@@ -45,23 +49,17 @@ namespace AppsDev
         {
 
         }
-        Class2 loc = new Class2();
+        public static string firstInfo = "";
+      
         static Generate referenceCode = new Generate();
         static string refer = referenceCode.getReference();
+
         private void nextBut_Click(object sender, EventArgs e)
         {
             if (lastName.Text != "" && firstName.Text != "" && middleName.Text != "" && governID.Text != "" && regionText.Text != "" && provinceText.Text != "" && cityText.Text != "" && barangayText.Text != "")
             {
-               
-                string accountName = loc.getLocation() +refer + ".txt";
-                using (StreamWriter refers = new StreamWriter(loc.getLocation()+refer+".txt"))
-                {
-                    refers.WriteLine(refer);
-                }
-                using (StreamWriter write = new StreamWriter(accountName))
-                {
-                    write.WriteLine(lastName.Text + " " + firstName.Text + " " + middleName.Text + " " + governID.Text + " " + regionText.Text + " " + provinceText.Text + " " + cityText.Text + " " + barangayText.Text);
-                }
+                firstInfo = lastName.Text + "," + firstName.Text + "," + middleName.Text + "," + governID.Text + "," + regionText.Text + "," + provinceText.Text + "," + cityText.Text + "," + barangayText.Text;
+
 
                 Form3 form3 = new Form3(this);                     
                 form3.Show();
