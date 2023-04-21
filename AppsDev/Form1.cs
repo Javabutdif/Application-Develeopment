@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic;
 using System.Diagnostics.Tracing;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
@@ -87,23 +88,40 @@ namespace AppsDev
             }
             getPass = textBox2.Text;
         }
-        static Class2 loc = new Class2();
+        public static List<UserLogin> list = new List<UserLogin>();
+        public static UserLogin uq = new UserLogin();
+
+        public void getList()
+        {
+
+     
+            string[] frag = File.ReadAllText(@"D:\Users.txt").Split("\n");
+         
+            for (int i =0; i< frag.Length; i++)
+            {
+               
+                    string[] us = frag[i].Split(",");
+
+                    UserLogin u = new UserLogin(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10]);
+                    list.Add(u);
+                
+            }
+          
+
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+          
+            UserLogin? user = list.Where(UserLogin=>UserLogin.username.Equals(getUser)).FirstOrDefault();
+            UserLogin? pass = list.Where(UserLogin => UserLogin.password.Equals(getPass)).FirstOrDefault();
             try
             {
-                if (getUser != "" && getPass != "")
+
+                if (user != null && pass != null)
                 {
-                    if (File.ReadAllText(loc.getLocation() + getUser + ".txt").Equals(File.ReadAllText(loc.getLocation() + getPass + ".txt")))
-                    {
-
-
-                        Form5 form5 = new Form5(File.ReadAllText(loc.getLocation() + getUser + ".txt"));
-
-
-
+                   
 
                         textBox1.Text = "";
                         textBox2.Text = "";
@@ -111,13 +129,8 @@ namespace AppsDev
                         Form5 dashboard = new Form5();
                         dashboard.Show();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid");
-                        textBox1.Text = "";
-                        textBox2.Text = "";
-                    }
+                    
+                    
                 }
                 else
                 {
@@ -140,6 +153,7 @@ namespace AppsDev
             this.Hide();
             Form2 form2 = new Form2(this);
             form2.Show();
+         
 
 
         }
