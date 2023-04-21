@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oo128\\source\\repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj": {}
+    "C:\\Users\\james\\Source\\Repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oo128\\source\\repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj": {
+    "C:\\Users\\james\\Source\\Repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oo128\\source\\repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj",
+        "projectUniqueName": "C:\\Users\\james\\Source\\Repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj",
         "projectName": "AppsDev",
-        "projectPath": "C:\\Users\\oo128\\source\\repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj",
-        "packagesPath": "C:\\Users\\oo128\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oo128\\source\\repos\\Application-Develeopment\\AppsDev\\obj\\",
+        "projectPath": "C:\\Users\\james\\Source\\Repos\\Application-Develeopment\\AppsDev\\AppsDev.csproj",
+        "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\james\\Source\\Repos\\Application-Develeopment\\AppsDev\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\oo128\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

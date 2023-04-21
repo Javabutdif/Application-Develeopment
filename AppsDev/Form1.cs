@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace AppsDev
 {
-   
+
     public partial class Form1 : Form
     {
-       
+
         string getUser = "";
         string getPass = "";
 
@@ -27,7 +27,7 @@ namespace AppsDev
          * 
          */
 
-      
+
 
 
 
@@ -41,7 +41,7 @@ namespace AppsDev
 
 
         }
-       
+
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,10 +69,10 @@ namespace AppsDev
             }
             getUser = textBox1.Text;
 
-           
+
 
         }
-     
+
 
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -87,21 +87,21 @@ namespace AppsDev
             }
             getPass = textBox2.Text;
         }
-       static Class2 loc = new Class2();
-       
+        static Class2 loc = new Class2();
+
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
                 if (getUser != "" && getPass != "")
                 {
                     if (File.ReadAllText(loc.getLocation() + getUser + ".txt").Equals(File.ReadAllText(loc.getLocation() + getPass + ".txt")))
                     {
-                      
-                        
+
+
                         Form5 form5 = new Form5(File.ReadAllText(loc.getLocation() + getUser + ".txt"));
-                        
+
 
 
 
@@ -110,7 +110,7 @@ namespace AppsDev
                         this.Hide();
                         Form5 dashboard = new Form5();
                         dashboard.Show();
-                        
+
                     }
                     else
                     {
@@ -123,14 +123,15 @@ namespace AppsDev
                 {
                     MessageBox.Show("Must contain valid username and password");
                 }
-            }catch(Exception ee)
+            }
+            catch (Exception ee)
             {
                 MessageBox.Show("Must input correct username and password");
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
-         
-          
+
+
 
         }
 
@@ -140,6 +141,19 @@ namespace AppsDev
             Form2 form2 = new Form2(this);
             form2.Show();
 
+
+        }
+        Hover color = new Hover();
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            this.button1.BackColor = color.lighter();
+            this.button1.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            this.button1.BackColor = Color.White;
+            this.button1.ForeColor = color.lighter();
 
         }
     }
