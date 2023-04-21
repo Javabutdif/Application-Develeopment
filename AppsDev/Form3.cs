@@ -51,17 +51,28 @@ namespace AppsDev
                 if (passIn.Equals(confirm))
                 {
 
+
+                    Users admin = new Users(getR.getReference(), userIn, passIn, Form2.firstInfo);
+                    string[] lines = File.ReadAllLines(@"D:\Users.txt");
+
+                    using (StreamWriter writeData = new StreamWriter(@"D:\Users.txt"))
+                        {
+
+                            
+                            for (int i = 0; i < lines.Length; i++)
+                            {
+                                writeData.WriteLine(lines[i]);
+                            }
+                            writeData.WriteLine(admin.getData());
+                        }
+
+
+
                     
-                    Users admin = new Users(getR.getReference (), userIn, passIn, Form2.firstInfo);
-                  
+                
+               
                     
 
-                    using(StreamWriter writeData = new StreamWriter(@"D:\Users"))
-                    {
-                        writeData.WriteLine(admin.getData());
-                    }
-                    
-                   
 
                     Form4 form4 = new Form4();
                     form4.Show();

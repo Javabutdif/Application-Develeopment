@@ -13,7 +13,7 @@ namespace AppsDev
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Form login = new Form1();
-            AppLevel.loginForm = login;
+            AppLevel.loginForm = (Form1?)login;
             Application.Run(login);
         }
     }
