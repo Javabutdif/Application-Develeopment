@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,26 +13,46 @@ namespace AppsDev
 {
     public partial class Form5 : MyBaseForm
     {
-        string value = "";
+
+
         Hover color = new Hover();
         public Form5()
         {
             InitializeComponent();
 
+
+
         }
-        public Form5(string data)
+
+
+
+        public void setID(string lastname, string firstname, string middlename, string region, string province, string city, string barangay)
         {
-            this.value = data;
+            lastNameDisplay.Text = lastname;
+            firstNameDisplay.Text = firstname;
+            middleNameDisplay.Text = middlename;
+            regionDisplay.Text = region;
+            cityDisplay.Text = city;
+            provinceDisplay.Text = province;
+            barangayDisplay.Text = barangay;
+
         }
+
+
 
         private void Form5_Load(object sender, EventArgs e)
         {
-           
+
+
             this.panel3.BackColor = color.lighter();
             this.panel12.BackColor = color.lightDark();
-            this.panel1.BackColor= color.lightDark();
-            this.panel4.BackColor= color.lightDark();
-           this.panel5.BackColor= color.lighterDark();
+            this.panel1.BackColor = color.lightDark();
+            this.panel4.BackColor = color.lightDark();
+            this.panel5.BackColor = color.lighterDark();
+            //
+
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

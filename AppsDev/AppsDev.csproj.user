@@ -19,6 +19,9 @@
     <Compile Update="Form5.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Icon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MyBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,16 +14,18 @@ namespace AppsDev
 {
     public partial class MyBaseForm : Form
     {
-       
+
         public MyBaseForm()
         {
             InitializeComponent();
-      
+
 
         }
+
         Hover color = new Hover();
-       
-      
+
+
+
 
 
 
@@ -80,14 +82,14 @@ namespace AppsDev
             register.BackColor = color.darker();
         }
 
-    
+
 
         private void MyBaseForm_Load(object sender, EventArgs e)
         {
-           
+
             this.BackColor = color.lighter();
             this.panel2.BackColor = color.darker();
-            
+
 
 
         }
@@ -110,14 +112,19 @@ namespace AppsDev
             Search search1 = new Search();
             search1.Show();
             this.Close();
-         
+
         }
 
         private void register_Click(object sender, EventArgs e)
         {
             Registration register = new Registration();
-            register.Show();   
+            register.Show();
             this.Close();
+        }
+
+        private void usernameData_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

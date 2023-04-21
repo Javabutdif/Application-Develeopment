@@ -151,3 +151,4 @@ C:\Users\james\source\repos\Application-Develeopment\AppsDev\obj\Debug\net7.0-wi
 C:\Users\james\source\repos\Application-Develeopment\AppsDev\obj\Debug\net7.0-windows\AppsDev.pdb
 C:\Users\james\source\repos\Application-Develeopment\AppsDev\obj\Debug\net7.0-windows\AppsDev.genruntimeconfig.cache
 C:\Users\james\source\repos\Application-Develeopment\AppsDev\obj\Debug\net7.0-windows\ref\AppsDev.dll
+C:\Users\james\source\repos\Application-Develeopment\AppsDev\obj\Debug\net7.0-windows\AppsDev.Icon.resources

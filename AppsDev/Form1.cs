@@ -116,13 +116,14 @@ namespace AppsDev
 
                 if (user != null && pass != null)
                 {
-                   
-
+                  
+                        
                         textBox1.Text = "";
                         textBox2.Text = "";
                         this.Hide();
                         Form5 dashboard = new Form5();
                         dashboard.Show();
+                        dashboard.setID(uq.lastname, uq.firstname, uq.middlename, uq.region, uq.province, uq.city, uq.barangay);
 
                     
                     

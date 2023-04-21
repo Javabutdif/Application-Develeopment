@@ -29,354 +29,350 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            this.logOut = new System.Windows.Forms.Label();
-            this.register = new System.Windows.Forms.Label();
-            this.search = new System.Windows.Forms.Label();
-            this.dashB = new System.Windows.Forms.Label();
-            this.records = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.barangayDisplay = new System.Windows.Forms.Label();
-            this.cityDisplay = new System.Windows.Forms.Label();
-            this.provinceDisplay = new System.Windows.Forms.Label();
-            this.regionDisplay = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lastNameDash = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.middleNameDisplay = new System.Windows.Forms.Label();
-            this.firstNameDisplay = new System.Windows.Forms.Label();
-            this.lastNameDisplay = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel12.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.SuspendLayout();
+            logOut = new Label();
+            register = new Label();
+            search = new Label();
+            dashB = new Label();
+            records = new Label();
+            pictureBox1 = new PictureBox();
+            panel12 = new Panel();
+            barangayDisplay = new Label();
+            cityDisplay = new Label();
+            provinceDisplay = new Label();
+            regionDisplay = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            lastNameDash = new Label();
+            panel3 = new Panel();
+            middleNameDisplay = new Label();
+            firstNameDisplay = new Label();
+            lastNameDisplay = new Label();
+            panel1 = new Panel();
+            label1 = new Label();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            label8 = new Label();
+            label7 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel12.SuspendLayout();
+            panel3.SuspendLayout();
+            panel1.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            SuspendLayout();
             // 
             // logOut
             // 
-            this.logOut.AutoSize = true;
-            this.logOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.logOut.ForeColor = System.Drawing.Color.White;
-            this.logOut.Location = new System.Drawing.Point(711, 10);
-            this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(80, 23);
-            this.logOut.TabIndex = 4;
-            this.logOut.Text = "LOG OUT";
+            logOut.AutoSize = true;
+            logOut.BorderStyle = BorderStyle.FixedSingle;
+            logOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            logOut.ForeColor = Color.White;
+            logOut.Location = new Point(711, 10);
+            logOut.Name = "logOut";
+            logOut.Size = new Size(80, 23);
+            logOut.TabIndex = 4;
+            logOut.Text = "LOG OUT";
             // 
             // register
             // 
-            this.register.AutoSize = true;
-            this.register.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.register.ForeColor = System.Drawing.Color.White;
-            this.register.Location = new System.Drawing.Point(543, 10);
-            this.register.Name = "register";
-            this.register.Size = new System.Drawing.Size(79, 25);
-            this.register.TabIndex = 2;
-            this.register.Text = "Register";
+            register.AutoSize = true;
+            register.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            register.ForeColor = Color.White;
+            register.Location = new Point(543, 10);
+            register.Name = "register";
+            register.Size = new Size(79, 25);
+            register.TabIndex = 2;
+            register.Text = "Register";
             // 
             // search
             // 
-            this.search.AutoSize = true;
-            this.search.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.search.ForeColor = System.Drawing.Color.White;
-            this.search.Location = new System.Drawing.Point(443, 10);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(69, 25);
-            this.search.TabIndex = 3;
-            this.search.Text = "Search";
+            search.AutoSize = true;
+            search.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            search.ForeColor = Color.White;
+            search.Location = new Point(443, 10);
+            search.Name = "search";
+            search.Size = new Size(69, 25);
+            search.TabIndex = 3;
+            search.Text = "Search";
             // 
             // dashB
             // 
-            this.dashB.AutoSize = true;
-            this.dashB.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dashB.ForeColor = System.Drawing.Color.White;
-            this.dashB.Location = new System.Drawing.Point(157, 10);
-            this.dashB.Name = "dashB";
-            this.dashB.Size = new System.Drawing.Size(104, 25);
-            this.dashB.TabIndex = 2;
-            this.dashB.Text = "Dashboard";
+            dashB.AutoSize = true;
+            dashB.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dashB.ForeColor = Color.White;
+            dashB.Location = new Point(157, 10);
+            dashB.Name = "dashB";
+            dashB.Size = new Size(104, 25);
+            dashB.TabIndex = 2;
+            dashB.Text = "Dashboard";
             // 
             // records
             // 
-            this.records.AutoSize = true;
-            this.records.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.records.ForeColor = System.Drawing.Color.White;
-            this.records.Location = new System.Drawing.Point(289, 10);
-            this.records.Name = "records";
-            this.records.Size = new System.Drawing.Size(78, 25);
-            this.records.TabIndex = 1;
-            this.records.Text = "Records";
+            records.AutoSize = true;
+            records.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            records.ForeColor = Color.White;
+            records.Location = new Point(289, 10);
+            records.Name = "records";
+            records.Size = new Size(78, 25);
+            records.TabIndex = 1;
+            records.Text = "Records";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AppsDev.Properties.Resources.lg;
-            this.pictureBox1.Location = new System.Drawing.Point(373, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Properties.Resources.lg;
+            pictureBox1.Location = new Point(373, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(54, 41);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.barangayDisplay);
-            this.panel12.Controls.Add(this.cityDisplay);
-            this.panel12.Controls.Add(this.provinceDisplay);
-            this.panel12.Controls.Add(this.regionDisplay);
-            this.panel12.Controls.Add(this.label5);
-            this.panel12.Controls.Add(this.label4);
-            this.panel12.Controls.Add(this.label3);
-            this.panel12.Controls.Add(this.label2);
-            this.panel12.Controls.Add(this.lastNameDash);
-            this.panel12.Location = new System.Drawing.Point(13, 63);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 352);
-            this.panel12.TabIndex = 1;
+            panel12.Controls.Add(barangayDisplay);
+            panel12.Controls.Add(cityDisplay);
+            panel12.Controls.Add(provinceDisplay);
+            panel12.Controls.Add(regionDisplay);
+            panel12.Controls.Add(label5);
+            panel12.Controls.Add(label4);
+            panel12.Controls.Add(label3);
+            panel12.Controls.Add(label2);
+            panel12.Controls.Add(lastNameDash);
+            panel12.Location = new Point(13, 63);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(200, 352);
+            panel12.TabIndex = 1;
             // 
             // barangayDisplay
             // 
-            this.barangayDisplay.AutoSize = true;
-            this.barangayDisplay.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.barangayDisplay.ForeColor = System.Drawing.Color.White;
-            this.barangayDisplay.Location = new System.Drawing.Point(8, 316);
-            this.barangayDisplay.Name = "barangayDisplay";
-            this.barangayDisplay.Size = new System.Drawing.Size(19, 20);
-            this.barangayDisplay.TabIndex = 8;
-            this.barangayDisplay.Text = "B";
+            barangayDisplay.AutoSize = true;
+            barangayDisplay.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            barangayDisplay.ForeColor = Color.White;
+            barangayDisplay.Location = new Point(8, 316);
+            barangayDisplay.Name = "barangayDisplay";
+            barangayDisplay.Size = new Size(0, 20);
+            barangayDisplay.TabIndex = 8;
             // 
             // cityDisplay
             // 
-            this.cityDisplay.AutoSize = true;
-            this.cityDisplay.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.cityDisplay.ForeColor = System.Drawing.Color.White;
-            this.cityDisplay.Location = new System.Drawing.Point(8, 239);
-            this.cityDisplay.Name = "cityDisplay";
-            this.cityDisplay.Size = new System.Drawing.Size(16, 20);
-            this.cityDisplay.TabIndex = 7;
-            this.cityDisplay.Text = "c";
+            cityDisplay.AutoSize = true;
+            cityDisplay.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            cityDisplay.ForeColor = Color.White;
+            cityDisplay.Location = new Point(8, 239);
+            cityDisplay.Name = "cityDisplay";
+            cityDisplay.Size = new Size(0, 20);
+            cityDisplay.TabIndex = 7;
             // 
             // provinceDisplay
             // 
-            this.provinceDisplay.AutoSize = true;
-            this.provinceDisplay.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.provinceDisplay.ForeColor = System.Drawing.Color.White;
-            this.provinceDisplay.Location = new System.Drawing.Point(9, 174);
-            this.provinceDisplay.Name = "provinceDisplay";
-            this.provinceDisplay.Size = new System.Drawing.Size(18, 20);
-            this.provinceDisplay.TabIndex = 6;
-            this.provinceDisplay.Text = "p";
+            provinceDisplay.AutoSize = true;
+            provinceDisplay.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            provinceDisplay.ForeColor = Color.White;
+            provinceDisplay.Location = new Point(9, 174);
+            provinceDisplay.Name = "provinceDisplay";
+            provinceDisplay.Size = new Size(0, 20);
+            provinceDisplay.TabIndex = 6;
             // 
             // regionDisplay
             // 
-            this.regionDisplay.AutoSize = true;
-            this.regionDisplay.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.regionDisplay.ForeColor = System.Drawing.Color.White;
-            this.regionDisplay.Location = new System.Drawing.Point(8, 113);
-            this.regionDisplay.Name = "regionDisplay";
-            this.regionDisplay.Size = new System.Drawing.Size(65, 20);
-            this.regionDisplay.TabIndex = 5;
-            this.regionDisplay.Text = "regionD";
+            regionDisplay.AutoSize = true;
+            regionDisplay.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            regionDisplay.ForeColor = Color.White;
+            regionDisplay.Location = new Point(8, 113);
+            regionDisplay.Name = "regionDisplay";
+            regionDisplay.Size = new Size(0, 20);
+            regionDisplay.TabIndex = 5;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 280);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "BARANGAY";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(3, 280);
+            label5.Name = "label5";
+            label5.Size = new Size(96, 21);
+            label5.TabIndex = 4;
+            label5.Text = "BARANGAY";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "CITY / MUNICIPALITY";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(3, 203);
+            label4.Name = "label4";
+            label4.Size = new Size(171, 21);
+            label4.TabIndex = 3;
+            label4.Text = "CITY / MUNICIPALITY";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "PROVINCE";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(3, 143);
+            label3.Name = "label3";
+            label3.Size = new Size(90, 21);
+            label3.TabIndex = 2;
+            label3.Text = "PROVINCE";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "REGION";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(3, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 21);
+            label2.TabIndex = 1;
+            label2.Text = "REGION";
             // 
             // lastNameDash
             // 
-            this.lastNameDash.AutoSize = true;
-            this.lastNameDash.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lastNameDash.ForeColor = System.Drawing.Color.White;
-            this.lastNameDash.Location = new System.Drawing.Point(71, 9);
-            this.lastNameDash.Name = "lastNameDash";
-            this.lastNameDash.Size = new System.Drawing.Size(106, 30);
-            this.lastNameDash.TabIndex = 0;
-            this.lastNameDash.Text = "LastName";
+            lastNameDash.AutoSize = true;
+            lastNameDash.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lastNameDash.ForeColor = Color.White;
+            lastNameDash.Location = new Point(71, 9);
+            lastNameDash.Name = "lastNameDash";
+            lastNameDash.Size = new Size(106, 30);
+            lastNameDash.TabIndex = 0;
+            lastNameDash.Text = "LastName";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.middleNameDisplay);
-            this.panel3.Controls.Add(this.firstNameDisplay);
-            this.panel3.Controls.Add(this.lastNameDisplay);
-            this.panel3.Location = new System.Drawing.Point(13, 63);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 66);
-            this.panel3.TabIndex = 1;
+            panel3.Controls.Add(middleNameDisplay);
+            panel3.Controls.Add(firstNameDisplay);
+            panel3.Controls.Add(lastNameDisplay);
+            panel3.Location = new Point(13, 63);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(200, 66);
+            panel3.TabIndex = 1;
             // 
             // middleNameDisplay
             // 
-            this.middleNameDisplay.AutoSize = true;
-            this.middleNameDisplay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.middleNameDisplay.ForeColor = System.Drawing.Color.White;
-            this.middleNameDisplay.Location = new System.Drawing.Point(136, 34);
-            this.middleNameDisplay.Name = "middleNameDisplay";
-            this.middleNameDisplay.Size = new System.Drawing.Size(44, 15);
-            this.middleNameDisplay.TabIndex = 2;
-            this.middleNameDisplay.Text = "Middle";
+            middleNameDisplay.AutoSize = true;
+            middleNameDisplay.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            middleNameDisplay.ForeColor = Color.White;
+            middleNameDisplay.Location = new Point(136, 34);
+            middleNameDisplay.Name = "middleNameDisplay";
+            middleNameDisplay.Size = new Size(44, 15);
+            middleNameDisplay.TabIndex = 2;
+            middleNameDisplay.Text = "Middle";
             // 
             // firstNameDisplay
             // 
-            this.firstNameDisplay.AutoSize = true;
-            this.firstNameDisplay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.firstNameDisplay.ForeColor = System.Drawing.Color.White;
-            this.firstNameDisplay.Location = new System.Drawing.Point(71, 34);
-            this.firstNameDisplay.Name = "firstNameDisplay";
-            this.firstNameDisplay.Size = new System.Drawing.Size(64, 15);
-            this.firstNameDisplay.TabIndex = 1;
-            this.firstNameDisplay.Text = "First Name";
+            firstNameDisplay.AutoSize = true;
+            firstNameDisplay.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            firstNameDisplay.ForeColor = Color.White;
+            firstNameDisplay.Location = new Point(71, 34);
+            firstNameDisplay.Name = "firstNameDisplay";
+            firstNameDisplay.Size = new Size(64, 15);
+            firstNameDisplay.TabIndex = 1;
+            firstNameDisplay.Text = "First Name";
             // 
             // lastNameDisplay
             // 
-            this.lastNameDisplay.AutoSize = true;
-            this.lastNameDisplay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lastNameDisplay.ForeColor = System.Drawing.Color.White;
-            this.lastNameDisplay.Location = new System.Drawing.Point(71, 9);
-            this.lastNameDisplay.Name = "lastNameDisplay";
-            this.lastNameDisplay.Size = new System.Drawing.Size(100, 25);
-            this.lastNameDisplay.TabIndex = 0;
-            this.lastNameDisplay.Text = "Last Name";
+            lastNameDisplay.AutoSize = true;
+            lastNameDisplay.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lastNameDisplay.ForeColor = Color.White;
+            lastNameDisplay.Location = new Point(71, 9);
+            lastNameDisplay.Name = "lastNameDisplay";
+            lastNameDisplay.Size = new Size(100, 25);
+            lastNameDisplay.TabIndex = 0;
+            lastNameDisplay.Text = "Last Name";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(270, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 48);
-            this.panel1.TabIndex = 5;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(270, 63);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(518, 48);
+            panel1.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Recent Registrations";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(3, 1);
+            label1.Name = "label1";
+            label1.Size = new Size(298, 40);
+            label1.TabIndex = 0;
+            label1.Text = "Recent Registrations";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(270, 117);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(518, 298);
-            this.panel4.TabIndex = 6;
+            panel4.Controls.Add(panel5);
+            panel4.Location = new Point(270, 117);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(518, 298);
+            panel4.TabIndex = 6;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(19, 10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(484, 26);
-            this.panel5.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(0, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Name";
+            panel5.Controls.Add(label8);
+            panel5.Controls.Add(label7);
+            panel5.Location = new Point(19, 10);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(484, 26);
+            panel5.TabIndex = 0;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(325, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 23);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Ref. Code";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(325, 3);
+            label8.Name = "label8";
+            label8.Size = new Size(84, 23);
+            label8.TabIndex = 1;
+            label8.Text = "Ref. Code";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(0, 3);
+            label7.Name = "label7";
+            label7.Size = new Size(56, 23);
+            label7.TabIndex = 0;
+            label7.Text = "Name";
             // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel12);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
-            this.Name = "Form5";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Barangay Registration";
-            this.Load += new System.EventHandler(this.Form5_Load);
-            this.Controls.SetChildIndex(this.panel12, 0);
-            this.Controls.SetChildIndex(this.panel3, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel4, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(panel4);
+            Controls.Add(panel1);
+            Controls.Add(panel3);
+            Controls.Add(panel12);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
+            Name = "Form5";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Barangay Registration";
+            Load += Form5_Load;
+            Controls.SetChildIndex(panel12, 0);
+            Controls.SetChildIndex(panel3, 0);
+            Controls.SetChildIndex(panel1, 0);
+            Controls.SetChildIndex(panel4, 0);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
