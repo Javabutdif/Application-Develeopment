@@ -10,8 +10,8 @@ namespace AppsDev
 
     public partial class Form1 : Form
     {
-        public static List<UserLogin> list = new List<UserLogin>();
-        public static UserLogin uq = new UserLogin();
+        public  List<UserLogin> list = new List<UserLogin>();
+        public  UserLogin uq = new UserLogin();
 
 
 
@@ -43,9 +43,6 @@ namespace AppsDev
             linkLabel1.LinkColor = ColorTranslator.FromHtml("#00FFF5");
 
 
-
-
-
         }
 
 
@@ -53,22 +50,7 @@ namespace AppsDev
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#107874");
-            int count;
-            for (count = 0; count < File.ReadAllLines(@"D:\Users.txt").Length; count++) {
-                string[] frag = File.ReadAllText(@"D:\Users.txt").Split("\n");
-                string[] us = frag[count].Split(",");
-
-                UserLogin u = new UserLogin(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10]);
-                list.Add(u);
-
-            }
-
-              
-                
-
-            
-
-
+   
         }
 
 
@@ -113,8 +95,20 @@ namespace AppsDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-
           
+
+            int count;
+            for (count = 0; count < File.ReadAllLines(@"D:\Users.txt").Length; count++)
+            {
+                string[] frag = File.ReadAllText(@"D:\Users.txt").Split("\n");
+                string[] us = frag[count].Split(",");
+
+                UserLogin u = new UserLogin(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10]);
+                list.Add(u);
+
+            }
+
+
             UserLogin? user = list.Where(UserLogin=>UserLogin.username.Equals(getUser)).FirstOrDefault();
             UserLogin? pass = list.Where(UserLogin => UserLogin.password.Equals(getPass)).FirstOrDefault();
             try
