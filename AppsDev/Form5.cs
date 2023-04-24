@@ -39,22 +39,6 @@ namespace AppsDev
         }
 
 
-
-        private void Form5_Load(object sender, EventArgs e)
-        {
-
-
-            this.panel3.BackColor = color.lighter();
-            this.panel12.BackColor = color.lightDark();
-            this.panel1.BackColor = color.lightDark();
-            this.panel4.BackColor = color.lightDark();
-            this.panel5.BackColor = color.lighterDark();
-            //
-
-
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -62,7 +46,12 @@ namespace AppsDev
 
         private void Form5_Load_1(object sender, EventArgs e)
         {
-
+            this.panel3.BackColor = color.lighter();
+            this.panel12.BackColor = color.lightDark();
+            this.panel1.BackColor = color.lightDark();
+            this.panel4.BackColor = color.lightDark();
+            this.panel5.BackColor = color.lighterDark();
+          
         }
     }
 }
