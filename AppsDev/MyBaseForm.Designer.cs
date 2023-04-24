@@ -37,7 +37,8 @@
             this.records = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.usernameData = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.userNameData = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -144,23 +145,33 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // usernameData
+            // label
             // 
-            this.usernameData.AutoSize = true;
-            this.usernameData.Font = new System.Drawing.Font("Segoe UI", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.usernameData.ForeColor = System.Drawing.Color.White;
-            this.usernameData.Location = new System.Drawing.Point(24, 428);
-            this.usernameData.Name = "usernameData";
-            this.usernameData.Size = new System.Drawing.Size(68, 13);
-            this.usernameData.TabIndex = 6;
-            this.usernameData.Text = "USERNAME";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(24, 428);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(68, 13);
+            this.label.TabIndex = 6;
+            this.label.Text = "USERNAME";
+            // 
+            // userNameData
+            // 
+            this.userNameData.AutoSize = true;
+            this.userNameData.ForeColor = System.Drawing.Color.White;
+            this.userNameData.Location = new System.Drawing.Point(98, 428);
+            this.userNameData.Name = "userNameData";
+            this.userNameData.Size = new System.Drawing.Size(0, 15);
+            this.userNameData.TabIndex = 7;
             // 
             // MyBaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.usernameData);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.userNameData);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -186,6 +197,7 @@
         private Label records;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Label usernameData;
+        private Label label;
+        private Label userNameData;
     }
 }

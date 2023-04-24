@@ -23,13 +23,20 @@ namespace AppsDev
 
 
         }
+        static string lastN = "";
+        static string fn = "";
+        static string md = "";
+        static string r = "";
+        static string c = "";
+        static string p = "";
+        static string b = "";
 
 
 
-        public void setID(string lastname, string firstname, string middlename, string region, string province, string city, string barangay)
+        public  void setID(string lastname, string firstname, string middlename, string region, string province, string city, string barangay)
         {
-            lastNameDisplay.Text = lastname;
-            firstNameDisplay.Text = firstname;
+            lastN = lastname;
+            fn = firstname;
             middleNameDisplay.Text = middlename;
             regionDisplay.Text = region;
             cityDisplay.Text = city;

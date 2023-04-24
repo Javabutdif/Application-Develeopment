@@ -101,6 +101,7 @@ namespace AppsDev
                         var provinceN = user.province.ToString();
                         var cityN = user.city.ToString();
                         var barangayN = user.barangay.ToString();
+                        var id = user.id.ToString();
 
                         textBox1.Text = "";
                         textBox2.Text = "";
@@ -108,6 +109,8 @@ namespace AppsDev
                         Form5 dashboard = new Form5();
                         dashboard.Show();
                         dashboard.setID(lastName,firstName,middleName, regionN, provinceN, cityN,barangayN);
+                        MyBaseForm my = new MyBaseForm();
+                        my.setUser(id);
 
 
 

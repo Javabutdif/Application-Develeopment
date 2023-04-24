@@ -21,6 +21,7 @@ namespace AppsDev
 
 
         }
+    
 
         Hover color = new Hover();
 
@@ -37,6 +38,10 @@ namespace AppsDev
         private void dashL(object sender, EventArgs e)
         {
             dashB.BackColor = color.darker();
+        }
+        public void setUser(string id)
+        {
+            this.label.Text = id;
         }
 
         private void logOut_Click(object sender, EventArgs e)

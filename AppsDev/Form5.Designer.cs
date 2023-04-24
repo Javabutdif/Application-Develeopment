@@ -255,7 +255,7 @@
             this.middleNameDisplay.AutoSize = true;
             this.middleNameDisplay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.middleNameDisplay.ForeColor = System.Drawing.Color.White;
-            this.middleNameDisplay.Location = new System.Drawing.Point(154, 33);
+            this.middleNameDisplay.Location = new System.Drawing.Point(153, 33);
             this.middleNameDisplay.Name = "middleNameDisplay";
             this.middleNameDisplay.Size = new System.Drawing.Size(44, 15);
             this.middleNameDisplay.TabIndex = 2;
@@ -266,7 +266,7 @@
             this.firstNameDisplay.AutoSize = true;
             this.firstNameDisplay.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.firstNameDisplay.ForeColor = System.Drawing.Color.White;
-            this.firstNameDisplay.Location = new System.Drawing.Point(89, 33);
+            this.firstNameDisplay.Location = new System.Drawing.Point(77, 33);
             this.firstNameDisplay.Name = "firstNameDisplay";
             this.firstNameDisplay.Size = new System.Drawing.Size(64, 15);
             this.firstNameDisplay.TabIndex = 1;
@@ -277,7 +277,7 @@
             this.lastNameDisplay.AutoSize = true;
             this.lastNameDisplay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lastNameDisplay.ForeColor = System.Drawing.Color.White;
-            this.lastNameDisplay.Location = new System.Drawing.Point(89, 8);
+            this.lastNameDisplay.Location = new System.Drawing.Point(77, 8);
             this.lastNameDisplay.Name = "lastNameDisplay";
             this.lastNameDisplay.Size = new System.Drawing.Size(100, 25);
             this.lastNameDisplay.TabIndex = 0;
