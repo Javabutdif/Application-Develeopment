@@ -50,6 +50,11 @@ namespace AppsDev
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#107874");
+            this.panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
+
+       
+
+
 
             if (!File.Exists(@"D:\Users.txt"))
             {
@@ -62,47 +67,11 @@ namespace AppsDev
         }
 
 
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox1_TextChanged != null)
-            {
-                label1.Visible = false;
-            }
-            if (textBox1.Text.Equals(""))
-            {
-                label1.Visible = true;
-            }
-            getUser = textBox1.Text;
-
-
-
-        }
-
-
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox2_TextChanged != null)
-            {
-                label2.Visible = false;
-            }
-            if (textBox2.Text.Equals(""))
-            {
-                label2.Visible = true;
-            }
-            getPass = textBox2.Text;
-        }
-     
-
         private void button1_Click(object sender, EventArgs e)
         {
+            getUser = textBox1.Text;
+            getPass = textBox2.Text;
+
             if (File.Exists(@"D:\Users.txt"))
             {
 
@@ -125,14 +94,20 @@ namespace AppsDev
 
                     if (user != null && pass != null)
                     {
-
+                        var lastName = user.lastname.ToString(); 
+                        var firstName = user.firstname.ToString();
+                        var middleName = user.middlename.ToString();
+                        var regionN = user.region.ToString();
+                        var provinceN = user.province.ToString();
+                        var cityN = user.city.ToString();
+                        var barangayN = user.barangay.ToString();
 
                         textBox1.Text = "";
                         textBox2.Text = "";
                         this.Hide();
                         Form5 dashboard = new Form5();
                         dashboard.Show();
-                        dashboard.setID(uq.lastname, uq.firstname, uq.middlename, uq.region, uq.province, uq.city, uq.barangay);
+                        dashboard.setID(lastName,firstName,middleName, regionN, provinceN, cityN,barangayN);
 
 
 
@@ -180,5 +155,7 @@ namespace AppsDev
             this.button1.ForeColor = color.lighter();
 
         }
+
+     
     }
 }
