@@ -10,28 +10,27 @@ using System.Windows.Forms;
 
 namespace AppsDev
 {
-    public partial class Search : MyBaseForm
+    public partial class SearchTab : UserControl
     {
-        public Search()
+        public SearchTab()
         {
             InitializeComponent();
         }
         Hover color = new Hover();
-
-        private void Search_Load(object sender, EventArgs e)
+        private void SearchTab_Load(object sender, EventArgs e)
         {
             this.tryAgain.BackColor = color.lighter();
             this.resultDisplay.Visible = false;
             this.resultNot.Visible = false;
-            this.tryAgain.Visible= false;
+            this.tryAgain.Visible = false;
+            this.BackColor = color.lighter();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
             {
                 this.label1.Visible = false;
-                this.textBox1.Visible= false;
+                this.textBox1.Visible = false;
                 this.button1.Visible = false;
                 this.resultDisplay.Visible = true;
             }

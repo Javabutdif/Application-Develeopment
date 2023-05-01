@@ -216,7 +216,6 @@ C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\Ap
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.MyBaseForm.resources
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.Properties.Resources.resources
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.Registration.resources
-C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.Search.resources
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.csproj.GenerateResource.cache
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.AssemblyInfoInputs.cache
@@ -228,3 +227,4 @@ C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\Ap
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.genruntimeconfig.cache
 C:\Users\james\Desktop\Barangay Registration\AppsDev\bin\Debug\net7.0-windows\AppsDev.pdb
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\ref\AppsDev.dll
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.SearchTab.resources

@@ -87,13 +87,16 @@ namespace AppsDev
             register.BackColor = color.darker();
         }
 
-        Dashboard dash = new Dashboard();
+
+      
 
         private void MyBaseForm_Load(object sender, EventArgs e)
         {
 
             this.BackColor = color.lighter();
             this.panel2.BackColor = color.darker();
+            searchTab1.Visible = false;
+            dashboard1.Visible = true;
 
 
 
@@ -101,8 +104,9 @@ namespace AppsDev
 
         private void dashB_Click(object sender, EventArgs e)
         {
-            
-            dash.Show();
+            dashboard1.Show();
+            searchTab1.Hide();
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -112,17 +116,18 @@ namespace AppsDev
 
         private void search_Click(object sender, EventArgs e)
         {
-            Search search1 = new Search();
-            search1.Show();
-            dash.Hide();
+            
+            dashboard1.Hide();
+            searchTab1.Show();
+
+
 
         }
 
         private void register_Click(object sender, EventArgs e)
         {
-            Registration register = new Registration();
-            register.Show();
-            dash.Hide();
+            dashboard1.Visible = false;
+
         }
 
         private void usernameData_Click(object sender, EventArgs e)

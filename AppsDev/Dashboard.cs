@@ -30,69 +30,15 @@ namespace AppsDev
 
         }
       
-        public string setLast
+       public void setData(string ln, string fn, string md, string r, string p, string c, string b)
         {
-            set
-            {
-                lastNameDisplay.Text = value;
- 
-            }
-        }
-        public string setFirst
-        {
-            set
-            {
-                firstNameDisplay.Text = value;
-            }
-
-
-
-        }
-        public string setMid
-        {
-            set
-            {
-                middleNameDisplay.Text = value;
-            }
-
-
-
-        }
-        public string setR
-        {
-            set
-            {
-                regionNum.Text = value;
-            }
-
-
-
-        }
-        public string setC
-        {
-            set
-            {
-                cityData.Text = value;
-            }
-        }
-        public string setP
-        {
-            set
-            {
-                provinceData.Text = value;
-            }
-
-
-
-        }
-        public string setB
-        {
-            set
-            {
-                barangayData.Text = value;
-            }
-
-
+            this.lastNameDisplay.Text = ln;
+            this.firstNameDisplay.Text = fn;
+            this.middleNameDisplay.Text = md;
+            this.regionDisplay.Text = r;
+            this.provinceData.Text = p;
+            this.cityData.Text = c;
+            this.barangayData.Text = b;
 
         }
     }

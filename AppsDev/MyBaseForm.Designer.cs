@@ -36,13 +36,12 @@
             dashB = new Label();
             records = new Label();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             label = new Label();
             userNameData = new Label();
             dashboard1 = new Dashboard();
+            searchTab1 = new SearchTab();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -136,16 +135,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.opacity20;
-            pictureBox2.Location = new Point(282, 117);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(284, 260);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
             // label
             // 
             label.AutoSize = true;
@@ -168,29 +157,38 @@
             // 
             // dashboard1
             // 
+            dashboard1.BackColor = Color.FromArgb(16, 120, 116);
             dashboard1.Location = new Point(0, 41);
             dashboard1.Name = "dashboard1";
             dashboard1.Size = new Size(801, 384);
             dashboard1.TabIndex = 8;
+            // 
+            // searchTab1
+            // 
+            searchTab1.BackColor = Color.FromArgb(16, 120, 116);
+            searchTab1.Location = new Point(0, 41);
+            searchTab1.Name = "searchTab1";
+            searchTab1.Size = new Size(816, 390);
+            searchTab1.TabIndex = 9;
             // 
             // MyBaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dashboard1);
             Controls.Add(label);
             Controls.Add(userNameData);
-            Controls.Add(pictureBox2);
             Controls.Add(panel2);
+            Controls.Add(searchTab1);
+            Controls.Add(dashboard1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MyBaseForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MyBaseForm";
             Load += MyBaseForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -204,9 +202,9 @@
         private Label dashB;
         private Label records;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private Label label;
         private Label userNameData;
         private Dashboard dashboard1;
+        private SearchTab searchTab1;
     }
 }

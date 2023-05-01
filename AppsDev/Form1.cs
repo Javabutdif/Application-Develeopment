@@ -51,7 +51,7 @@ namespace AppsDev
         {
             this.BackColor = ColorTranslator.FromHtml("#107874");
             this.panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
-
+         
        
 
 
@@ -65,7 +65,8 @@ namespace AppsDev
             }
    
         }
-
+       
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -106,19 +107,15 @@ namespace AppsDev
                         textBox1.Text = "";
                         textBox2.Text = "";
                         this.Hide();
+
+                        Dashboard dash = new Dashboard();
+                        dash.setData(lastName, firstName, middleName, regionN, provinceN, cityN, barangayN);
                         
-                        var parent = this.Parent as Dashboard;
-                        parent.setLast = lastName;
-                        parent.setFirst = firstName;
-                        parent.setMid = middleName;
-                        parent.setR = regionN;
-                        parent.setP = provinceN;
-                        parent.setC = cityN;
-                        parent.setB = barangayN;
 
                     
                         
                         MyBaseForm dashboard = new MyBaseForm();
+                        dashboard.setUser(id);
                         dashboard.Show();
                         
 
