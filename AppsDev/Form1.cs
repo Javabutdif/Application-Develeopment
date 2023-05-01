@@ -94,23 +94,33 @@ namespace AppsDev
 
                     if (user != null && pass != null)
                     {
-                        var lastName = user.lastname.ToString(); 
-                        var firstName = user.firstname.ToString();
-                        var middleName = user.middlename.ToString();
-                        var regionN = user.region.ToString();
-                        var provinceN = user.province.ToString();
-                        var cityN = user.city.ToString();
-                        var barangayN = user.barangay.ToString();
-                        var id = user.id.ToString();
+                        var lastName = user.lastname;
+                        var firstName = user.firstname;
+                        var middleName = user.middlename;
+                        var regionN = user.region;
+                        var provinceN = user.province;
+                        var cityN = user.city;
+                        var barangayN = user.barangay;
+                        var id = user.id;
 
                         textBox1.Text = "";
                         textBox2.Text = "";
                         this.Hide();
-                        Form5 dashboard = new Form5();
+                        
+                        var parent = this.Parent as Dashboard;
+                        parent.setLast = lastName;
+                        parent.setFirst = firstName;
+                        parent.setMid = middleName;
+                        parent.setR = regionN;
+                        parent.setP = provinceN;
+                        parent.setC = cityN;
+                        parent.setB = barangayN;
+
+                    
+                        
+                        MyBaseForm dashboard = new MyBaseForm();
                         dashboard.Show();
-                        dashboard.setID(lastName,firstName,middleName, regionN, provinceN, cityN,barangayN);
-                        MyBaseForm my = new MyBaseForm();
-                        my.setUser(id);
+                        
 
 
 

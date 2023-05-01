@@ -21,7 +21,7 @@ namespace AppsDev
 
 
         }
-    
+
 
         Hover color = new Hover();
 
@@ -87,7 +87,7 @@ namespace AppsDev
             register.BackColor = color.darker();
         }
 
-
+        Dashboard dash = new Dashboard();
 
         private void MyBaseForm_Load(object sender, EventArgs e)
         {
@@ -101,10 +101,8 @@ namespace AppsDev
 
         private void dashB_Click(object sender, EventArgs e)
         {
-            Form5 dashBoard = new Form5();
-            this.Close();
-            dashBoard.Show();
-            dashBoard.dashB.BackColor = color.lighter();
+            
+            dash.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -116,7 +114,7 @@ namespace AppsDev
         {
             Search search1 = new Search();
             search1.Show();
-            this.Close();
+            dash.Hide();
 
         }
 
@@ -124,7 +122,7 @@ namespace AppsDev
         {
             Registration register = new Registration();
             register.Show();
-            this.Close();
+            dash.Hide();
         }
 
         private void usernameData_Click(object sender, EventArgs e)
