@@ -20,10 +20,10 @@ namespace AppsDev
         private void SearchTab_Load(object sender, EventArgs e)
         {
             this.tryAgain.BackColor = color.lighter();
+            this.BackColor = color.lighter();
             this.resultDisplay.Visible = false;
             this.resultNot.Visible = false;
             this.tryAgain.Visible = false;
-            this.BackColor = color.lighter();
         }
         private void button1_Click(object sender, EventArgs e)
         {

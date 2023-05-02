@@ -228,3 +228,4 @@ C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\Ap
 C:\Users\james\Desktop\Barangay Registration\AppsDev\bin\Debug\net7.0-windows\AppsDev.pdb
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\ref\AppsDev.dll
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.SearchTab.resources
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.Regis.resources

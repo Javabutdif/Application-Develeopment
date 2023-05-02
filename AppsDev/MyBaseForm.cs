@@ -29,7 +29,7 @@ namespace AppsDev
         private static string c;
         private static string b;
 
-        
+
         public string setL
         {
             set
@@ -197,7 +197,7 @@ namespace AppsDev
         }
 
 
-      
+
 
         private void MyBaseForm_Load(object sender, EventArgs e)
         {
@@ -206,6 +206,7 @@ namespace AppsDev
             this.panel2.BackColor = color.darker();
             searchTab1.Visible = false;
             dashboard1.Visible = true;
+            regis1.Visible = false;
 
 
 
@@ -213,8 +214,9 @@ namespace AppsDev
 
         private void dashB_Click(object sender, EventArgs e)
         {
-            dashboard1.Show();
-            searchTab1.Hide();
+            dashboard1.Visible = true;
+            searchTab1.Visible = false;
+            regis1.Visible = false;
 
         }
 
@@ -225,9 +227,10 @@ namespace AppsDev
 
         private void search_Click(object sender, EventArgs e)
         {
-            
-            dashboard1.Hide();
-            searchTab1.Show();
+
+            dashboard1.Visible = false;
+            searchTab1.Visible = true;
+            regis1.Visible = false;
 
 
 
@@ -236,6 +239,8 @@ namespace AppsDev
         private void register_Click(object sender, EventArgs e)
         {
             dashboard1.Visible = false;
+            searchTab1.Visible = false;
+            regis1.Visible = true;
 
         }
 

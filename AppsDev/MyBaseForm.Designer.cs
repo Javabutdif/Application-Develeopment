@@ -40,6 +40,7 @@
             userNameData = new Label();
             dashboard1 = new Dashboard();
             searchTab1 = new SearchTab();
+            regis1 = new Regis();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -171,11 +172,20 @@
             searchTab1.Size = new Size(816, 390);
             searchTab1.TabIndex = 9;
             // 
+            // regis1
+            // 
+            regis1.BackColor = Color.FromArgb(16, 120, 116);
+            regis1.Location = new Point(-15, 48);
+            regis1.Name = "regis1";
+            regis1.Size = new Size(816, 377);
+            regis1.TabIndex = 5;
+            // 
             // MyBaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(regis1);
             Controls.Add(label);
             Controls.Add(userNameData);
             Controls.Add(panel2);
@@ -206,5 +216,6 @@
         private Label userNameData;
         private Dashboard dashboard1;
         private SearchTab searchTab1;
+        private Regis regis1;
     }
 }
