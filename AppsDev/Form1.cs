@@ -10,8 +10,8 @@ namespace AppsDev
 
     public partial class Form1 : Form
     {
-        public  List<UserLogin> list = new List<UserLogin>();
-        public  UserLogin uq = new UserLogin();
+        public List<UserLogin> list = new List<UserLogin>();
+        public UserLogin uq = new UserLogin();
 
 
 
@@ -51,22 +51,22 @@ namespace AppsDev
         {
             this.BackColor = ColorTranslator.FromHtml("#107874");
             this.panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
-         
-       
+
+
 
 
 
             if (!File.Exists(@"D:\Users.txt"))
             {
-                using(StreamWriter write = new StreamWriter(@"D:\Users.txt"))
+                using (StreamWriter write = new StreamWriter(@"D:\Users.txt"))
                 {
                     write.Write("");
                 }
             }
-   
+
         }
-       
-       
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -117,15 +117,15 @@ namespace AppsDev
                         parent.setC = cityN;
                         parent.setB = barangayN;
 
-                      
-                        
 
-                    
-                        
+
+
+
+
                         MyBaseForm dashboard = new MyBaseForm();
                         dashboard.setUser(id);
                         dashboard.Show();
-                        
+
 
 
 
@@ -156,7 +156,7 @@ namespace AppsDev
             this.Hide();
             Form2 form2 = new Form2(this);
             form2.Show();
-         
+
 
 
         }
@@ -174,6 +174,6 @@ namespace AppsDev
 
         }
 
-     
+
     }
 }

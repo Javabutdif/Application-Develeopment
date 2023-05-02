@@ -25,9 +25,6 @@
     <Compile Update="Regis.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Registration.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="SearchTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

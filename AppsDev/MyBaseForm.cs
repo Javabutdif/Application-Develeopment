@@ -244,9 +244,6 @@ namespace AppsDev
 
         }
 
-        private void usernameData_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
