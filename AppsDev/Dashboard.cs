@@ -15,6 +15,7 @@ namespace AppsDev
         public Dashboard()
         {
             InitializeComponent();
+
         }
         Hover color = new Hover();
         private void Dashboard_Load(object sender, EventArgs e)
@@ -27,20 +28,19 @@ namespace AppsDev
             this.panel5.BackColor = color.lighterDark();
             this.BackColor = color.lighter();
 
+            MyBaseForm data = new MyBaseForm();
+
+            this.lastNameDisplay.Text = data.getL;
+            this.firstNameDisplay.Text = data.getF;
+            this.middleNameDisplay.Text = data.getM;
+            this.regionNum.Text = data.getR;
+            this.provinceData.Text = data.getP;
+            this.cityData.Text = data.getC;
+            this.barangayData.Text = data.getB;
 
         }
-      
-       public void setData(string ln, string fn, string md, string r, string p, string c, string b)
-        {
-            this.lastNameDisplay.Text = ln;
-            this.firstNameDisplay.Text = fn;
-            this.middleNameDisplay.Text = md;
-            this.regionDisplay.Text = r;
-            this.provinceData.Text = p;
-            this.cityData.Text = c;
-            this.barangayData.Text = b;
 
-        }
+
     }
-    
-    }
+
+}

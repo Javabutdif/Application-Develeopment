@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             panel12 = new Panel();
+            barangayData = new Label();
+            cityData = new Label();
+            provinceData = new Label();
+            regionNum = new Label();
             barangayDisplay = new Label();
             cityDisplay = new Label();
             provinceDisplay = new Label();
@@ -47,10 +51,6 @@
             panel4 = new Panel();
             panel1 = new Panel();
             label1 = new Label();
-            regionNum = new Label();
-            provinceData = new Label();
-            cityData = new Label();
-            barangayData = new Label();
             panel12.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -76,6 +76,50 @@
             panel12.Name = "panel12";
             panel12.Size = new Size(200, 352);
             panel12.TabIndex = 2;
+            // 
+            // barangayData
+            // 
+            barangayData.AutoSize = true;
+            barangayData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            barangayData.ForeColor = Color.White;
+            barangayData.Location = new Point(9, 301);
+            barangayData.Name = "barangayData";
+            barangayData.Size = new Size(51, 20);
+            barangayData.TabIndex = 12;
+            barangayData.Text = "label6";
+            // 
+            // cityData
+            // 
+            cityData.AutoSize = true;
+            cityData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            cityData.ForeColor = Color.White;
+            cityData.Location = new Point(8, 224);
+            cityData.Name = "cityData";
+            cityData.Size = new Size(51, 20);
+            cityData.TabIndex = 11;
+            cityData.Text = "label6";
+            // 
+            // provinceData
+            // 
+            provinceData.AutoSize = true;
+            provinceData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            provinceData.ForeColor = Color.White;
+            provinceData.Location = new Point(8, 164);
+            provinceData.Name = "provinceData";
+            provinceData.Size = new Size(51, 20);
+            provinceData.TabIndex = 10;
+            provinceData.Text = "label6";
+            // 
+            // regionNum
+            // 
+            regionNum.AutoSize = true;
+            regionNum.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            regionNum.ForeColor = Color.White;
+            regionNum.Location = new Point(8, 104);
+            regionNum.Name = "regionNum";
+            regionNum.Size = new Size(89, 20);
+            regionNum.TabIndex = 9;
+            regionNum.Text = "regionNum";
             // 
             // barangayDisplay
             // 
@@ -261,50 +305,6 @@
             label1.Size = new Size(298, 40);
             label1.TabIndex = 0;
             label1.Text = "Recent Registrations";
-            // 
-            // regionNum
-            // 
-            regionNum.AutoSize = true;
-            regionNum.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            regionNum.ForeColor = Color.White;
-            regionNum.Location = new Point(4, 104);
-            regionNum.Name = "regionNum";
-            regionNum.Size = new Size(89, 20);
-            regionNum.TabIndex = 9;
-            regionNum.Text = "regionNum";
-            // 
-            // provinceData
-            // 
-            provinceData.AutoSize = true;
-            provinceData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            provinceData.ForeColor = Color.White;
-            provinceData.Location = new Point(8, 164);
-            provinceData.Name = "provinceData";
-            provinceData.Size = new Size(51, 20);
-            provinceData.TabIndex = 10;
-            provinceData.Text = "label6";
-            // 
-            // cityData
-            // 
-            cityData.AutoSize = true;
-            cityData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            cityData.ForeColor = Color.White;
-            cityData.Location = new Point(8, 224);
-            cityData.Name = "cityData";
-            cityData.Size = new Size(51, 20);
-            cityData.TabIndex = 11;
-            cityData.Text = "label6";
-            // 
-            // barangayData
-            // 
-            barangayData.AutoSize = true;
-            barangayData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            barangayData.ForeColor = Color.White;
-            barangayData.Location = new Point(9, 301);
-            barangayData.Name = "barangayData";
-            barangayData.Size = new Size(51, 20);
-            barangayData.TabIndex = 12;
-            barangayData.Text = "label6";
             // 
             // Dashboard
             // 

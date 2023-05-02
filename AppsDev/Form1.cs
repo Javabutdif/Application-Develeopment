@@ -108,8 +108,16 @@ namespace AppsDev
                         textBox2.Text = "";
                         this.Hide();
 
-                        Dashboard dash = new Dashboard();
-                        dash.setData(lastName, firstName, middleName, regionN, provinceN, cityN, barangayN);
+                        MyBaseForm parent = new MyBaseForm();
+                        parent.setL = lastName;
+                        parent.setF = firstName;
+                        parent.setM = middleName;
+                        parent.setR = regionN;
+                        parent.setP = provinceN;
+                        parent.setC = cityN;
+                        parent.setB = barangayN;
+
+                      
                         
 
                     
