@@ -61,6 +61,7 @@
             this.civilBirthYear = new System.Windows.Forms.ComboBox();
             this.civilSex = new System.Windows.Forms.ComboBox();
             this.civilStatus = new System.Windows.Forms.ComboBox();
+            this.registerBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -466,10 +467,23 @@
             this.civilStatus.Size = new System.Drawing.Size(117, 23);
             this.civilStatus.TabIndex = 78;
             // 
+            // registerBut
+            // 
+            this.registerBut.BackColor = System.Drawing.Color.Transparent;
+            this.registerBut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.registerBut.ForeColor = System.Drawing.Color.White;
+            this.registerBut.Location = new System.Drawing.Point(670, 340);
+            this.registerBut.Name = "registerBut";
+            this.registerBut.Size = new System.Drawing.Size(120, 31);
+            this.registerBut.TabIndex = 79;
+            this.registerBut.Text = "REGISTER";
+            this.registerBut.UseVisualStyleBackColor = false;
+            // 
             // Regis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.registerBut);
             this.Controls.Add(this.civilStatus);
             this.Controls.Add(this.civilSex);
             this.Controls.Add(this.civilBirthYear);
@@ -505,6 +519,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "Regis";
             this.Size = new System.Drawing.Size(816, 390);
+            this.Load += new System.EventHandler(this.Regis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -546,5 +561,6 @@
         private ComboBox civilBirthYear;
         private ComboBox civilSex;
         private ComboBox civilStatus;
+        private Button registerBut;
     }
 }
