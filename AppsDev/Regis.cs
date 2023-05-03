@@ -22,5 +22,12 @@ namespace AppsDev
             this.BackColor = color.lighter();
 
         }
+    
+
+        private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int year = Convert.ToInt32(civilBirthYear.Text);
+            civilAge.Text = Convert.ToString(2023-year);
+        }
     }
 }
