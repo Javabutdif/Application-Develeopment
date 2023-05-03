@@ -24,14 +24,13 @@ namespace AppsDev
             this.resultDisplay.Visible = false;
             this.resultNot.Visible = false;
             this.tryAgain.Visible = false;
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "")
             {
-                this.label1.Visible = false;
-                this.textBox1.Visible = false;
-                this.button1.Visible = false;
+               
                 this.resultDisplay.Visible = true;
             }
             else
@@ -54,6 +53,12 @@ namespace AppsDev
             this.resultNot.Visible = false;
             this.tryAgain.Visible = false;
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox1.Text == "")
+                this.resultDisplay.Visible =false;
         }
     }
 }

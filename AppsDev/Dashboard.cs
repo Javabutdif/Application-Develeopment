@@ -30,9 +30,9 @@ namespace AppsDev
 
             MyBaseForm data = new MyBaseForm();
 
-            this.lastNameDisplay.Text = data.getL;
+            this.lastNameDisplay.Text = data.getL + ",";
             this.firstNameDisplay.Text = data.getF;
-            this.middleNameDisplay.Text = data.getM;
+          
             this.regionNum.Text = data.getR;
             this.provinceData.Text = data.getP;
             this.cityData.Text = data.getC;
@@ -40,7 +40,7 @@ namespace AppsDev
 
         }
 
-
+      
     }
 
 }
