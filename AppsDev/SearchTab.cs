@@ -24,14 +24,32 @@ namespace AppsDev
             this.resultDisplay.Visible = false;
             this.resultNot.Visible = false;
             this.tryAgain.Visible = false;
+            this.panel1.Visible = false;
 
         }
+        private static string path = @"D:\Barangay Registration\Database\";
         private void button1_Click(object sender, EventArgs e)
         {
+            Civil person = new Civil();
             if (textBox1.Text != "")
             {
+                if (File.Exists(path + textBox1.Text + ".txt"))
+                {
+                    passData = path + textBox1.Text + ".txt";
+                    this.panel1.Visible = true;
+                    this.resultDisplay.Visible = true;
+
+                
+                    this.displayName.Text = person.Lastname + "," + person.Firstname + "," + person.MIDdlename;
+                    this.refCode.Text = "REF: " + textBox1.Text;
+                }
                
-                this.resultDisplay.Visible = true;
+                else
+                {
+                    this.resultDisplay.Visible = false;
+                    this.panel1.Visible = false;
+                }
+
             }
             else
             {
@@ -43,6 +61,8 @@ namespace AppsDev
 
             }
         }
+        private static string data;
+        public string passData { set { data = value; } get { return data; } }
 
         private void tryAgain_Click(object sender, EventArgs e)
         {
@@ -57,8 +77,8 @@ namespace AppsDev
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if(textBox1.Text == "")
-                this.resultDisplay.Visible =false;
+            if (textBox1.Text == "")
+                this.resultDisplay.Visible = false;
         }
     }
 }

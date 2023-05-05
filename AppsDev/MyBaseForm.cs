@@ -208,13 +208,13 @@ namespace AppsDev
             dashboard1.Visible = true;
             regis1.Visible = false;
 
-         
-           
+
+
 
 
 
         }
-       
+
 
         private void dashB_Click(object sender, EventArgs e)
         {

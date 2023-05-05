@@ -178,6 +178,7 @@
             regis1.BackColor = Color.FromArgb(16, 120, 116);
             regis1.Location = new Point(0, 51);
             regis1.Name = "regis1";
+            regis1.Reference = null;
             regis1.Size = new Size(816, 367);
             regis1.TabIndex = 5;
             // 
@@ -195,7 +196,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MyBaseForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MyBaseForm";
+            Text = "Barangay Registration";
             Load += MyBaseForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

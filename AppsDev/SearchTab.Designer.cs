@@ -28,107 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tryAgain = new System.Windows.Forms.Button();
-            this.resultNot = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.resultDisplay = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            tryAgain = new Button();
+            resultNot = new Label();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            resultDisplay = new Label();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            refCode = new Label();
+            displayName = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // tryAgain
             // 
-            this.tryAgain.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tryAgain.ForeColor = System.Drawing.Color.White;
-            this.tryAgain.Location = new System.Drawing.Point(345, 334);
-            this.tryAgain.Name = "tryAgain";
-            this.tryAgain.Size = new System.Drawing.Size(136, 46);
-            this.tryAgain.TabIndex = 15;
-            this.tryAgain.Text = "TRY AGAIN";
-            this.tryAgain.UseVisualStyleBackColor = true;
-            this.tryAgain.Click += new System.EventHandler(this.tryAgain_Click);
+            tryAgain.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tryAgain.ForeColor = Color.White;
+            tryAgain.Location = new Point(345, 334);
+            tryAgain.Name = "tryAgain";
+            tryAgain.Size = new Size(136, 46);
+            tryAgain.TabIndex = 15;
+            tryAgain.Text = "TRY AGAIN";
+            tryAgain.UseVisualStyleBackColor = true;
+            tryAgain.Click += tryAgain_Click;
             // 
             // resultNot
             // 
-            this.resultNot.AutoSize = true;
-            this.resultNot.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.resultNot.ForeColor = System.Drawing.Color.White;
-            this.resultNot.Location = new System.Drawing.Point(219, 173);
-            this.resultNot.Name = "resultNot";
-            this.resultNot.Size = new System.Drawing.Size(378, 65);
-            this.resultNot.TabIndex = 14;
-            this.resultNot.Text = "Result not found";
+            resultNot.AutoSize = true;
+            resultNot.Font = new Font("Segoe UI", 36F, FontStyle.Underline, GraphicsUnit.Point);
+            resultNot.ForeColor = Color.White;
+            resultNot.Location = new Point(219, 173);
+            resultNot.Name = "resultNot";
+            resultNot.Size = new Size(378, 65);
+            resultNot.TabIndex = 14;
+            resultNot.Text = "Result not found";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(541, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(541, 39);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 13;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 23);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            textBox1.Location = new Point(200, 39);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(322, 23);
+            textBox1.TabIndex = 12;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(200, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 25);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Name / Reference Code: ";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(200, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(220, 25);
+            label1.TabIndex = 11;
+            label1.Text = "Name / Reference Code: ";
             // 
             // resultDisplay
             // 
-            this.resultDisplay.AutoSize = true;
-            this.resultDisplay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.resultDisplay.ForeColor = System.Drawing.Color.White;
-            this.resultDisplay.Location = new System.Drawing.Point(200, 65);
-            this.resultDisplay.Name = "resultDisplay";
-            this.resultDisplay.Size = new System.Drawing.Size(71, 25);
-            this.resultDisplay.TabIndex = 16;
-            this.resultDisplay.Text = "Result: ";
+            resultDisplay.AutoSize = true;
+            resultDisplay.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            resultDisplay.ForeColor = Color.White;
+            resultDisplay.Location = new Point(200, 65);
+            resultDisplay.Name = "resultDisplay";
+            resultDisplay.Size = new Size(71, 25);
+            resultDisplay.TabIndex = 16;
+            resultDisplay.Text = "Result: ";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AppsDev.Properties.Resources.opacity20;
-            this.pictureBox2.Location = new System.Drawing.Point(268, 68);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(284, 260);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.opacity20;
+            pictureBox2.Location = new Point(268, 68);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(284, 260);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 17;
+            pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(refCode);
+            panel1.Controls.Add(displayName);
+            panel1.Location = new Point(205, 99);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(411, 29);
+            panel1.TabIndex = 18;
+            // 
+            // refCode
+            // 
+            refCode.AutoSize = true;
+            refCode.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            refCode.ForeColor = Color.White;
+            refCode.Location = new Point(279, 4);
+            refCode.Name = "refCode";
+            refCode.Size = new Size(38, 25);
+            refCode.TabIndex = 1;
+            refCode.Text = "Ref";
+            // 
+            // displayName
+            // 
+            displayName.AutoSize = true;
+            displayName.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            displayName.ForeColor = Color.White;
+            displayName.Location = new Point(0, 0);
+            displayName.Name = "displayName";
+            displayName.Size = new Size(65, 25);
+            displayName.TabIndex = 0;
+            displayName.Text = "NAME";
             // 
             // SearchTab
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.resultNot);
-            this.Controls.Add(this.resultDisplay);
-            this.Controls.Add(this.tryAgain);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Name = "SearchTab";
-            this.Size = new System.Drawing.Size(816, 390);
-            this.Load += new System.EventHandler(this.SearchTab_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
+            Controls.Add(resultNot);
+            Controls.Add(resultDisplay);
+            Controls.Add(tryAgain);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
+            Name = "SearchTab";
+            Size = new Size(816, 390);
+            Load += SearchTab_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -140,5 +177,8 @@
         private Label label1;
         private Label resultDisplay;
         private PictureBox pictureBox2;
+        private Panel panel1;
+        private Label refCode;
+        private Label displayName;
     }
 }
