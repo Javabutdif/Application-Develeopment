@@ -43,7 +43,8 @@ namespace AppsDev
             this.Close();
         }
         Form2 getR = new Form2();
-        
+
+        private static string path = @"D:\Barangay Registration\Admin\";
         private void signUp_Click(object sender, EventArgs e)
         {
             if (userIn != "" && passIn != "")
@@ -51,13 +52,13 @@ namespace AppsDev
                 if (passIn.Equals(confirm))
                 {
 
-         
+                
               
 
                     Users admin = new Users(getR.getReference(), userIn, passIn, Form2.firstInfo);
-                    string[] lines = File.ReadAllLines(@"D:\Users.txt");
+                    string[] lines = File.ReadAllLines(path + "Users.txt");
 
-                    using (StreamWriter writeData = new StreamWriter(@"D:\Users.txt"))
+                    using (StreamWriter writeData = new StreamWriter(path + "Users.txt"))
                         {
 
                             

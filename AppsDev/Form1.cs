@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic;
 using System.Diagnostics.Tracing;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
@@ -45,6 +46,8 @@ namespace AppsDev
 
         }
 
+        private static string path = @"D:\Barangay Registration\Admin\";
+        private static string database = @"D:\Barangay Registration\Database\";
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,13 +55,15 @@ namespace AppsDev
             this.BackColor = ColorTranslator.FromHtml("#107874");
             this.panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
 
+            
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            Directory.CreateDirectory(Path.GetDirectoryName(database));
 
 
 
-
-            if (!File.Exists(@"D:\Users.txt"))
+            if (!File.Exists(path+"Users.txt"))
             {
-                using (StreamWriter write = new StreamWriter(@"D:\Users.txt"))
+                using (StreamWriter write = new StreamWriter(path + "Users.txt"))
                 {
                     write.Write("");
                 }
@@ -73,13 +78,13 @@ namespace AppsDev
             getUser = textBox1.Text;
             getPass = textBox2.Text;
 
-            if (File.Exists(@"D:\Users.txt"))
+            if (File.Exists(path + "Users.txt"))
             {
 
                 int count;
-                for (count = 0; count < File.ReadAllLines(@"D:\Users.txt").Length; count++)
+                for (count = 0; count < File.ReadAllLines(path + "Users.txt").Length; count++)
                 {
-                    string[] frag = File.ReadAllText(@"D:\Users.txt").Split("\n");
+                    string[] frag = File.ReadAllText(path + "Users.txt").Split("\n");
                     string[] us = frag[count].Split(",");
 
                     UserLogin u = new UserLogin(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10]);

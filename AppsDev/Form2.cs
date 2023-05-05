@@ -50,16 +50,16 @@ namespace AppsDev
 
         }
         public static string firstInfo = "";
-      
 
+        private static string path = @"D:\Barangay Registration\Admin\";
         private void nextBut_Click(object sender, EventArgs e)
         {
             if (lastName.Text != "" && firstName.Text != "" && middleName.Text != "" && governID.Text != "" && regionText.Text != "" && provinceText.Text != "" && cityText.Text != "" && barangayText.Text != "")
             {
                 firstInfo = lastName.Text + "," + firstName.Text + "," + middleName.Text + "," + governID.Text + "," + regionText.Text + "," + provinceText.Text + "," + cityText.Text + "," + barangayText.Text;
-                if (!File.Exists(@"D:\Users.txt"))
+                if (!File.Exists(path + "Users.txt"))
                 {
-                    using (StreamWriter write = new StreamWriter(@"D:\Users.txt"))
+                    using (StreamWriter write = new StreamWriter(path + "Users.txt"))
                     {
                         write.Write("");
                     }
