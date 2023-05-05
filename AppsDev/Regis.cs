@@ -72,7 +72,7 @@ namespace AppsDev
             int year = Convert.ToInt32(civilBirthYear.Text);
             civilAge.Text = Convert.ToString(2023 - year);
         }
-        private static string path = @"D:\Barangay Registration\Database\";
+        private static string path = @"C:\Barangay Registration\Database\";
         private string reference;
         private void registerBut_Click(object sender, EventArgs e)
         {

@@ -44,7 +44,7 @@ namespace AppsDev
         }
         Form2 getR = new Form2();
 
-        private static string path = @"D:\Barangay Registration\Admin\";
+        private static string path = @"C:\Barangay Registration\Admin\";
         private void signUp_Click(object sender, EventArgs e)
         {
             if (userIn != "" && passIn != "")

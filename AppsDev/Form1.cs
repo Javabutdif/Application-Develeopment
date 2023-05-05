@@ -46,22 +46,26 @@ namespace AppsDev
 
         }
 
-        private static string path = @"D:\Barangay Registration\Admin\";
-        private static string database = @"D:\Barangay Registration\Database\";
+        private static string path = @"C:\Barangay Registration\Admin\";
+        private static string database = @"C:\Barangay Registration\Database\";
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
+
+
             this.BackColor = ColorTranslator.FromHtml("#107874");
             this.panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
 
-            
+
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             Directory.CreateDirectory(Path.GetDirectoryName(database));
 
 
 
-            if (!File.Exists(path+"Users.txt"))
+            if (!File.Exists(path + "Users.txt"))
             {
                 using (StreamWriter write = new StreamWriter(path + "Users.txt"))
                 {
@@ -179,6 +183,14 @@ namespace AppsDev
 
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void pictureBox3_MouseHover(object sender, EventArgs e)
+        {
+            this.ForeColor = color.lighter();
+        }
     }
 }

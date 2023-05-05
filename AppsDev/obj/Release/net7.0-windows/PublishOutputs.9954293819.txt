@@ -1,0 +1,5 @@
+C:\Users\james\Desktop\Barangay Registration Deployable\AppsDev.exe
+C:\Users\james\Desktop\Barangay Registration Deployable\AppsDev.dll
+C:\Users\james\Desktop\Barangay Registration Deployable\AppsDev.deps.json
+C:\Users\james\Desktop\Barangay Registration Deployable\AppsDev.runtimeconfig.json
+C:\Users\james\Desktop\Barangay Registration Deployable\AppsDev.pdb

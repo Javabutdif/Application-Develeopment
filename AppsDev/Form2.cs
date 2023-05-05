@@ -51,7 +51,7 @@ namespace AppsDev
         }
         public static string firstInfo = "";
 
-        private static string path = @"D:\Barangay Registration\Admin\";
+        private static string path = @"C:\Barangay Registration\Admin\";
         private void nextBut_Click(object sender, EventArgs e)
         {
             if (lastName.Text != "" && firstName.Text != "" && middleName.Text != "" && governID.Text != "" && regionText.Text != "" && provinceText.Text != "" && cityText.Text != "" && barangayText.Text != "")

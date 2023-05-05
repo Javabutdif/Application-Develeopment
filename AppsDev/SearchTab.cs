@@ -27,12 +27,11 @@ namespace AppsDev
             this.panel1.Visible = false;
 
         }
-        private static string path = @"D:\Barangay Registration\Database\";
+        private static string path = @"C:\Barangay Registration\Database\";
         private void button1_Click(object sender, EventArgs e)
         {
             Civil person = new Civil();
-            try
-            {
+            
                 if (File.Exists(path + textBox1.Text + ".txt"))
                 {
                     passData = path + textBox1.Text + ".txt";
@@ -55,11 +54,7 @@ namespace AppsDev
                     this.resultDisplay.Visible = false;
                     this.panel1.Visible = false;
                 }
-            }catch(Exception ex)
-            {
-                this.resultNot.Visible = true;
-                this.tryAgain.Visible = true;
-            }
+        
 
             
           
