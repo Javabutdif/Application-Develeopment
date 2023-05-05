@@ -16,19 +16,34 @@ namespace AppsDev
         {
             InitializeComponent();
         }
+
+
+
+
+
         Hover color = new Hover();
+
         private void SuccessfulRegis_Load(object sender, EventArgs e)
         {
+            var re = this.Parent as Regis;
+           
             this.BackColor = color.lighter();
             this.displaySuccess.BackColor = color.lighterDark();
             this.continueBut.BackColor = color.lighter();
+            this.displaySuccess.Text = re.Reference;
+            this.label2.BackColor = color.lighterDark();
+            this.panel1.BackColor = color.lighterDark();
         }
-        public int counter = 0;
+
         public void continueBut_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            counter++;
-           
+            
+            var re = this.Parent as Regis;
+      
+            re.Reference = "";
+
         }
+
+      
     }
 }

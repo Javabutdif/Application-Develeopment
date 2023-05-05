@@ -32,7 +32,10 @@
             label1 = new Label();
             displaySuccess = new Label();
             continueBut = new Button();
+            label2 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox2
@@ -60,12 +63,13 @@
             // 
             displaySuccess.AutoSize = true;
             displaySuccess.BackColor = Color.Transparent;
+            displaySuccess.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             displaySuccess.ForeColor = Color.White;
-            displaySuccess.Location = new Point(351, 149);
+            displaySuccess.Location = new Point(278, 0);
             displaySuccess.Name = "displaySuccess";
-            displaySuccess.Size = new Size(140, 15);
+            displaySuccess.Size = new Size(54, 25);
             displaySuccess.TabIndex = 21;
-            displaySuccess.Text = "thisDisplayRegisteredInfo";
+            displaySuccess.Text = "INFO";
             // 
             // continueBut
             // 
@@ -80,18 +84,41 @@
             continueBut.UseVisualStyleBackColor = false;
             continueBut.Click += continueBut_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.Control;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(153, 25);
+            label2.TabIndex = 81;
+            label2.Text = "Reference Code: ";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(displaySuccess);
+            panel1.Location = new Point(220, 177);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(402, 32);
+            panel1.TabIndex = 82;
+            // 
             // SuccessfulRegis
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
             Controls.Add(continueBut);
-            Controls.Add(displaySuccess);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Name = "SuccessfulRegis";
             Size = new Size(816, 390);
             Load += SuccessfulRegis_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,5 +129,7 @@
         private Label label1;
         private Label displaySuccess;
         private Button continueBut;
+        private Label label2;
+        private Panel panel1;
     }
 }

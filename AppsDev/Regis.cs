@@ -51,7 +51,7 @@ namespace AppsDev
 
 
         }
-        private string getID()
+        public static string getID()
         {
             Random rand = new Random();
             string reference = "";
@@ -64,6 +64,7 @@ namespace AppsDev
 
             return reference;
         }
+        private string reference = getID();
 
 
         private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,16 +75,18 @@ namespace AppsDev
         private static string path = @"D:\Barangay Registration\Database\";
         private void registerBut_Click(object sender, EventArgs e)
         {
-            string reference = getID();
+            
             using (StreamWriter write = new StreamWriter(path+reference+".txt"))
             {
                 write.Write(civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text);
             }
-
+            
 
             this.successfulRegis1.Visible = true;
 
 
         }
+        public string Reference { get { return reference; } set { reference = value; } }
+    
     }
 }
