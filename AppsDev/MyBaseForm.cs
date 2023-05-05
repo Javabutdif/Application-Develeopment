@@ -30,104 +30,17 @@ namespace AppsDev
         private static string b;
 
 
-        public string setL
-        {
-            set
-            {
-                ln = value;
-            }
-        }
-        public string setF
-        {
-            set
-            {
-                fn = value;
-            }
-        }
-        public string setM
-        {
-            set
-            {
-                mn = value;
-            }
-        }
-        public string setR
-        {
-            set
-            {
-                r = value;
-            }
-        }
-        public string setP
-        {
-            set
-            {
-                p = value;
-            }
-        }
-        public string setC
-        {
-            set
-            {
-                c = value;
-            }
-        }
-        public string setB
-        {
-            set
-            {
-                b = value;
-            }
-        }
-        public string getL
-        {
-            get
-            {
-                return ln;
-            }
-        }
-        public string getF
-        {
-            get
-            {
-                return fn;
-            }
-        }
-        public string getM
-        {
-            get
-            {
-                return mn;
-            }
-        }
-        public string getR
-        {
-            get
-            {
-                return r;
-            }
-        }
-        public string getP
-        {
-            get
-            {
-                return p;
-            }
-        }
-        public string getC
-        {
-            get
-            {
-                return c;
-            }
-        }
-        public string getB
-        {
-            get
-            {
-                return b;
-            }
-        }
+        
+        public string getL { get { return ln; } set { ln = value; } }
+        public string getF { get { return fn; } set { fn = value; } }
+        public string getM { get { return mn; } set { mn = value; } }
+        
+        public string getR { get { return r; } set { r = value; } }
+        
+        public string getP { get { return p; } set { p = value; } }
+
+        public string getC { get { return c; } set { c = value; } }
+        public string getB { get { return b; } set { b = value; } }
 
 
 

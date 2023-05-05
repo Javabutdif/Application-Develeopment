@@ -33,6 +33,7 @@ namespace AppsDev
             Civil person = new Civil();
             if (textBox1.Text != "")
             {
+                
                 if (File.Exists(path + textBox1.Text + ".txt"))
                 {
                     passData = path + textBox1.Text + ".txt";

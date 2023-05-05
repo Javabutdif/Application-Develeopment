@@ -114,13 +114,13 @@ namespace AppsDev
                         this.Hide();
 
                         MyBaseForm parent = new MyBaseForm();
-                        parent.setL = lastName;
-                        parent.setF = firstName;
-                        parent.setM = middleName;
-                        parent.setR = regionN;
-                        parent.setP = provinceN;
-                        parent.setC = cityN;
-                        parent.setB = barangayN;
+                        parent.getL = lastName;
+                        parent.getF = firstName;
+                        parent.getM = middleName;
+                        parent.getR = regionN;
+                        parent.getP = provinceN;
+                        parent.getC = cityN;
+                        parent.getB = barangayN;
 
 
 

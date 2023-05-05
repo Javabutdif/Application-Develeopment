@@ -10,22 +10,22 @@ namespace AppsDev
     internal class Civil
     {
      
-        private static string lastname;
-        private static string firstname;
-        private static string middlename;
-        private static string birthM;
-        private static string birthDate;
-        private static string birthYear;
-        private static string age;
-        private static string sex;
-        private static string status;
-        private static string religion;
-        private static string birthPlace;
-        private static string phoneNumber;
-        private static string address;
-        private static string ID;
-        private static string idNum;
-        private static string email;
+        private static string lastname = "";
+        private static string firstname = "";
+        private static string middlename = "";
+        private static string birthM = "";
+        private static string birthDate = "";
+        private static string birthYear = "";
+        private static string age = "";
+        private static string sex = "";
+        private static string status = "";
+        private static string religion = "";
+        private static string birthPlace = "";
+        private static string phoneNumber = "";
+        private static string address = "";
+        private static string ID = "";
+        private static string idNum = "";
+        private static string email = "";
 
         
         public Civil() {
