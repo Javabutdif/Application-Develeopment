@@ -350,7 +350,7 @@
             // civilSex
             // 
             civilSex.FormattingEnabled = true;
-            civilSex.Items.AddRange(new object[] { "Male", "Femaile", "Do Not Specify" });
+            civilSex.Items.AddRange(new object[] { "Male", "Female", "Do Not Specify" });
             civilSex.Location = new Point(427, 94);
             civilSex.Name = "civilSex";
             civilSex.Size = new Size(67, 23);

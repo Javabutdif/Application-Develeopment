@@ -27,7 +27,7 @@ namespace AppsDev
 
 
 
-            
+
         }
         private void clearSelection_Click(object sender, EventArgs e)
         {
@@ -57,14 +57,14 @@ namespace AppsDev
             string reference = "";
             char[] letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789".ToCharArray();
 
-            for(int i =0; i < 8; i++)
+            for (int i = 0; i < 8; i++)
             {
                 reference += letters[rand.Next(letters.Length)];
             }
 
             return reference;
         }
-        private string reference = getID();
+       
 
 
         private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,20 +73,28 @@ namespace AppsDev
             civilAge.Text = Convert.ToString(2023 - year);
         }
         private static string path = @"D:\Barangay Registration\Database\";
+        private string reference;
         private void registerBut_Click(object sender, EventArgs e)
         {
+            Reference = getID();
             
-            using (StreamWriter write = new StreamWriter(path+reference+".txt"))
+            using (StreamWriter write = new StreamWriter(path + Reference + ".txt"))
             {
                 write.Write(civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text);
             }
-            
+
 
             this.successfulRegis1.Visible = true;
 
+           
 
         }
-        public string Reference { get { return reference; } set { reference = value; } }
-    
+        public string Reference { set { reference = value; } get { return reference; } }
+
+
+
+      
+
+
     }
 }

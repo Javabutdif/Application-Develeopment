@@ -65,11 +65,11 @@
             displaySuccess.BackColor = Color.Transparent;
             displaySuccess.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             displaySuccess.ForeColor = Color.White;
-            displaySuccess.Location = new Point(278, 0);
+            displaySuccess.Location = new Point(292, 0);
             displaySuccess.Name = "displaySuccess";
-            displaySuccess.Size = new Size(54, 25);
+            displaySuccess.Size = new Size(94, 25);
             displaySuccess.TabIndex = 21;
-            displaySuccess.Text = "INFO";
+            displaySuccess.Text = "INFO1234";
             // 
             // continueBut
             // 
@@ -116,6 +116,7 @@
             Name = "SuccessfulRegis";
             Size = new Size(816, 390);
             Load += SuccessfulRegis_Load;
+            VisibleChanged += SuccessfulRegis_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
