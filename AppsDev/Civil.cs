@@ -28,12 +28,8 @@ namespace AppsDev
         private static string email = "";
 
         
-        public Civil() {
-
-           
-            setData();
-        }
-        private void setData()
+      
+        public void setData()
         {
             SearchTab tab = new SearchTab();
 

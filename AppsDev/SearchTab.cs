@@ -31,38 +31,40 @@ namespace AppsDev
         private void button1_Click(object sender, EventArgs e)
         {
             Civil person = new Civil();
-            if (textBox1.Text != "")
+            try
             {
-                
                 if (File.Exists(path + textBox1.Text + ".txt"))
                 {
                     passData = path + textBox1.Text + ".txt";
                     this.panel1.Visible = true;
                     this.resultDisplay.Visible = true;
+                    person.setData();
 
-                
-                    this.displayName.Text = person.Lastname + "," + person.Firstname + "," + person.MIDdlename;
+
+                    this.displayName.Text = person.Lastname + ", " + person.Firstname + person.MIDdlename;
                     this.refCode.Text = "REF: " + textBox1.Text;
                 }
-               
+
                 else
                 {
+                    this.label1.Visible = false;
+                    this.textBox1.Visible = false;
+                    this.button1.Visible = false;
+                    this.resultNot.Visible = true;
+                    this.tryAgain.Visible = true;
                     this.resultDisplay.Visible = false;
                     this.panel1.Visible = false;
                 }
-
-            }
-            else
+            }catch(Exception ex)
             {
-                this.label1.Visible = false;
-                this.textBox1.Visible = false;
-                this.button1.Visible = false;
                 this.resultNot.Visible = true;
                 this.tryAgain.Visible = true;
-
             }
+
+            
+          
         }
-        private static string data;
+        private static string data = "";
         public string passData { set { data = value; } get { return data; } }
 
         private void tryAgain_Click(object sender, EventArgs e)
@@ -78,8 +80,11 @@ namespace AppsDev
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+           
                 this.resultDisplay.Visible = false;
+                this.panel1.Visible = false;
+            
+               
         }
     }
 }
