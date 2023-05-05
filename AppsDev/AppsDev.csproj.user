@@ -25,7 +25,13 @@
     <Compile Update="Regis.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="RegisResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="SearchTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SuccessfulRegis.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

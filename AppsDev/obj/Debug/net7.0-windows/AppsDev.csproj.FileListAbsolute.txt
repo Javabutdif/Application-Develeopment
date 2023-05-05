@@ -253,3 +253,5 @@ C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Debug\net7.0-windows\refint\AppsDev.d
 C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Debug\net7.0-windows\AppsDev.pdb
 C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Debug\net7.0-windows\AppsDev.genruntimeconfig.cache
 C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Debug\net7.0-windows\ref\AppsDev.dll
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.RegisResult.resources
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Debug\net7.0-windows\AppsDev.SuccessfulRegis.resources

@@ -207,6 +207,7 @@ namespace AppsDev
             searchTab1.Visible = false;
             dashboard1.Visible = true;
             regis1.Visible = false;
+           
 
 
 
