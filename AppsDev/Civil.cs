@@ -81,7 +81,7 @@ namespace AppsDev
         }
         public void getList(string search)
         {
-            Civil? user = list.Where(user => user.Lastname.Equals(search)).FirstOrDefault();
+            Civil? user = list.Where(user => user.Lastname.Equals(search) || user.id.Equals(search) || user.firstname.Equals(search)).FirstOrDefault();
 
             if (user != null)
             {
