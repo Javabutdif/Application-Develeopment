@@ -8,7 +8,7 @@ namespace AppsDev
 {
     public class Users
     {
-        string allInfo = "";
+        private string allInfo = "";
         public Users() { 
         }
 

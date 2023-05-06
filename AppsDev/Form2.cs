@@ -49,14 +49,14 @@ namespace AppsDev
         {
 
         }
-        public static string firstInfo = "";
+        private static string firstInfo1 = "";
 
         private static string path = @"C:\Barangay Registration\Admin\";
         private void nextBut_Click(object sender, EventArgs e)
         {
             if (lastName.Text != "" && firstName.Text != "" && middleName.Text != "" && governID.Text != "" && regionText.Text != "" && provinceText.Text != "" && cityText.Text != "" && barangayText.Text != "")
             {
-                firstInfo = lastName.Text + "," + firstName.Text + "," + middleName.Text + "," + governID.Text + "," + regionText.Text + "," + provinceText.Text + "," + cityText.Text + "," + barangayText.Text;
+                firstInfo1 = lastName.Text + "," + firstName.Text + "," + middleName.Text + "," + governID.Text + "," + regionText.Text + "," + provinceText.Text + "," + cityText.Text + "," + barangayText.Text;
                 if (!File.Exists(path + "Users.txt"))
                 {
                     using (StreamWriter write = new StreamWriter(path + "Users.txt"))
@@ -76,6 +76,7 @@ namespace AppsDev
 
             
         }
+        public string firstinfo { get { return firstInfo1; } }
         public string getReference()
         {
             Generate refer = new Generate();

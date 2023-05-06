@@ -55,7 +55,7 @@ namespace AppsDev
                 
               
 
-                    Users admin = new Users(getR.getReference(), userIn, passIn, Form2.firstInfo);
+                    Users admin = new Users(getR.getReference(), userIn, passIn, getR.firstinfo);
                     string[] lines = File.ReadAllLines(path + "Users.txt");
 
                     using (StreamWriter writeData = new StreamWriter(path + "Users.txt"))

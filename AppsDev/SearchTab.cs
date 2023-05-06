@@ -31,17 +31,38 @@ namespace AppsDev
         private void button1_Click(object sender, EventArgs e)
         {
             Civil person = new Civil();
-            
-                if (File.Exists(path + textBox1.Text + ".txt"))
+            passData = path + "Citizen.txt";
+            person.setData();
+
+              if (File.Exists(path +  "Citizen.txt"))
                 {
-                    passData = path + textBox1.Text + ".txt";
+                try
+                {
+                    person.getList(textBox1.Text);
+
+
                     this.panel1.Visible = true;
                     this.resultDisplay.Visible = true;
-                    person.setData();
 
 
-                    this.displayName.Text = person.Lastname + ", " + person.Firstname + person.MIDdlename;
-                    this.refCode.Text = "REF: " + textBox1.Text;
+
+                    this.displayName.Text = person.Lastname + ", " + person.Firstname +" "+ person.MIDdlename;
+                    this.refCode.Text = "REF: " + person.reference;
+
+
+
+                }
+                catch(Exception ex)
+                {
+                    this.label1.Visible = false;
+                    this.textBox1.Visible = false;
+                    this.button1.Visible = false;
+                    this.resultNot.Visible = true;
+                    this.tryAgain.Visible = true;
+                    this.resultDisplay.Visible = false;
+                    this.panel1.Visible = false;
+                }
+                     
                 }
 
                 else

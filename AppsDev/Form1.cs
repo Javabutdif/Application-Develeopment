@@ -24,8 +24,8 @@ namespace AppsDev
          * Form2 = Admin Registration
          * Form3 = Username and Password Registration
          * Form4 = Successful Page
-         * Form5 = Dashboard
-         * 
+         * MyBaseForm = Parent Form
+         * Dashboard , Searchtab , Regis = UserControl
          * 
          * 
          * 
@@ -68,6 +68,13 @@ namespace AppsDev
             if (!File.Exists(path + "Users.txt"))
             {
                 using (StreamWriter write = new StreamWriter(path + "Users.txt"))
+                {
+                    write.Write("");
+                }
+            }
+            if (!File.Exists(database + "Citizen.txt"))
+            {
+                using (StreamWriter write = new StreamWriter(database + "Citizen.txt"))
                 {
                     write.Write("");
                 }

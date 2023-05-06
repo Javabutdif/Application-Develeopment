@@ -74,13 +74,27 @@ namespace AppsDev
         }
         private static string path = @"C:\Barangay Registration\Database\";
         private string reference;
+        private string citizenInfo = "";
         private void registerBut_Click(object sender, EventArgs e)
         {
             Reference = getID();
             
-            using (StreamWriter write = new StreamWriter(path + Reference + ".txt"))
+           
+            citizenInfo =Reference+","+ civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text;
+            
+
+
+            string[] lines = File.ReadAllLines(path + "Citizen.txt");
+
+            using (StreamWriter writeData = new StreamWriter(path + "Citizen.txt"))
             {
-                write.Write(civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text);
+
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    writeData.WriteLine(lines[i]);
+                }
+                writeData.WriteLine(citizenInfo);
             }
 
 
