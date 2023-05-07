@@ -69,6 +69,7 @@ namespace AppsDev
                         identification = person.identification;
                         idNumber = person.idNumber;
                         Email = person.Email;
+                        id = person.reference;
 
                     }
                     else
