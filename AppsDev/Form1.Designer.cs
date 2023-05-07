@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             panel2 = new Panel();
-            pictureBox3 = new PictureBox();
             linkLabel1 = new LinkLabel();
             label3 = new Label();
             button1 = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -65,18 +65,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(218, 455);
             panel2.TabIndex = 1;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.aaaaaa;
-            pictureBox3.Location = new Point(12, 12);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(23, 21);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 8;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
-            pictureBox3.MouseHover += pictureBox3_MouseHover;
             // 
             // linkLabel1
             // 
@@ -144,6 +132,18 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.aaaaaa;
+            pictureBox3.Location = new Point(12, 12);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(23, 21);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            pictureBox3.MouseHover += pictureBox3_MouseHover;
+            // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.Control;
@@ -175,8 +175,8 @@
             Load += Form1_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

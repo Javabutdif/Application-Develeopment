@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.LinkLabel;
+using System.IO;
 
 namespace AppsDev
 {
@@ -20,14 +22,14 @@ namespace AppsDev
             InitializeComponent();
         }
 
-
+        private List<Civil> list1 = new List<Civil>();
 
 
         Hover color = new Hover();
         private void DisplayForm_Load(object sender, EventArgs e)
         {
 
-           
+
             //
             /*
              * 
@@ -53,7 +55,9 @@ namespace AppsDev
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            
+            Civil c = new Civil();
+            c.list = list1;
+
 
         }
 
@@ -83,7 +87,64 @@ namespace AppsDev
 
         private void panel1_VisibleChanged(object sender, EventArgs e)
         {
-            
+
+        }
+       
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult d;
+            d = MessageBox.Show("Do you want to Delete? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (d == DialogResult.OK)
+            {
+             
+               
+
+                SearchTab tab = new SearchTab();
+
+
+
+
+                
+                int count;
+                for (count = 0; count < File.ReadAllLines(tab.passData).Length; count++)
+                {
+                    string[] frag = File.ReadAllText(tab.passData).Split("\n");
+                    string[] us = frag[count].Split(",");
+
+                    Civil cd = new Civil(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10], us[11], us[12], us[13], us[14], us[15], us[16]);
+                    list1.Add(cd);
+
+                }
+                
+
+                Civil? user = list1.Where(user => user.Lastname.Equals(lastnameDisplay.Text) ).FirstOrDefault();
+             
+                if(user!= null)
+                {
+                    list1.Remove(user);
+
+                    string[] arr = list1.Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
+
+
+
+
+                    using (StreamWriter writeData = new StreamWriter(tab.passData))
+                    {
+
+
+                        for (int i = 0; i < list1.Count; i++)
+                        {
+
+                          
+                            writeData.Write(arr[i]);
+                        }
+
+                    }
+
+
+                }
+                
+            }
         }
     }
 }

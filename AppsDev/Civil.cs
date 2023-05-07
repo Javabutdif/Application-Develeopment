@@ -29,7 +29,7 @@ namespace AppsDev
         private string idNum = "";
         private string email = "";
 
-        private Civil(string id, string l, string f, string m, string bm, string bd, string by, string age, string sex, string status, string religion, string bp, string pn, string add, string idP, string idnum, string email)
+        public Civil(string id, string l, string f, string m, string bm, string bd, string by, string age, string sex, string status, string religion, string bp, string pn, string add, string idP, string idnum, string email)
         {
             this.id = id;
             this.lastname = l;
@@ -61,8 +61,7 @@ namespace AppsDev
             SearchTab tab = new SearchTab();
 
 
-
-            string[] info = File.ReadAllText(tab.passData).Split(",");
+            
 
             int count;
             for (count = 0; count < File.ReadAllLines(tab.passData).Length; count++)
@@ -79,6 +78,8 @@ namespace AppsDev
 
 
         }
+        
+        
         public Civil getList(string search)
         {
             Civil? user = list.Where(user => user.Lastname.Equals(search) || user.id.Equals(search) || user.firstname.Equals(search)).FirstOrDefault();
@@ -103,9 +104,14 @@ namespace AppsDev
                 this.email = user.email;
                 this.id = user.reference;
             }
+            else
+            {
+                user = null;
+            }
 
             return user;
         }
+       
 
        
         public string Lastname { get { return this.lastname; } }

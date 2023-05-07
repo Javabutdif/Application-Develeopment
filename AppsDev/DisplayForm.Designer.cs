@@ -500,6 +500,7 @@
             deleteButton.TabIndex = 3;
             deleteButton.Text = "DELETE";
             deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // printButton
             // 
