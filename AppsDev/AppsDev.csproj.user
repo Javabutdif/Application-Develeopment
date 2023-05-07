@@ -7,6 +7,9 @@
     <Compile Update="Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="DisplayForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

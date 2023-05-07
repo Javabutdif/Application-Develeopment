@@ -16,6 +16,9 @@ namespace AppsDev
         {
             InitializeComponent();
         }
+      
+
+
         Hover color = new Hover();
         private void Regis_Load(object sender, EventArgs e)
         {

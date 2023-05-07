@@ -64,6 +64,7 @@
             registerBut = new Button();
             successfulRegis1 = new SuccessfulRegis();
             clearSelection = new Button();
+         
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 

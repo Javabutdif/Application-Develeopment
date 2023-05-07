@@ -38,6 +38,7 @@
             panel1 = new Panel();
             refCode = new Label();
             displayName = new Label();
+            displayForm1 = new DisplayForm();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -123,6 +124,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(411, 29);
             panel1.TabIndex = 18;
+            panel1.Click += panel1_Click;
             // 
             // refCode
             // 
@@ -134,6 +136,7 @@
             refCode.Size = new Size(38, 25);
             refCode.TabIndex = 1;
             refCode.Text = "Ref";
+            refCode.Click += displayName_Click;
             // 
             // displayName
             // 
@@ -145,11 +148,21 @@
             displayName.Size = new Size(65, 25);
             displayName.TabIndex = 0;
             displayName.Text = "NAME";
+            displayName.Click += displayName_Click;
+            // 
+            // displayForm1
+            // 
+            displayForm1.BackColor = Color.FromArgb(16, 120, 116);
+            displayForm1.Location = new Point(0, 0);
+            displayForm1.Name = "displayForm1";
+            displayForm1.Size = new Size(816, 390);
+            displayForm1.TabIndex = 19;
             // 
             // SearchTab
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(displayForm1);
             Controls.Add(panel1);
             Controls.Add(resultNot);
             Controls.Add(resultDisplay);
@@ -180,5 +193,6 @@
         private Panel panel1;
         private Label refCode;
         private Label displayName;
+        private DisplayForm displayForm1;
     }
 }

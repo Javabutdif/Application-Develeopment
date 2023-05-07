@@ -46,7 +46,7 @@ namespace AppsDev
             this.phoneNumber = pn;
             this.address = add;
             this.ID = idP;
-            this.idNum =idnum;
+            this.idNum = idnum;
             this.email = email;
         }
         public Civil()
@@ -54,13 +54,13 @@ namespace AppsDev
 
         }
 
-        
-      
+
+
         public void setData()
         {
             SearchTab tab = new SearchTab();
 
-           
+
 
             string[] info = File.ReadAllText(tab.passData).Split(",");
 
@@ -77,9 +77,9 @@ namespace AppsDev
 
 
 
-         
+
         }
-        public void getList(string search)
+        public Civil getList(string search)
         {
             Civil? user = list.Where(user => user.Lastname.Equals(search) || user.id.Equals(search) || user.firstname.Equals(search)).FirstOrDefault();
 
@@ -88,25 +88,43 @@ namespace AppsDev
                 this.lastname = user.lastname;
                 this.firstname = user.firstname;
                 this.middlename = user.middlename;
+                this.birthM = user.birthM;
+                this.birthDate = user.birthDate;
+                this.birthYear = user.birthYear;
+                this.age = user.age;
+                this.sex = user.sex;
+                this.status = user.status;
+                this.religion = user.religion;
+                this.birthPlace = user.birthPlace;
+                this.phoneNumber = user.phoneNumber;
+                this.address = user.address;
+                this.ID = user.ID;
+                this.idNum = user.idNum;
+                this.email = user.email;
                 this.id = user.reference;
             }
 
+            return user;
         }
 
        
-        public string Lastname { get { return lastname; } }
-        public string Firstname { get { return firstname; } }
-        public string MIDdlename { get { return middlename; } }
-        public string BirthM { get { return birthM; } }
-        public string BirthD { get { return birthDate; } }
-        public string BirthYear { get { return birthYear; } }
-        public string BirthPlace { get {  return birthPlace; } }
-        public string PhoneNumber { get {  return phoneNumber; } }
-        public string Address { get { return address; } }
-        public string identification { get { return ID; } }
-        public string Email { get { return email; } }
-        public string idNumber { get { return idNum; } }
-        public string reference { get { return id; } }
+        public string Lastname { get { return this.lastname; } }
+        public string Firstname { get { return this.firstname; } }
+        public string MIDdlename { get { return this.middlename; } }
+        public string BirthM { get { return this.birthM; } }
+        public string BirthD { get { return this.birthDate; } }
+        public string BirthYear { get { return  this.birthYear; } }
+        public string BirthPlace { get {  return this.birthPlace; } }
+        public string PhoneNumber { get {  return this.phoneNumber; } }
+        public string Address { get { return this.address; } }
+        public string identification { get { return this.ID; } }
+        public string Email { get { return this.email; } }
+        public string idNumber { get { return this.idNum; } }
+        public string reference { get { return this.id; } }
+        public string Age { get { return this.age; } }
+        public string Sex { get { return this.sex; } }
+        public string Religion { get { return this.religion; } }
+        public string Status { get { return this.status; } }
 
 
     }
