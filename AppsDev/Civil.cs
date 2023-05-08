@@ -9,7 +9,7 @@ namespace AppsDev
 {
     internal class Civil
     {
-        private List<Civil> list = new List<Civil>();
+        private static List<Civil> list = new List<Civil>();
 
         private string id = "";
         private string lastname = "";
@@ -87,6 +87,7 @@ namespace AppsDev
         {
 
             list.Remove(civil);
+          
         }
         public List<Civil> getData()
         {

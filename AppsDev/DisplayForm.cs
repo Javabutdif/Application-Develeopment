@@ -105,10 +105,6 @@ namespace AppsDev
                 {
                     c.remove(user);
                
-                 
-             
-
-                  
                     string[] arr = c.getData().Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
 
 
@@ -117,7 +113,7 @@ namespace AppsDev
 
                         for(int i =0; i < arr.Length; i++)
                         {
-                            write.WriteLine(arr[i]);
+                            write.Write(arr[i]);
                         }
 
                     }
