@@ -22,6 +22,8 @@ namespace AppsDev
             InitializeComponent();
         }
 
+        Civil c = new Civil();
+
         private List<Civil> list1 = new List<Civil>();
 
 
@@ -55,7 +57,9 @@ namespace AppsDev
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            
+            c.deleteAll();
+            c.setData();
+        
 
 
         }
@@ -88,25 +92,26 @@ namespace AppsDev
         {
 
         }
-       
+
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            var person = this.Parent as SearchTab;
             DialogResult d;
             d = MessageBox.Show("Do you want to Delete? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (d == DialogResult.OK)
             {
 
-               Civil c = new Civil();
-                SearchTab tab = new SearchTab();    
+                SearchTab tab = new SearchTab();
 
                 Civil? user = c.getData().Where(user => user.Lastname.Equals(lastnameDisplay.Text) ).FirstOrDefault();
              
                 if(user!= null)
                 {
                     c.remove(user);
-               
-                    string[] arr = c.getData().Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
 
+                    string[] arr = c.getData().Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
+                    c.deleteAll();
+                    c.setData();
 
                     using (StreamWriter write = new StreamWriter(tab.passData))
                     {
@@ -118,9 +123,14 @@ namespace AppsDev
 
                     }
 
+                   
+                 
+
+
                 }
                 
             }
         }
+       
     }
 }

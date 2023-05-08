@@ -74,6 +74,7 @@ namespace AppsDev
                     }
                     else
                     {
+                        
                         this.label1.Visible = false;
                         this.textBox1.Visible = false;
                         this.button1.Visible = false;
@@ -128,7 +129,7 @@ namespace AppsDev
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
             this.resultDisplay.Visible = false;
             this.panel1.Visible = false;
 
