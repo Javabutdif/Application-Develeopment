@@ -55,8 +55,7 @@ namespace AppsDev
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Civil c = new Civil();
-            c.list = list1;
+            
 
 
         }
@@ -96,51 +95,32 @@ namespace AppsDev
             d = MessageBox.Show("Do you want to Delete? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (d == DialogResult.OK)
             {
-             
-               
 
-                SearchTab tab = new SearchTab();
+               Civil c = new Civil();
+                SearchTab tab = new SearchTab();    
 
-
-
-
-                
-                int count;
-                for (count = 0; count < File.ReadAllLines(tab.passData).Length; count++)
-                {
-                    string[] frag = File.ReadAllText(tab.passData).Split("\n");
-                    string[] us = frag[count].Split(",");
-
-                    Civil cd = new Civil(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10], us[11], us[12], us[13], us[14], us[15], us[16]);
-                    list1.Add(cd);
-
-                }
-                
-
-                Civil? user = list1.Where(user => user.Lastname.Equals(lastnameDisplay.Text) ).FirstOrDefault();
+                Civil? user = c.getData().Where(user => user.Lastname.Equals(lastnameDisplay.Text) ).FirstOrDefault();
              
                 if(user!= null)
                 {
-                    list1.Remove(user);
+                    c.remove(user);
+               
+                 
+             
 
-                    string[] arr = list1.Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
+                  
+                    string[] arr = c.getData().Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
 
 
-
-
-                    using (StreamWriter writeData = new StreamWriter(tab.passData))
+                    using (StreamWriter write = new StreamWriter(tab.passData))
                     {
 
-
-                        for (int i = 0; i < list1.Count; i++)
+                        for(int i =0; i < arr.Length; i++)
                         {
-
-                          
-                            writeData.Write(arr[i]);
+                            write.WriteLine(arr[i]);
                         }
 
                     }
-
 
                 }
                 
