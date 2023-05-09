@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.LinkLabel;
 using System.IO;
+using System.IO.Pipes;
 
 namespace AppsDev
 {
@@ -51,6 +52,7 @@ namespace AppsDev
             this.printButton.BackColor = color.lighter();
             this.backButton.BackColor = color.lighterDark();
             this.panel1.Visible = true;
+       
 
         }
 
@@ -59,7 +61,7 @@ namespace AppsDev
             this.Visible = false;
             c.deleteAll();
             c.setData();
-        
+
 
 
         }
@@ -88,14 +90,11 @@ namespace AppsDev
 
         }
 
-        private void panel1_VisibleChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            var person = this.Parent as SearchTab;
+        
             DialogResult d;
             d = MessageBox.Show("Do you want to Delete? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (d == DialogResult.OK)
@@ -103,9 +102,9 @@ namespace AppsDev
 
                 SearchTab tab = new SearchTab();
 
-                Civil? user = c.getData().Where(user => user.Lastname.Equals(lastnameDisplay.Text) ).FirstOrDefault();
-             
-                if(user!= null)
+                Civil? user = c.getData().Where(user => user.Lastname.Equals(lastnameDisplay.Text)).FirstOrDefault();
+
+                if (user != null)
                 {
                     c.remove(user);
 
@@ -116,21 +115,46 @@ namespace AppsDev
                     using (StreamWriter write = new StreamWriter(tab.passData))
                     {
 
-                        for(int i =0; i < arr.Length; i++)
+                        for (int i = 0; i < arr.Length; i++)
                         {
                             write.Write(arr[i]);
                         }
 
                     }
 
-                   
-                 
+
+
 
 
                 }
-                
+
             }
         }
-       
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+
+
+        public string Lastname { get { return this.lastnameDisplay.Text; } }
+        public string Firstname { get { return this.firstnameDisplay.Text; } }
+        public string MIDdlename { get { return this.middlenameDisplay.Text; } }
+        public string BirthM { get { return this.birthmonthDisplay.Text; } }
+        public string BirthD { get { return this.birthdayDisplay.Text; } }
+        public string BirthYear { get { return this.birthyearDisplay.Text; } }
+        public string BirthPlace { get { return this.birthplaceDisplay.Text; } }
+        public string PhoneNumber { get { return this.phoneDisplay.Text; } }
+        public string Address { get { return this.addressDisplay.Text; } }
+        public string identification { get { return this.typeDisplay.Text; } }
+        public string Email { get { return this.emailDisplay.Text; } }
+        public string idNumber { get { return this.idNumDisplay.Text; } }
+        public string reference { get { return this.displayRef.Text; } }
+        public string Age { get { return this.ageDisplay.Text; } }
+        public string Sex { get { return this.sexDisplay.Text; } }
+        public string Religion { get { return this.religionDisplay.Text; } }
+        public string Status { get { return this.statusDisplay.Text; } }
+
     }
 }
