@@ -4,61 +4,53 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppsDev
 {
-    public partial class Edit1 : UserControl
+    public partial class Edit : Form
     {
-        public Edit1()
+        public Edit()
         {
             InitializeComponent();
         }
-
-        private void Edit1_Load(object sender, EventArgs e)
-        {
-
-        }
         Hover color = new Hover();
+        private string reference1 = "";
         private void Edit_Load(object sender, EventArgs e)
         {
             this.BackColor = color.lighter();
-
             this.saveBut.BackColor = color.lighter();
-            this.clearSelection.BackColor = color.lighter();
-            this.clearSelection.ForeColor = Color.White;
+
+
+
+            this.civilLastName.Text = Lastname;
+            this.civilFirstName.Text = Firstname;
+            this.civilMiddleName.Text = MIDdlename;
+            this.civilBirthMonth.Text = BirthM;
+            this.civilBirthDay.Text = BirthD;
+            this.civilBirthYear.Text = BirthYear;
+            this.civilAge.Text = Age;
+            this.civilSex.Text = Sex;
+            this.civilStatus.Text = Status;
+            this.civilReligion.Text = Religion;
+            this.civilBirthPlace.Text = BirthPlace;
+            this.civilPhone.Text = PhoneNumber;
+            this.civilAddress.Text = Address;
+            this.civilID.Text = identification;
+            this.civilIDNumber.Text = idNumber;
+            this.civilEmail.Text = Email;
+            this.reference1 = reference;
 
         }
-        private string reference1 = "";
-        private void Edit_VisibleChanged(object sender, EventArgs e)
-        {
-            var person = this.Parent as SearchTab;
 
-            this.civilLastName.Text = person.Lastname;
-            this.civilFirstName.Text = person.Firstname;
-            this.civilMiddleName.Text = person.MIDdlename;
-            this.civilBirthMonth.Text = person.BirthM;
-            this.civilBirthDay.Text = person.BirthD;
-            this.civilBirthYear.Text = person.BirthYear;
-            this.civilAge.Text = person.Age;
-            this.civilSex.Text = person.Sex;
-            this.civilStatus.Text = person.Status;
-            this.civilReligion.Text = person.Religion;
-            this.civilBirthPlace.Text = person.BirthPlace;
-            this.civilPhone.Text = person.PhoneNumber;
-            this.civilAddress.Text = person.Address;
-            this.civilID.Text = person.identification;
-            this.civilIDNumber.Text = person.idNumber;
-            this.civilEmail.Text = person.Email;
-            this.reference1 = person.reference;
-
-        }
-        private string citizeninfo = "";
         private void saveBut_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             Lastname = this.civilLastName.Text;
             Firstname = this.civilFirstName.Text;
             MIDdlename = this.civilMiddleName.Text;
@@ -78,13 +70,12 @@ namespace AppsDev
 
             Civil c = new Civil();
             SearchTab tab = new SearchTab();
-
             Civil? user = c.getData().Where(user => user.Lastname.Equals(civilLastName.Text)).FirstOrDefault();
 
             if (user != null)
             {
                 c.remove(user);
-                string citizenInfo = reference1 + "," + civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text;
+                string citizenInfo = reference1 + "," + civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text ;
                 string[] arr = c.getData().Select(user => user.reference + "," + user.Lastname + "," + user.Firstname + "," + user.MIDdlename + "," + user.BirthM + "," + user.BirthD + "," + user.BirthYear + "," + user.Age + "," + user.Sex + "," + user.Status + "," + user.Religion + "," + user.BirthPlace + "," + user.PhoneNumber + "," + user.Address + "," + user.identification + "," + user.idNumber + "," + user.Email + "\n").ToArray();
                 c.deleteAll();
                 c.setData();
@@ -96,15 +87,16 @@ namespace AppsDev
                     {
                         write.Write(arr[i]);
                     }
-                    write.WriteLine(citizenInfo);
+                    write.Write(citizenInfo+"\n");
 
                 }
 
 
 
 
-
             }
+
+            this.Close();
         }
         private string id = "";
         private string lastname = "";
@@ -124,6 +116,12 @@ namespace AppsDev
         private string idNum = "";
         private string email = "";
 
+        private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int year = Convert.ToInt32(civilBirthYear.Text);
+            civilAge.Text = Convert.ToString(2023 - year);
+        }
+
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }
         public string MIDdlename { get { return this.middlename; } set { this.middlename = value; } }
@@ -141,5 +139,6 @@ namespace AppsDev
         public string Sex { get { return this.sex; } set { this.sex = value; } }
         public string Religion { get { return this.religion; } set { this.religion = value; } }
         public string Status { get { return this.status; } set { this.status = value; } }
+
     }
 }

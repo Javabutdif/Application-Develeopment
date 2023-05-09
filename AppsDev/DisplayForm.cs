@@ -133,28 +133,31 @@ namespace AppsDev
 
         private void editButton_Click(object sender, EventArgs e)
         {
-          
+            Edit edit = new Edit();
+            edit.Lastname = this.lastnameDisplay.Text;
+            edit.Firstname = this.firstnameDisplay.Text;
+            edit.MIDdlename = this.middlenameDisplay.Text;
+            edit.BirthM = this.birthmonthDisplay.Text;
+            edit.BirthD = this.birthdayDisplay.Text;
+            edit.BirthYear = this.birthyearDisplay.Text;
+            edit.Age = this.ageDisplay.Text;
+            edit.Sex = this.sexDisplay.Text;
+            edit.Status = this.statusDisplay.Text;
+            edit.Religion = this.religionDisplay.Text;
+            edit.BirthPlace = this.birthplaceDisplay.Text;
+            edit.PhoneNumber = this.phoneDisplay.Text;
+            edit.Address = this.addressDisplay.Text;
+            edit.identification = this.typeDisplay.Text;
+            edit.idNumber = this.idNumDisplay.Text;
+            edit.Email = this.emailDisplay.Text;
+            edit.reference = this.displayRef.Text;
+
+            edit.Show();
+         
         }
 
 
 
-        public string Lastname { get { return this.lastnameDisplay.Text; } }
-        public string Firstname { get { return this.firstnameDisplay.Text; } }
-        public string MIDdlename { get { return this.middlenameDisplay.Text; } }
-        public string BirthM { get { return this.birthmonthDisplay.Text; } }
-        public string BirthD { get { return this.birthdayDisplay.Text; } }
-        public string BirthYear { get { return this.birthyearDisplay.Text; } }
-        public string BirthPlace { get { return this.birthplaceDisplay.Text; } }
-        public string PhoneNumber { get { return this.phoneDisplay.Text; } }
-        public string Address { get { return this.addressDisplay.Text; } }
-        public string identification { get { return this.typeDisplay.Text; } }
-        public string Email { get { return this.emailDisplay.Text; } }
-        public string idNumber { get { return this.idNumDisplay.Text; } }
-        public string reference { get { return this.displayRef.Text; } }
-        public string Age { get { return this.ageDisplay.Text; } }
-        public string Sex { get { return this.sexDisplay.Text; } }
-        public string Religion { get { return this.religionDisplay.Text; } }
-        public string Status { get { return this.statusDisplay.Text; } }
 
     }
 }
