@@ -124,3 +124,4 @@ C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Release\net7.0-windows\AppsDev.pdb
 C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Release\net7.0-windows\AppsDev.genruntimeconfig.cache
 C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Release\net7.0-windows\ref\AppsDev.dll
 C:\Users\OO128\Desktop\AppsDev\AppsDev\obj\Release\net7.0-windows\AppsDev.Records.resources
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\AppsDev.Records.resources
