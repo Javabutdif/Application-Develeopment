@@ -30,6 +30,7 @@
         {
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            clearAll = new Button();
             listBox1 = new ListBox();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -48,6 +49,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(clearAll);
             panel1.Controls.Add(listBox1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(33, 40);
@@ -55,16 +57,27 @@
             panel1.Size = new Size(748, 327);
             panel1.TabIndex = 19;
             // 
+            // clearAll
+            // 
+            clearAll.Location = new Point(670, 18);
+            clearAll.Name = "clearAll";
+            clearAll.Size = new Size(75, 23);
+            clearAll.TabIndex = 3;
+            clearAll.Text = "Clear";
+            clearAll.UseVisualStyleBackColor = true;
+            clearAll.Click += clearAll_Click;
+            // 
             // listBox1
             // 
             listBox1.BorderStyle = BorderStyle.None;
-            listBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.ColumnWidth = 1;
+            listBox1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             listBox1.ForeColor = Color.White;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(0, 50);
+            listBox1.Location = new Point(3, 50);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(745, 250);
+            listBox1.Size = new Size(742, 250);
             listBox1.TabIndex = 2;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             listBox1.VisibleChanged += listView1_VisibleChanged;
@@ -101,5 +114,6 @@
         private Panel panel1;
         private Label label1;
         private ListBox listBox1;
+        private Button clearAll;
     }
 }
