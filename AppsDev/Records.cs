@@ -27,19 +27,22 @@ namespace AppsDev
             this.panel1.ForeColor = Color.White;
         }
         Civil c = new Civil();
-        
+
         private string path = @"C:\Barangay Registration\Database\Citizen.txt";
         private void listView1_VisibleChanged(object sender, EventArgs e)
         {
             this.listBox1.Items.Clear();
             c.setData();
-            foreach(Civil cd in c.getData()) 
+            foreach (Civil cd in c.getData())
             {
-                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.reference + "\n");
+                this.listBox1.Items.Add(" " + cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "                   " + cd.reference + "\n");
             }
 
         }
 
-       
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
