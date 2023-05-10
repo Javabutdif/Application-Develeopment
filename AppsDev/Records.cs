@@ -23,6 +23,7 @@ namespace AppsDev
         {
             this.BackColor = color.lighter();
             this.listBox1.BackColor = color.lighterDark();
+            this.listBox2.BackColor = color.lighterDark();
             this.panel1.BackColor = color.lighterDark();
             this.panel1.ForeColor = Color.White;
             this.clearAll.BackColor = color.lighterDark();
@@ -34,10 +35,12 @@ namespace AppsDev
         private void listView1_VisibleChanged(object sender, EventArgs e)
         {
             this.listBox1.Items.Clear();
+            this.listBox2.Items.Clear();
             c.setData();
             foreach (Civil cd in c.getData())
             {
-                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "                   " + cd.reference + "\n");
+                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename);
+                this.listBox2.Items.Add(cd.reference);
             }
 
         }

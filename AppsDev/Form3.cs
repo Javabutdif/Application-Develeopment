@@ -82,9 +82,9 @@ namespace AppsDev
 
                             for (int i = 0; i < lines.Length; i++)
                             {
-                                writeData.Write(lines[i]);
+                                writeData.WriteLine(lines[i]);
                             }
-                            writeData.Write(admin.getData());
+                            writeData.WriteLine(admin.getData());
                         }
 
 
