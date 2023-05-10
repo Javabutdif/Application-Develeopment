@@ -177,5 +177,10 @@ namespace AppsDev
             regis1.Visible = false;
             records1.Visible = true;
         }
+
+        private void MyBaseForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.ExitThread();
+        }
     }
 }
