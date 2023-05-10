@@ -61,6 +61,7 @@ namespace AppsDev
                     write.Write("");
                 }
                 this.listBox1.Items.Clear();
+                this.listBox2.Items.Clear();
             }
 
         }
