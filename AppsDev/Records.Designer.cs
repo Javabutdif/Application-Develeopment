@@ -28,45 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            listBox1 = new ListBox();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::AppsDev.Properties.Resources.opacity20;
-            this.pictureBox2.Location = new System.Drawing.Point(268, 68);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(284, 260);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = Properties.Resources.opacity20;
+            pictureBox2.Location = new Point(268, 68);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(284, 260);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 18;
+            pictureBox2.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(33, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 327);
-            this.panel1.TabIndex = 19;
+            panel1.Controls.Add(listBox1);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(33, 40);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(748, 327);
+            panel1.TabIndex = 19;
+            // 
+            // listBox1
+            // 
+            listBox1.BorderStyle = BorderStyle.None;
+            listBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.ForeColor = Color.White;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 25;
+            listBox1.Location = new Point(0, 50);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(745, 250);
+            listBox1.TabIndex = 2;
+            listBox1.VisibleChanged += listView1_VisibleChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(252, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(267, 32);
+            label1.TabIndex = 1;
+            label1.Text = "REGISTERED CITIZENS";
             // 
             // Records
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox2);
-            this.Name = "Records";
-            this.Size = new System.Drawing.Size(816, 390);
-            this.Load += new System.EventHandler(this.Records_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
+            Controls.Add(pictureBox2);
+            Name = "Records";
+            Size = new Size(816, 390);
+            Load += Records_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private PictureBox pictureBox2;
         private Panel panel1;
+        private Label label1;
+        private ListBox listBox1;
     }
 }

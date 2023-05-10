@@ -41,6 +41,7 @@
             dashboard1 = new Dashboard();
             searchTab1 = new SearchTab();
             regis1 = new Regis();
+            records1 = new Records();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -124,6 +125,7 @@
             records.Size = new Size(78, 25);
             records.TabIndex = 1;
             records.Text = "Records";
+            records.Click += records_Click;
             records.MouseLeave += records_MouseLeave;
             records.MouseHover += records_MouseHover;
             // 
@@ -167,10 +169,28 @@
             // 
             // searchTab1
             // 
+            searchTab1.Address = "";
+            searchTab1.Age = "";
             searchTab1.BackColor = Color.FromArgb(16, 120, 116);
+            searchTab1.BirthD = "";
+            searchTab1.BirthM = "";
+            searchTab1.BirthPlace = "";
+            searchTab1.BirthYear = "";
+            searchTab1.Email = "";
+            searchTab1.Firstname = "";
+            searchTab1.identification = "";
+            searchTab1.idNumber = "";
+            searchTab1.Lastname = "";
             searchTab1.Location = new Point(0, 41);
+            searchTab1.MIDdlename = "";
             searchTab1.Name = "searchTab1";
+            searchTab1.passData = "";
+            searchTab1.PhoneNumber = "";
+            searchTab1.reference = "";
+            searchTab1.Religion = "";
+            searchTab1.Sex = "";
             searchTab1.Size = new Size(816, 390);
+            searchTab1.Status = "";
             searchTab1.TabIndex = 9;
             // 
             // regis1
@@ -182,11 +202,20 @@
             regis1.Size = new Size(816, 367);
             regis1.TabIndex = 5;
             // 
+            // records1
+            // 
+            records1.BackColor = Color.FromArgb(16, 120, 116);
+            records1.Location = new Point(0, 48);
+            records1.Name = "records1";
+            records1.Size = new Size(816, 390);
+            records1.TabIndex = 10;
+            // 
             // MyBaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(records1);
             Controls.Add(regis1);
             Controls.Add(label);
             Controls.Add(userNameData);
@@ -219,5 +248,6 @@
         private Dashboard dashboard1;
         private SearchTab searchTab1;
         private Regis regis1;
+        private Records records1;
     }
 }

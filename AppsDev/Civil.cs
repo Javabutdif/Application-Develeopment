@@ -54,10 +54,10 @@ namespace AppsDev
         {
 
         }
-        
 
 
 
+        private static string path = @"C:\Barangay Registration\Database\Citizen.txt";
         public void setData()
         {
             SearchTab tab = new SearchTab();
@@ -66,9 +66,9 @@ namespace AppsDev
             deleteAll();
 
             int count;
-            for (count = 0; count < File.ReadAllLines(tab.passData).Length; count++)
+            for (count = 0; count < File.ReadAllLines(path).Length; count++)
             {
-                 string[] frag = File.ReadAllText(tab.passData).Split("\n");
+                 string[] frag = File.ReadAllText(path).Split("\n");
                 string[] us = frag[count].Split(",");
 
                 Civil c = new Civil(us[0], us[1], us[2], us[3], us[4], us[5], us[6], us[7], us[8], us[9], us[10], us[11], us[12], us[13], us[14], us[15], us[16]);
