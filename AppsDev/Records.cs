@@ -35,12 +35,12 @@ namespace AppsDev
         private void listView1_VisibleChanged(object sender, EventArgs e)
         {
             this.listBox1.Items.Clear();
-            this.listBox2.Items.Clear();
+
             c.setData();
             foreach (Civil cd in c.getData())
             {
-                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename);
-                this.listBox2.Items.Add(cd.reference);
+                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "........." + cd.reference);
+
             }
 
         }
@@ -53,7 +53,7 @@ namespace AppsDev
         private void clearAll_Click(object sender, EventArgs e)
         {
             DialogResult d;
-            d = MessageBox.Show("Do you want to Clear All the Database? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            d = MessageBox.Show("Do you want to Clear All the Database? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (d == DialogResult.OK)
             {
                 using (StreamWriter write = new StreamWriter(path))
@@ -61,7 +61,7 @@ namespace AppsDev
                     write.Write("");
                 }
                 this.listBox1.Items.Clear();
-                this.listBox2.Items.Clear();
+
             }
 
         }
