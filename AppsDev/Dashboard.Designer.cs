@@ -53,12 +53,14 @@
             infoD = new Label();
             panel1 = new Panel();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             panel12.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel12
@@ -210,6 +212,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(firstNameDisplay);
             panel3.Controls.Add(lastNameDisplay);
             panel3.Location = new Point(11, 24);
@@ -330,6 +333,16 @@
             label1.TabIndex = 0;
             label1.Text = "Recent Registrations";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.LOGO1;
+            pictureBox1.Location = new Point(8, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(48, 41);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -352,6 +365,7 @@
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -382,5 +396,6 @@
         private Panel panel2;
         private Label codeR;
         private Label infoD;
+        private PictureBox pictureBox1;
     }
 }
