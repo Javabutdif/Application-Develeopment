@@ -32,7 +32,7 @@ namespace AppsDev
 
             this.lastNameDisplay.Text = data.getL + ",";
             this.firstNameDisplay.Text = data.getF;
-          
+
             this.regionNum.Text = data.getR;
             this.provinceData.Text = data.getP;
             this.cityData.Text = data.getC;
@@ -40,7 +40,13 @@ namespace AppsDev
 
         }
 
-      
+        private void refCode_VisibleChanged(object sender, EventArgs e)
+        {
+            Regis reg = new Regis();
+
+            this.infoD.Text = reg.getInfo;
+            this.codeR.Text = reg.Reference;
+        }
     }
 
 }

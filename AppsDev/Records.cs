@@ -23,7 +23,7 @@ namespace AppsDev
         {
             this.BackColor = color.lighter();
             this.listBox1.BackColor = color.lighterDark();
-            this.listBox2.BackColor = color.lighterDark();
+           
             this.panel1.BackColor = color.lighterDark();
             this.panel1.ForeColor = Color.White;
             this.clearAll.BackColor = color.lighterDark();

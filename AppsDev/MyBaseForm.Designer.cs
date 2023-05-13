@@ -226,7 +226,7 @@
             Name = "MyBaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";
-            FormClosed += MyBaseForm_FormClosed;
+         
             Load += MyBaseForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

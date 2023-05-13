@@ -30,7 +30,6 @@
         {
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
-            listBox2 = new ListBox();
             clearAll = new Button();
             listBox1 = new ListBox();
             label1 = new Label();
@@ -50,27 +49,13 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(listBox2);
             panel1.Controls.Add(clearAll);
             panel1.Controls.Add(listBox1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(33, 40);
             panel1.Name = "panel1";
-            panel1.Size = new Size(748, 327);
+            panel1.Size = new Size(748, 314);
             panel1.TabIndex = 19;
-            // 
-            // listBox2
-            // 
-            listBox2.BorderStyle = BorderStyle.None;
-            listBox2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            listBox2.ForeColor = Color.White;
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 25;
-            listBox2.Location = new Point(507, 49);
-            listBox2.Name = "listBox2";
-            listBox2.RightToLeft = RightToLeft.Yes;
-            listBox2.Size = new Size(229, 250);
-            listBox2.TabIndex = 4;
             // 
             // clearAll
             // 
@@ -92,7 +77,7 @@
             listBox1.ItemHeight = 25;
             listBox1.Location = new Point(3, 50);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(498, 250);
+            listBox1.Size = new Size(742, 250);
             listBox1.Sorted = true;
             listBox1.TabIndex = 2;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
@@ -131,6 +116,5 @@
         private Label label1;
         private ListBox listBox1;
         private Button clearAll;
-        private ListBox listBox2;
     }
 }

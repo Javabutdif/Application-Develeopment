@@ -120,9 +120,9 @@
             // 
             panel1.Controls.Add(refCode);
             panel1.Controls.Add(displayName);
-            panel1.Location = new Point(205, 99);
+            panel1.Location = new Point(200, 99);
             panel1.Name = "panel1";
-            panel1.Size = new Size(411, 29);
+            panel1.Size = new Size(528, 29);
             panel1.TabIndex = 18;
             panel1.Click += panel1_Click;
             // 

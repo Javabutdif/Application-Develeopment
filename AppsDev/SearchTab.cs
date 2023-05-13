@@ -32,7 +32,7 @@ namespace AppsDev
         Civil person = new Civil();
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             passData = path + "Citizen.txt";
             person.setData();
 
@@ -74,7 +74,7 @@ namespace AppsDev
                     }
                     else
                     {
-                        
+
                         this.label1.Visible = false;
                         this.textBox1.Visible = false;
                         this.button1.Visible = false;
@@ -129,7 +129,7 @@ namespace AppsDev
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
             this.resultDisplay.Visible = false;
             this.panel1.Visible = false;
 
@@ -146,7 +146,7 @@ namespace AppsDev
         private void displayName_Click(object sender, EventArgs e)
         {
             this.displayForm1.Visible = true;
-            
+
         }
         /*
          * 
