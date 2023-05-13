@@ -27,7 +27,7 @@ namespace AppsDev
             this.panel4.BackColor = color.lightDark();
             this.panel5.BackColor = color.lighterDark();
             this.BackColor = color.lighter();
-
+         
             MyBaseForm data = new MyBaseForm();
 
             this.lastNameDisplay.Text = data.getL + ",";

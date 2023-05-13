@@ -208,7 +208,7 @@
             records1.BackColor = Color.FromArgb(16, 120, 116);
             records1.Location = new Point(0, 48);
             records1.Name = "records1";
-            records1.Size = new Size(816, 390);
+            records1.Size = new Size(816, 370);
             records1.TabIndex = 10;
             // 
             // MyBaseForm
