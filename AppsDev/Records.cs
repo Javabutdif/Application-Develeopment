@@ -23,7 +23,7 @@ namespace AppsDev
         {
             this.BackColor = color.lighter();
             this.listBox1.BackColor = color.lighterDark();
-           
+
             this.panel1.BackColor = color.lighterDark();
             this.panel1.ForeColor = Color.White;
             this.clearAll.BackColor = color.lighterDark();
@@ -34,6 +34,9 @@ namespace AppsDev
         private string path = @"C:\Barangay Registration\Database\Citizen.txt";
         private void listView1_VisibleChanged(object sender, EventArgs e)
         {
+
+
+
             this.listBox1.Items.Clear();
 
             c.setData();
@@ -41,6 +44,15 @@ namespace AppsDev
             {
                 this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "........." + cd.reference);
 
+            }
+            if (this.listBox1.Items.Count == 0)
+            {
+                this.label2.Visible = true;
+
+            }
+            else
+            {
+                this.label2.Visible = false;
             }
 
         }
@@ -62,7 +74,22 @@ namespace AppsDev
                 }
                 this.listBox1.Items.Clear();
 
+                if (this.listBox1.Items.Count == 0)
+                {
+                    this.label2.Visible = true;
+
+                }
+                else
+                {
+                    this.label2.Visible = false;
+                }
+
             }
+
+        }
+
+        private void Records_VisibleChanged(object sender, EventArgs e)
+        {
 
         }
     }

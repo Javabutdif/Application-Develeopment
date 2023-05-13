@@ -80,38 +80,54 @@ namespace AppsDev
         private string citizenInfo = "";
         private void registerBut_Click(object sender, EventArgs e)
         {
-            Reference = getID();
-
-
-            citizenInfo = Reference + "," + civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text;
-            getInfo = civilLastName.Text + ", " + civilFirstName.Text;
-
-
-            string[] lines = File.ReadAllLines(path + "Citizen.txt");
-
-            using (StreamWriter writeData = new StreamWriter(path + "Citizen.txt"))
+            if (Validate1() == true)
             {
+                Reference = getID();
 
 
-                for (int i = 0; i < lines.Length; i++)
+                citizenInfo = Reference + "," + civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text;
+                getInfo = civilLastName.Text + ", " + civilFirstName.Text;
+
+
+                string[] lines = File.ReadAllLines(path + "Citizen.txt");
+
+                using (StreamWriter writeData = new StreamWriter(path + "Citizen.txt"))
                 {
-                    writeData.WriteLine(lines[i]);
+
+
+                    for (int i = 0; i < lines.Length; i++)
+                    {
+                        writeData.WriteLine(lines[i]);
+                    }
+                    writeData.WriteLine(citizenInfo);
                 }
-                writeData.WriteLine(citizenInfo);
+
+
+                this.successfulRegis1.Visible = true;
             }
-
-
-            this.successfulRegis1.Visible = true;
-
 
 
         }
         private static string info = "";
         public string Reference { set { reference = value; } get { return reference; } }
 
-        public  string getInfo { set { info = value; }get { return info; } }
+        public string getInfo { set { info = value; } get { return info; } }
 
-      
+        private bool Validate1()
+        {
+            bool valid = true;
+
+            if (civilLastName.Text == ""&& civilFirstName.Text == "")
+            {
+                errorProvider1.SetError(civilLastName, "Please enter again ");
+                valid = false;
+            }
+            else
+                errorProvider1.SetError(civilLastName, "");
+
+            return valid;
+
+        }
 
 
     }

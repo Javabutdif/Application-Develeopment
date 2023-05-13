@@ -54,9 +54,9 @@
             panel2.Controls.Add(dashB);
             panel2.Controls.Add(records);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(0, 1);
+            panel2.Location = new Point(0, -5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(804, 47);
+            panel2.Size = new Size(804, 53);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -66,7 +66,7 @@
             logOut.BorderStyle = BorderStyle.FixedSingle;
             logOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             logOut.ForeColor = Color.White;
-            logOut.Location = new Point(711, 10);
+            logOut.Location = new Point(708, 16);
             logOut.Name = "logOut";
             logOut.Size = new Size(80, 23);
             logOut.TabIndex = 4;
@@ -78,7 +78,7 @@
             register.AutoSize = true;
             register.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             register.ForeColor = Color.White;
-            register.Location = new Point(543, 10);
+            register.Location = new Point(539, 14);
             register.Name = "register";
             register.Size = new Size(79, 25);
             register.TabIndex = 2;
@@ -92,7 +92,7 @@
             search.AutoSize = true;
             search.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             search.ForeColor = Color.White;
-            search.Location = new Point(443, 10);
+            search.Location = new Point(439, 14);
             search.Name = "search";
             search.Size = new Size(69, 25);
             search.TabIndex = 3;
@@ -106,7 +106,7 @@
             dashB.AutoSize = true;
             dashB.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             dashB.ForeColor = Color.White;
-            dashB.Location = new Point(157, 10);
+            dashB.Location = new Point(153, 14);
             dashB.Name = "dashB";
             dashB.Size = new Size(104, 25);
             dashB.TabIndex = 2;
@@ -120,7 +120,7 @@
             records.AutoSize = true;
             records.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             records.ForeColor = Color.White;
-            records.Location = new Point(289, 10);
+            records.Location = new Point(285, 14);
             records.Name = "records";
             records.Size = new Size(78, 25);
             records.TabIndex = 1;
@@ -132,7 +132,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.lg;
-            pictureBox1.Location = new Point(373, 3);
+            pictureBox1.Location = new Point(373, 9);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(54, 41);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -196,6 +196,7 @@
             // regis1
             // 
             regis1.BackColor = Color.FromArgb(16, 120, 116);
+            regis1.getInfo = "";
             regis1.Location = new Point(0, 51);
             regis1.Name = "regis1";
             regis1.Reference = null;
@@ -226,7 +227,6 @@
             Name = "MyBaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";
-         
             Load += MyBaseForm_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

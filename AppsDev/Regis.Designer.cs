@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBox2 = new PictureBox();
             label8 = new Label();
             civilPhone = new TextBox();
@@ -64,8 +65,9 @@
             registerBut = new Button();
             successfulRegis1 = new SuccessfulRegis();
             clearSelection = new Button();
-         
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox2
@@ -397,6 +399,10 @@
             clearSelection.UseVisualStyleBackColor = true;
             clearSelection.Click += clearSelection_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Regis
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -441,6 +447,7 @@
             Size = new Size(816, 390);
             Load += Regis_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -483,5 +490,6 @@
         private Button registerBut;
         private SuccessfulRegis successfulRegis1;
         private Button clearSelection;
+        private ErrorProvider errorProvider1;
     }
 }

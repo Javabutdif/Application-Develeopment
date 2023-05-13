@@ -30,6 +30,7 @@
         {
             pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            label2 = new Label();
             clearAll = new Button();
             listBox1 = new ListBox();
             label1 = new Label();
@@ -49,6 +50,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(clearAll);
             panel1.Controls.Add(listBox1);
             panel1.Controls.Add(label1);
@@ -56,6 +58,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(748, 314);
             panel1.TabIndex = 19;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 20.25F, FontStyle.Underline, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(268, 129);
+            label2.Name = "label2";
+            label2.Size = new Size(235, 37);
+            label2.TabIndex = 4;
+            label2.Text = "No Records Found";
             // 
             // clearAll
             // 
@@ -103,6 +116,7 @@
             Name = "Records";
             Size = new Size(816, 390);
             Load += Records_Load;
+            VisibleChanged += Records_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -116,5 +130,6 @@
         private Label label1;
         private ListBox listBox1;
         private Button clearAll;
+        private Label label2;
     }
 }
