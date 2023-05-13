@@ -68,26 +68,31 @@ namespace AppsDev
 
         private void DisplayForm_VisibleChanged(object sender, EventArgs e)
         {
-            var person = this.Parent as SearchTab;
+            try
+            {
+                var person = this.Parent as SearchTab;
 
-            this.lastnameDisplay.Text = person.Lastname;
-            this.firstnameDisplay.Text = person.Firstname;
-            this.middlenameDisplay.Text = person.MIDdlename;
-            this.birthmonthDisplay.Text = person.BirthM;
-            this.birthdayDisplay.Text = person.BirthD;
-            this.birthyearDisplay.Text = person.BirthYear;
-            this.ageDisplay.Text = person.Age;
-            this.sexDisplay.Text = person.Sex;
-            this.statusDisplay.Text = person.Status;
-            this.religionDisplay.Text = person.Religion;
-            this.birthplaceDisplay.Text = person.BirthPlace;
-            this.phoneDisplay.Text = person.PhoneNumber;
-            this.addressDisplay.Text = person.Address;
-            this.typeDisplay.Text = person.identification;
-            this.idNumDisplay.Text = person.idNumber;
-            this.emailDisplay.Text = person.Email;
-            this.displayRef.Text = person.reference;
+                this.lastnameDisplay.Text = person.Lastname;
+                this.firstnameDisplay.Text = person.Firstname;
+                this.middlenameDisplay.Text = person.MIDdlename;
+                this.birthmonthDisplay.Text = person.BirthM;
+                this.birthdayDisplay.Text = person.BirthD;
+                this.birthyearDisplay.Text = person.BirthYear;
+                this.ageDisplay.Text = person.Age;
+                this.sexDisplay.Text = person.Sex;
+                this.statusDisplay.Text = person.Status;
+                this.religionDisplay.Text = person.Religion;
+                this.birthplaceDisplay.Text = person.BirthPlace;
+                this.phoneDisplay.Text = person.PhoneNumber;
+                this.addressDisplay.Text = person.Address;
+                this.typeDisplay.Text = person.identification;
+                this.idNumDisplay.Text = person.idNumber;
+                this.emailDisplay.Text = person.Email;
+                this.displayRef.Text = person.reference;
+            }catch(Exception ex)
+            {
 
+            }
         }
 
       

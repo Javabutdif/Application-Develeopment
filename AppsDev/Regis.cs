@@ -117,7 +117,7 @@ namespace AppsDev
         {
             bool valid = true;
 
-            if (civilLastName.Text == ""&& civilFirstName.Text == "")
+            if (civilLastName.Text == "" && civilFirstName.Text == "")
             {
                 errorProvider1.SetError(civilLastName, "Please enter again ");
                 valid = false;

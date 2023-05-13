@@ -44,13 +44,11 @@
             label17 = new Label();
             civilIDNumber = new TextBox();
             label16 = new Label();
-            civilID = new TextBox();
             label15 = new Label();
             civilAddress = new TextBox();
             label14 = new Label();
             civilBirthPlace = new TextBox();
             label12 = new Label();
-            civilReligion = new TextBox();
             label11 = new Label();
             civilAge = new TextBox();
             label5 = new Label();
@@ -62,6 +60,8 @@
             civilLastName = new TextBox();
             label1 = new Label();
             pictureBox2 = new PictureBox();
+            civilReligion = new ComboBox();
+            civilID = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -220,13 +220,6 @@
             label16.TabIndex = 139;
             label16.Text = "ID NUMBER";
             // 
-            // civilID
-            // 
-            civilID.Location = new Point(20, 248);
-            civilID.Name = "civilID";
-            civilID.Size = new Size(222, 23);
-            civilID.TabIndex = 138;
-            // 
             // label15
             // 
             label15.AutoSize = true;
@@ -270,13 +263,6 @@
             label12.Size = new Size(76, 15);
             label12.TabIndex = 131;
             label12.Text = "BIRTH PLACE";
-            // 
-            // civilReligion
-            // 
-            civilReligion.Location = new Point(649, 89);
-            civilReligion.Name = "civilReligion";
-            civilReligion.Size = new Size(135, 23);
-            civilReligion.TabIndex = 130;
             // 
             // label11
             // 
@@ -376,11 +362,31 @@
             pictureBox2.TabIndex = 117;
             pictureBox2.TabStop = false;
             // 
+            // civilReligion
+            // 
+            civilReligion.FormattingEnabled = true;
+            civilReligion.Items.AddRange(new object[] { "Roman Catholic", "Islam", "Iglesia ni Cristo", "Philippine Independent Church", "Seventh-day Adventist", "Bible Baptist Church", "United Church of Christ in the Philippines", "Jehovah's Witnesses", "Church of Christ" });
+            civilReligion.Location = new Point(649, 89);
+            civilReligion.Name = "civilReligion";
+            civilReligion.Size = new Size(135, 23);
+            civilReligion.TabIndex = 151;
+            // 
+            // civilID
+            // 
+            civilID.FormattingEnabled = true;
+            civilID.Items.AddRange(new object[] { "e-Card / UMID", "Employee’s ID / Office Id", "Driver’s License", "Professional Regulation Commission (PRC) ID ", "Passport ", "Senior Citizen ID", "SSS ID", "COMELEC / Voter’s ID / COMELEC Registration Form", "Philippine Identification (PhilID / ePhilID)", "NBI Clearance ", "Integrated Bar of the Philippines (IBP) ID", "Firearms License ", "AFPSLAI ID ", "PVAO ID", "AFP Beneficiary ID", "BIR (TIN)", "Pag-ibig ID", "Person’s With Disability (PWD) ID", "Solo Parent ID", "Pantawid Pamilya Pilipino Program (4Ps) ID ", "Barangay ID ", "Philippine Postal ID ", "Phil-health ID", "School ID " });
+            civilID.Location = new Point(20, 251);
+            civilID.Name = "civilID";
+            civilID.Size = new Size(220, 23);
+            civilID.TabIndex = 152;
+            // 
             // Edit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(civilID);
+            Controls.Add(civilReligion);
             Controls.Add(saveBut);
             Controls.Add(civilStatus);
             Controls.Add(civilSex);
@@ -397,13 +403,11 @@
             Controls.Add(label17);
             Controls.Add(civilIDNumber);
             Controls.Add(label16);
-            Controls.Add(civilID);
             Controls.Add(label15);
             Controls.Add(civilAddress);
             Controls.Add(label14);
             Controls.Add(civilBirthPlace);
             Controls.Add(label12);
-            Controls.Add(civilReligion);
             Controls.Add(label11);
             Controls.Add(civilAge);
             Controls.Add(label5);
@@ -442,13 +446,11 @@
         private Label label17;
         private TextBox civilIDNumber;
         private Label label16;
-        private TextBox civilID;
         private Label label15;
         private TextBox civilAddress;
         private Label label14;
         private TextBox civilBirthPlace;
         private Label label12;
-        private TextBox civilReligion;
         private Label label11;
         private TextBox civilAge;
         private Label label5;
@@ -460,5 +462,7 @@
         private TextBox civilLastName;
         private Label label1;
         private PictureBox pictureBox2;
+        private ComboBox civilReligion;
+        private ComboBox civilID;
     }
 }

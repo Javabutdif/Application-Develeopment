@@ -50,8 +50,14 @@ namespace AppsDev
       
         private void SuccessfulRegis_VisibleChanged(object sender, EventArgs e)
         {
-            var re = this.Parent as Regis;
-            this.displaySuccess.Text = re.Reference;
+            try
+            {
+                var re = this.Parent as Regis;
+                this.displaySuccess.Text = re.Reference;
+            }catch (Exception ex)
+            {
+
+            }
             
         }
     }
