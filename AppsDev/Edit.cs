@@ -70,7 +70,7 @@ namespace AppsDev
 
             Civil c = new Civil();
             SearchTab tab = new SearchTab();
-            Civil? user = c.getData().Where(user => user.Lastname.Equals(civilLastName.Text)).FirstOrDefault();
+            Civil? user = c.getData().Where(user => user.reference.Equals(this.reference1)).FirstOrDefault();
 
             if (user != null)
             {
