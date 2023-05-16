@@ -67,13 +67,11 @@
             editButton = new Button();
             deleteButton = new Button();
             printButton = new Button();
-           
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-      
             panel1.Controls.Add(emailDisplay);
             panel1.Controls.Add(idNumDisplay);
             panel1.Controls.Add(typeDisplay);
@@ -112,7 +110,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(786, 325);
             panel1.TabIndex = 0;
-          
             // 
             // emailDisplay
             // 
@@ -514,11 +511,7 @@
             printButton.TabIndex = 108;
             printButton.Text = "PRINT";
             printButton.UseVisualStyleBackColor = true;
-            // 
-            // edit1
-            // 
-         
-         
+            printButton.Click += printButton_Click;
             // 
             // DisplayForm
             // 
@@ -580,6 +573,6 @@
         private Label middlenameDisplay;
         private Label firstnameDisplay;
         private Label lastnameDisplay;
-    
+
     }
 }

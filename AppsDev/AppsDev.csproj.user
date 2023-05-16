@@ -28,6 +28,9 @@
     <Compile Update="MyBaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Records.cs">
       <SubType>UserControl</SubType>
     </Compile>

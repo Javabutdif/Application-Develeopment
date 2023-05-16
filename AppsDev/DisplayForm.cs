@@ -52,7 +52,7 @@ namespace AppsDev
             this.printButton.BackColor = color.lighter();
             this.backButton.BackColor = color.lighterDark();
             this.panel1.Visible = true;
-       
+
 
         }
 
@@ -89,17 +89,18 @@ namespace AppsDev
                 this.idNumDisplay.Text = person.idNumber;
                 this.emailDisplay.Text = person.Email;
                 this.displayRef.Text = person.reference;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
 
             }
         }
 
-      
+
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-        
+
             DialogResult d;
             d = MessageBox.Show("Do you want to Delete? ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (d == DialogResult.OK)
@@ -158,11 +159,13 @@ namespace AppsDev
             edit.reference = this.displayRef.Text;
 
             edit.Show();
-         
+
         }
 
-
-
-
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            Print print = new Print();
+            print.Show();
+        }
     }
 }
