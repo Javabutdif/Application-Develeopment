@@ -80,30 +80,51 @@ namespace AppsDev
         private string citizenInfo = "";
         private void registerBut_Click(object sender, EventArgs e)
         {
-            if (Validate1() == true)
+            string ln = this.civilLastName.Text;
+            string fn = this.civilFirstName.Text;
+            string mn = this.civilMiddleName.Text;
+            string bm = this.civilBirthMonth.Text;
+            string bd = this.civilBirthDay.Text;
+            string by = this.civilBirthYear.Text;
+            string age = this.civilAge.Text;
+            string sex = this.civilSex.Text;
+            string status = this.civilStatus.Text;
+            string r = this.civilReligion.Text;
+            string bp = this.civilBirthPlace.Text;
+            string pn = this.civilPhone.Text;
+            string add = this.civilAddress.Text;
+            string type = this.civilID.Text;
+            string idN = this.civilIDNumber.Text;
+            string email = this.civilEmail.Text;
+
+            if (ln.Equals(string.Empty) || fn.Equals(string.Empty) || mn.Equals(string.Empty) || email.Equals(string.Empty) || bm.Equals(string.Empty) || bd.Equals(string.Empty) || by.Equals(string.Empty) || age.Equals(string.Empty) || sex.Equals(string.Empty) || status.Equals(string.Empty) || r.Equals(string.Empty) || bp.Equals(string.Empty) || pn.Equals(string.Empty) || add.Equals(string.Empty) || type.Equals(string.Empty) || idN.Equals(string.Empty))
             {
-                Reference = getID();
+                MessageBox.Show("Please complete necessary Information!");
+            }
+            else {
+               
+                    Reference = getID();
 
 
-                citizenInfo = Reference + "," + civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text;
-                getInfo = civilLastName.Text + ", " + civilFirstName.Text;
+                    citizenInfo = Reference + "," + civilLastName.Text + "," + civilFirstName.Text + "," + civilMiddleName.Text + "," + civilBirthMonth.Text + "," + civilBirthDay.Text + "," + civilBirthYear.Text + "," + civilAge.Text + "," + civilSex.Text + "," + civilStatus.Text + "," + civilReligion.Text + "," + civilBirthPlace.Text + "," + civilPhone.Text + "," + civilAddress.Text + "," + civilID.Text + "," + civilIDNumber.Text + "," + civilEmail.Text;
+                    getInfo = civilLastName.Text + ", " + civilFirstName.Text;
 
 
-                string[] lines = File.ReadAllLines(path + "Citizen.txt");
+                    string[] lines = File.ReadAllLines(path + "Citizen.txt");
 
-                using (StreamWriter writeData = new StreamWriter(path + "Citizen.txt"))
-                {
-
-
-                    for (int i = 0; i < lines.Length; i++)
+                    using (StreamWriter writeData = new StreamWriter(path + "Citizen.txt"))
                     {
-                        writeData.WriteLine(lines[i]);
+
+
+                        for (int i = 0; i < lines.Length; i++)
+                        {
+                            writeData.WriteLine(lines[i]);
+                        }
+                        writeData.WriteLine(citizenInfo);
                     }
-                    writeData.WriteLine(citizenInfo);
-                }
-
-
-                this.successfulRegis1.Visible = true;
+                    this.successfulRegis1.Visible = true;
+                
+               
             }
 
 
@@ -117,7 +138,7 @@ namespace AppsDev
         {
             bool valid = true;
 
-            if (civilLastName.Text == "" && civilFirstName.Text == "")
+            if (civilLastName.Text == "")
             {
                 errorProvider1.SetError(civilLastName, "Please enter again ");
                 valid = false;
