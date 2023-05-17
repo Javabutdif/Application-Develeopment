@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace AppsDev
 {
     public partial class SearchTab : UserControl
     {
+        Civil person = new Civil();
         public SearchTab()
         {
             InitializeComponent();
@@ -28,8 +30,9 @@ namespace AppsDev
             this.displayForm1.Visible = false;
 
         }
+        
         private static string path = @"C:\Barangay Registration\Database\";
-        Civil person = new Civil();
+   
         private void button1_Click(object sender, EventArgs e)
         {
 

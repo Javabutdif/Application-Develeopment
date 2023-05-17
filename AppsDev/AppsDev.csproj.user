@@ -10,6 +10,9 @@
     <Compile Update="DisplayForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="DisplayForm2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Edit.cs">
       <SubType>Form</SubType>
     </Compile>

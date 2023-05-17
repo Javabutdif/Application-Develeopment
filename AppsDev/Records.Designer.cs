@@ -34,6 +34,7 @@
             clearAll = new Button();
             listBox1 = new ListBox();
             label1 = new Label();
+            displayForm2 = new DisplayForm2();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -93,8 +94,10 @@
             listBox1.Size = new Size(742, 250);
             listBox1.Sorted = true;
             listBox1.TabIndex = 2;
+            listBox1.MouseClick += listBox1_MouseClick;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             listBox1.VisibleChanged += listView1_VisibleChanged;
+            listBox1.MouseDoubleClick += listBox1_MouseClick;
             // 
             // label1
             // 
@@ -107,10 +110,20 @@
             label1.TabIndex = 1;
             label1.Text = "REGISTERED CITIZENS";
             // 
+            // displayForm2
+            // 
+            displayForm2.BackColor = Color.FromArgb(16, 120, 116);
+            displayForm2.Location = new Point(0, 0);
+            displayForm2.Name = "displayForm2";
+            displayForm2.Size = new Size(816, 390);
+            displayForm2.TabIndex = 20;
+            displayForm2.VisibleChanged += displayForm2_VisibleChanged;
+            // 
             // Records
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(displayForm2);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Name = "Records";
@@ -131,5 +144,6 @@
         private ListBox listBox1;
         private Button clearAll;
         private Label label2;
+        private DisplayForm2 displayForm2;
     }
 }

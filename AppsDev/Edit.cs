@@ -48,7 +48,7 @@ namespace AppsDev
             this.reference1 = reference;
 
         }
-
+        private static string path = @"C:\Barangay Registration\Database\Citizen.txt";
         private void saveBut_Click(object sender, EventArgs e)
         {
             Lastname = this.civilLastName.Text;
@@ -80,7 +80,7 @@ namespace AppsDev
                 c.deleteAll();
                 c.setData();
 
-                using (StreamWriter write = new StreamWriter(tab.passData))
+                using (StreamWriter write = new StreamWriter(path))
                 {
 
                     for (int i = 0; i < arr.Length; i++)

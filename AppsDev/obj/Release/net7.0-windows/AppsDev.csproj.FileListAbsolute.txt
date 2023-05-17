@@ -126,3 +126,4 @@ C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\AppsDev.genruntimeconfig.cache
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\ref\AppsDev.dll
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\AppsDev.Print.resources
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\AppsDev.DisplayForm2.resources
