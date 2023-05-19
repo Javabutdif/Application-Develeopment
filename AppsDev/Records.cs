@@ -37,6 +37,7 @@ namespace AppsDev
         Civil c = new Civil();
 
         private string path = @"C:\Barangay Registration\Database\Citizen.txt";
+
         private void listView1_VisibleChanged(object sender, EventArgs e)
         {
 
@@ -47,7 +48,7 @@ namespace AppsDev
             c.setData();
             foreach (Civil cd in c.getData())
             {
-                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "........." + cd.reference);
+                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "\t\t\t" + cd.reference);
 
             }
             if (this.listBox1.Items.Count == 0)
@@ -95,31 +96,15 @@ namespace AppsDev
 
         private void Records_VisibleChanged(object sender, EventArgs e)
         {
-            this.listBox1.Items.Clear();
 
-            c.setData();
-            foreach (Civil cd in c.getData())
-            {
-                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "........." + cd.reference);
-
-            }
-            if (this.listBox1.Items.Count == 0)
-            {
-                this.label2.Visible = true;
-
-            }
-            else
-            {
-                this.label2.Visible = false;
-            }
         }
-
+        public string data = "";
         private void listBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            string data = listBox1.GetItemText(listBox1.SelectedItem.ToString());
-            string[] arr = data.Split(" ");
+            data = this.listBox1.GetItemText(this.listBox1.SelectedItem.ToString());
+            string[] arr = data.Split("\t\t\t");
 
-            setLastname(arr[0]);
+            setLastname(arr[1]);
 
 
             this.displayForm2.Visible = true;
@@ -173,11 +158,11 @@ namespace AppsDev
         private void displayForm2_VisibleChanged(object sender, EventArgs e)
         {
             this.listBox1.Items.Clear();
-
+            this.data = "";
             c.setData();
             foreach (Civil cd in c.getData())
             {
-                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "........." + cd.reference);
+                this.listBox1.Items.Add(cd.Lastname + " " + cd.Firstname + " " + cd.MIDdlename + "\t\t\t" + cd.reference);
 
             }
             if (this.listBox1.Items.Count == 0)

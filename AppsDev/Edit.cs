@@ -11,11 +11,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace AppsDev
 {
     public partial class Edit : Form
     {
+
         public Edit()
         {
             InitializeComponent();
@@ -96,6 +98,7 @@ namespace AppsDev
 
             }
 
+
             this.Close();
         }
         private string id = "";
@@ -115,6 +118,7 @@ namespace AppsDev
         private string ID = "";
         private string idNum = "";
         private string email = "";
+     
 
         private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -122,6 +126,11 @@ namespace AppsDev
             civilAge.Text = Convert.ToString(2023 - year);
         }
 
+        private void Edit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          
+        }
+    
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }
         public string MIDdlename { get { return this.middlename; } set { this.middlename = value; } }

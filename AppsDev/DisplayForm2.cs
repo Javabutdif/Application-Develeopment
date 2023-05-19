@@ -58,9 +58,11 @@ namespace AppsDev
 
 
         }
+        Edit edit = new Edit();
 
         private void DisplayForm_VisibleChanged(object sender, EventArgs e)
         {
+
             try
             {
                 var person = this.Parent as Records;
@@ -132,7 +134,7 @@ namespace AppsDev
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            Edit edit = new Edit();
+
             edit.Lastname = this.lastnameDisplay.Text;
             edit.Firstname = this.firstnameDisplay.Text;
             edit.MIDdlename = this.middlenameDisplay.Text;
@@ -152,6 +154,7 @@ namespace AppsDev
             edit.reference = this.displayRef.Text;
 
             edit.Show();
+
 
         }
 

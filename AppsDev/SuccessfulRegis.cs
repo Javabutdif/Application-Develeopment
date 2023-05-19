@@ -54,7 +54,7 @@ namespace AppsDev
             {
                 var re = this.Parent as Regis;
                 this.displaySuccess.Text = re.Reference;
-            }catch (Exception ex)
+            }catch (Exception)
             {
 
             }

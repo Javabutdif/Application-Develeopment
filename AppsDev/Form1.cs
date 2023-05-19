@@ -59,7 +59,7 @@ namespace AppsDev
             this.BackColor = ColorTranslator.FromHtml("#107874");
             this.panel2.BackColor = ColorTranslator.FromHtml("#062e2c");
 
-
+          
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             Directory.CreateDirectory(Path.GetDirectoryName(database));
 
@@ -151,7 +151,7 @@ namespace AppsDev
                         MessageBox.Show("Must contain valid username and password");
                     }
                 }
-                catch (Exception ee)
+                catch (Exception)
                 {
                     MessageBox.Show("Must input correct username and password");
                     textBox1.Text = "";

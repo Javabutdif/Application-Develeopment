@@ -152,7 +152,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(15, 50);
             panel1.Name = "panel1";
-            panel1.Size = new Size(786, 325);
+            panel1.Size = new Size(773, 325);
             panel1.TabIndex = 109;
             // 
             // emailDisplay
@@ -334,7 +334,7 @@
             // backButton
             // 
             backButton.ForeColor = Color.White;
-            backButton.Location = new Point(691, 275);
+            backButton.Location = new Point(676, 275);
             backButton.Name = "backButton";
             backButton.Size = new Size(82, 37);
             backButton.TabIndex = 4;
@@ -345,11 +345,11 @@
             // displayRef
             // 
             displayRef.AutoSize = true;
-            displayRef.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            displayRef.Font = new Font("Cambria", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             displayRef.ForeColor = Color.White;
-            displayRef.Location = new Point(657, 10);
+            displayRef.Location = new Point(650, 10);
             displayRef.Name = "displayRef";
-            displayRef.Size = new Size(51, 20);
+            displayRef.Size = new Size(52, 17);
             displayRef.TabIndex = 107;
             displayRef.Text = "label9";
             // 

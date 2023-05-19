@@ -90,7 +90,7 @@ namespace AppsDev
                 this.emailDisplay.Text = person.Email;
                 this.displayRef.Text = person.reference;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

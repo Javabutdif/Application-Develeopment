@@ -88,7 +88,7 @@ namespace AppsDev
                     }
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     this.label1.Visible = false;
                     this.textBox1.Visible = false;

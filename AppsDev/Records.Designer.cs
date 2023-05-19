@@ -115,7 +115,7 @@
             displayForm2.BackColor = Color.FromArgb(16, 120, 116);
             displayForm2.Location = new Point(0, 0);
             displayForm2.Name = "displayForm2";
-            displayForm2.Size = new Size(816, 390);
+            displayForm2.Size = new Size(828, 390);
             displayForm2.TabIndex = 20;
             displayForm2.VisibleChanged += displayForm2_VisibleChanged;
             // 
