@@ -85,7 +85,7 @@ namespace AppsDev
                 this.emailDisplay.Text = person.Email;
                 this.displayRef.Text = person.reference;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -124,7 +124,7 @@ namespace AppsDev
                     }
                     MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                    this.Visible = false;
 
 
 
