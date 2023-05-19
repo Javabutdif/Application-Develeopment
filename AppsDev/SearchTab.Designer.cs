@@ -174,6 +174,7 @@
             Name = "SearchTab";
             Size = new Size(816, 390);
             Load += SearchTab_Load;
+            VisibleChanged += SearchTab_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

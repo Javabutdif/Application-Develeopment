@@ -157,6 +157,9 @@ namespace AppsDev
 
         private void displayForm2_VisibleChanged(object sender, EventArgs e)
         {
+           
+
+
             this.listBox1.Items.Clear();
             this.data = "";
             c.setData();
@@ -174,6 +177,8 @@ namespace AppsDev
             {
                 this.label2.Visible = false;
             }
+       
+          
         }
 
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }

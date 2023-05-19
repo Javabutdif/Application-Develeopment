@@ -30,9 +30,9 @@ namespace AppsDev
             this.displayForm1.Visible = false;
 
         }
-        
+
         private static string path = @"C:\Barangay Registration\Database\";
-   
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -144,11 +144,13 @@ namespace AppsDev
         private void panel1_Click(object sender, EventArgs e)
         {
             this.displayForm1.Visible = true;
+            this.textBox1.Text = "";
         }
 
         private void displayName_Click(object sender, EventArgs e)
         {
             this.displayForm1.Visible = true;
+            this.textBox1.Text = "";
 
         }
         /*
@@ -184,6 +186,11 @@ namespace AppsDev
         private string ID = "";
         private string idNum = "";
         private string email = "";
+
+        private void SearchTab_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
 
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }

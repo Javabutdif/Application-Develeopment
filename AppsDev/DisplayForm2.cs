@@ -155,7 +155,7 @@ namespace AppsDev
             edit.reference = this.displayRef.Text;
 
             edit.Show();
-
+            this.Visible = false;
 
         }
 

@@ -133,7 +133,7 @@ namespace AppsDev
                     this.Visible = false;
 
 
-
+                    
 
                 }
 
@@ -160,7 +160,7 @@ namespace AppsDev
             edit.idNumber = this.idNumDisplay.Text;
             edit.Email = this.emailDisplay.Text;
             edit.reference = this.displayRef.Text;
-
+            this.Visible = false;
             edit.Show();
 
         }
