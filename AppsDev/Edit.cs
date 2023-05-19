@@ -82,23 +82,7 @@ namespace AppsDev
             }
 
             MessageBox.Show("Data Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.civilLastName.Text = "";
-            this.civilFirstName.Text = "";
-            this.civilMiddleName.Text = "";
-            this.civilBirthMonth.Text = "";
-            this.civilBirthDay.Text = "";
-            this.civilBirthYear.Text = "";
-            this.civilAge.Text = "";
-            this.civilSex.Text = "";
-            this.civilStatus.Text = "";
-            this.civilReligion.Text = "";
-            this.civilBirthPlace.Text = "";
-            this.civilPhone.Text = "";
-            this.civilAddress.Text = "";
-            this.civilID.Text = "";
-            this.civilIDNumber.Text = "";
-            this.civilEmail.Text = "";
-            this.reference1 = "";
+           
 
             this.Hide();
         }
