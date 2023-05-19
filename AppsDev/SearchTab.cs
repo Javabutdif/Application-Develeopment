@@ -28,6 +28,7 @@ namespace AppsDev
             this.tryAgain.Visible = false;
             this.panel1.Visible = false;
             this.displayForm1.Visible = false;
+            this.panel1.BackColor = color.lighterDark();
 
         }
 

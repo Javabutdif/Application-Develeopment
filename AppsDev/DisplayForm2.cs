@@ -20,7 +20,7 @@ namespace AppsDev
 
         private List<Civil> list1 = new List<Civil>();
 
-
+      
         Hover color = new Hover();
         private void DisplayForm_Load(object sender, EventArgs e)
         {
@@ -62,7 +62,7 @@ namespace AppsDev
 
         private void DisplayForm_VisibleChanged(object sender, EventArgs e)
         {
-
+           
             try
             {
                 var person = this.Parent as Records;
@@ -84,6 +84,11 @@ namespace AppsDev
                 this.idNumDisplay.Text = person.idNumber;
                 this.emailDisplay.Text = person.Email;
                 this.displayRef.Text = person.reference;
+
+
+
+              
+
             }
             catch (Exception)
             {
@@ -125,6 +130,7 @@ namespace AppsDev
                     MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                   
                     this.Visible = false;
+                   
 
 
 
@@ -155,7 +161,7 @@ namespace AppsDev
             edit.reference = this.displayRef.Text;
 
             edit.Show();
-            this.Visible = false;
+         
 
         }
 

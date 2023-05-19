@@ -63,6 +63,7 @@ namespace AppsDev
 
         }
 
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -108,6 +109,8 @@ namespace AppsDev
 
 
             this.displayForm2.Visible = true;
+
+
 
         }
 
@@ -157,7 +160,6 @@ namespace AppsDev
 
         private void displayForm2_VisibleChanged(object sender, EventArgs e)
         {
-           
 
 
             this.listBox1.Items.Clear();
@@ -177,8 +179,8 @@ namespace AppsDev
             {
                 this.label2.Visible = false;
             }
-       
-          
+
+
         }
 
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }

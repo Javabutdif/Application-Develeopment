@@ -27,7 +27,7 @@ namespace AppsDev
 
         private List<Civil> list1 = new List<Civil>();
 
-
+  
         Hover color = new Hover();
         private void DisplayForm_Load(object sender, EventArgs e)
         {
@@ -59,6 +59,7 @@ namespace AppsDev
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+    
             c.deleteAll();
             c.setData();
 
@@ -131,9 +132,10 @@ namespace AppsDev
                     MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                   
                     this.Visible = false;
+           
 
 
-                    
+
 
                 }
 
@@ -161,6 +163,7 @@ namespace AppsDev
             edit.Email = this.emailDisplay.Text;
             edit.reference = this.displayRef.Text;
             this.Visible = false;
+          
             edit.Show();
 
         }

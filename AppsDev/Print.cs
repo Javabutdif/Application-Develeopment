@@ -25,7 +25,7 @@ namespace AppsDev
             this.label2.Visible = false;
             this.button1.Visible = false;
 
-       
+
 
 
         }

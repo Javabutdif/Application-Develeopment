@@ -83,6 +83,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(progressBar1);
+            MaximumSize = new Size(294, 184);
+            MinimumSize = new Size(294, 184);
             Name = "Print";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Print";

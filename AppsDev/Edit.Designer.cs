@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit));
             saveBut = new Button();
             civilStatus = new ComboBox();
             civilSex = new ComboBox();
@@ -70,7 +71,7 @@
             saveBut.BackColor = Color.Transparent;
             saveBut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             saveBut.ForeColor = Color.White;
-            saveBut.Location = new Point(664, 325);
+            saveBut.Location = new Point(664, 335);
             saveBut.Name = "saveBut";
             saveBut.Size = new Size(120, 31);
             saveBut.TabIndex = 150;
@@ -384,7 +385,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 381);
             Controls.Add(civilID);
             Controls.Add(civilReligion);
             Controls.Add(saveBut);
@@ -419,6 +420,9 @@
             Controls.Add(civilLastName);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(816, 420);
+            MinimumSize = new Size(816, 420);
             Name = "Edit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";

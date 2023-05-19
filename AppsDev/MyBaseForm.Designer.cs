@@ -205,10 +205,27 @@
             // 
             // records1
             // 
+            records1.Address = "";
+            records1.Age = "";
             records1.BackColor = Color.FromArgb(16, 120, 116);
+            records1.BirthD = "";
+            records1.BirthM = "";
+            records1.BirthPlace = "";
+            records1.BirthYear = "";
+            records1.Email = "";
+            records1.Firstname = "";
+            records1.identification = "";
+            records1.idNumber = "";
+            records1.Lastname = "";
             records1.Location = new Point(0, 48);
+            records1.MIDdlename = "";
             records1.Name = "records1";
+            records1.PhoneNumber = "";
+            records1.reference = "";
+            records1.Religion = "";
+            records1.Sex = "";
             records1.Size = new Size(816, 370);
+            records1.Status = "";
             records1.TabIndex = 10;
             // 
             // MyBaseForm
@@ -224,6 +241,8 @@
             Controls.Add(searchTab1);
             Controls.Add(dashboard1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "MyBaseForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";

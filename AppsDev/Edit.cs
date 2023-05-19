@@ -79,10 +79,12 @@ namespace AppsDev
 
 
 
+
+
             }
 
             MessageBox.Show("Data Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-         
+
 
             this.Hide();
         }
@@ -103,7 +105,7 @@ namespace AppsDev
         private string ID = "";
         private string idNum = "";
         private string email = "";
-      
+
 
 
         private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,7 +114,7 @@ namespace AppsDev
             civilAge.Text = Convert.ToString(2023 - year);
         }
 
-       
+
 
         private void Edit_VisibleChanged(object sender, EventArgs e)
         {
@@ -135,7 +137,7 @@ namespace AppsDev
             this.civilEmail.Text = Email;
             this.reference1 = reference;
         }
-    
+
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }
         public string MIDdlename { get { return this.middlename; } set { this.middlename = value; } }

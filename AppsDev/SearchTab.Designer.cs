@@ -122,18 +122,18 @@
             panel1.Controls.Add(displayName);
             panel1.Location = new Point(200, 99);
             panel1.Name = "panel1";
-            panel1.Size = new Size(528, 29);
+            panel1.Size = new Size(416, 29);
             panel1.TabIndex = 18;
             panel1.Click += panel1_Click;
             // 
             // refCode
             // 
             refCode.AutoSize = true;
-            refCode.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            refCode.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             refCode.ForeColor = Color.White;
-            refCode.Location = new Point(279, 4);
+            refCode.Location = new Point(276, 2);
             refCode.Name = "refCode";
-            refCode.Size = new Size(38, 25);
+            refCode.Size = new Size(34, 23);
             refCode.TabIndex = 1;
             refCode.Text = "Ref";
             refCode.Click += displayName_Click;
