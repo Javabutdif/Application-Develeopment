@@ -98,7 +98,7 @@ namespace AppsDev
 
             }
 
-
+            MessageBox.Show("Data Saved","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
             this.Close();
         }
         private string id = "";

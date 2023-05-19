@@ -122,6 +122,7 @@ namespace AppsDev
                         }
 
                     }
+                    MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
