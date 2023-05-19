@@ -103,7 +103,7 @@ namespace AppsDev
 
                 SearchTab tab = new SearchTab();
 
-                Civil? user = c.getData().Where(user => user.Lastname.Equals(lastnameDisplay.Text)).FirstOrDefault();
+                Civil? user = c.getData().Where(user => user.reference.Equals(displayRef.Text)).FirstOrDefault();
 
                 if (user != null)
                 {
@@ -123,8 +123,7 @@ namespace AppsDev
 
                     }
                     MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    c.deleteAll();
-                    c.setData();
+                  
                     this.Visible = false;
 
 
