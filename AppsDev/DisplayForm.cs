@@ -129,6 +129,8 @@ namespace AppsDev
                     }
 
                     MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    c.deleteAll();
+                    c.setData();
                     this.Visible = false;
 
 

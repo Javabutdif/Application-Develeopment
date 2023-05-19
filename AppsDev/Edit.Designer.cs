@@ -422,8 +422,8 @@
             Name = "Edit";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Barangay Registration";
-            FormClosed += Edit_FormClosed;
             Load += Edit_Load;
+            VisibleChanged += Edit_VisibleChanged;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -31,23 +31,6 @@ namespace AppsDev
 
 
 
-            this.civilLastName.Text = Lastname;
-            this.civilFirstName.Text = Firstname;
-            this.civilMiddleName.Text = MIDdlename;
-            this.civilBirthMonth.Text = BirthM;
-            this.civilBirthDay.Text = BirthD;
-            this.civilBirthYear.Text = BirthYear;
-            this.civilAge.Text = Age;
-            this.civilSex.Text = Sex;
-            this.civilStatus.Text = Status;
-            this.civilReligion.Text = Religion;
-            this.civilBirthPlace.Text = BirthPlace;
-            this.civilPhone.Text = PhoneNumber;
-            this.civilAddress.Text = Address;
-            this.civilID.Text = identification;
-            this.civilIDNumber.Text = idNumber;
-            this.civilEmail.Text = Email;
-            this.reference1 = reference;
 
         }
         private static string path = @"C:\Barangay Registration\Database\Citizen.txt";
@@ -98,8 +81,26 @@ namespace AppsDev
 
             }
 
-            MessageBox.Show("Data Saved","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            this.Close();
+            MessageBox.Show("Data Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.civilLastName.Text = "";
+            this.civilFirstName.Text = "";
+            this.civilMiddleName.Text = "";
+            this.civilBirthMonth.Text = "";
+            this.civilBirthDay.Text = "";
+            this.civilBirthYear.Text = "";
+            this.civilAge.Text = "";
+            this.civilSex.Text = "";
+            this.civilStatus.Text = "";
+            this.civilReligion.Text = "";
+            this.civilBirthPlace.Text = "";
+            this.civilPhone.Text = "";
+            this.civilAddress.Text = "";
+            this.civilID.Text = "";
+            this.civilIDNumber.Text = "";
+            this.civilEmail.Text = "";
+            this.reference1 = "";
+
+            this.Hide();
         }
         private string id = "";
         private string lastname = "";
@@ -118,7 +119,7 @@ namespace AppsDev
         private string ID = "";
         private string idNum = "";
         private string email = "";
-     
+
 
         private void civilBirthYear_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -126,11 +127,30 @@ namespace AppsDev
             civilAge.Text = Convert.ToString(2023 - year);
         }
 
-        private void Edit_FormClosed(object sender, FormClosedEventArgs e)
+       
+
+        private void Edit_VisibleChanged(object sender, EventArgs e)
         {
-          
+
+            this.civilLastName.Text = Lastname;
+            this.civilFirstName.Text = Firstname;
+            this.civilMiddleName.Text = MIDdlename;
+            this.civilBirthMonth.Text = BirthM;
+            this.civilBirthDay.Text = BirthD;
+            this.civilBirthYear.Text = BirthYear;
+            this.civilAge.Text = Age;
+            this.civilSex.Text = Sex;
+            this.civilStatus.Text = Status;
+            this.civilReligion.Text = Religion;
+            this.civilBirthPlace.Text = BirthPlace;
+            this.civilPhone.Text = PhoneNumber;
+            this.civilAddress.Text = Address;
+            this.civilID.Text = identification;
+            this.civilIDNumber.Text = idNumber;
+            this.civilEmail.Text = Email;
+            this.reference1 = reference;
         }
-    
+
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }
         public string MIDdlename { get { return this.middlename; } set { this.middlename = value; } }
