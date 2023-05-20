@@ -160,7 +160,11 @@ namespace AppsDev
 
         private void displayForm2_VisibleChanged(object sender, EventArgs e)
         {
-
+            EditUser edit = new EditUser();
+            if(displayForm2.Visible == false && edit.Visible == false)
+            {
+                displayForm2.Visible = true;
+            }
 
             this.listBox1.Items.Clear();
             this.data = "";

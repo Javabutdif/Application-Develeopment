@@ -20,7 +20,7 @@ namespace AppsDev
 
         private List<Civil> list1 = new List<Civil>();
 
-      
+
         Hover color = new Hover();
         private void DisplayForm_Load(object sender, EventArgs e)
         {
@@ -45,6 +45,7 @@ namespace AppsDev
             this.printButton.BackColor = color.lighter();
             this.backButton.BackColor = color.lighterDark();
             this.panel1.Visible = true;
+            this.editUser1.Visible = false;
 
 
         }
@@ -58,11 +59,11 @@ namespace AppsDev
 
 
         }
-        Edit edit = new Edit();
+
 
         private void DisplayForm_VisibleChanged(object sender, EventArgs e)
         {
-           
+            
             try
             {
                 var person = this.Parent as Records;
@@ -87,7 +88,7 @@ namespace AppsDev
 
 
 
-              
+
 
             }
             catch (Exception)
@@ -128,9 +129,9 @@ namespace AppsDev
 
                     }
                     MessageBox.Show("Data Deleted", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                  
+
                     this.Visible = false;
-                   
+
 
 
 
@@ -141,27 +142,34 @@ namespace AppsDev
 
         private void editButton_Click(object sender, EventArgs e)
         {
+            var edit = new EditUser();
+            try
+            {
+                edit.Lastname = this.lastnameDisplay.Text;
+                edit.Firstname = this.firstnameDisplay.Text;
+                edit.MIDdlename = this.middlenameDisplay.Text;
+                edit.BirthM = this.birthmonthDisplay.Text;
+                edit.BirthD = this.birthdayDisplay.Text;
+                edit.BirthYear = this.birthyearDisplay.Text;
+                edit.Age = this.ageDisplay.Text;
+                edit.Sex = this.sexDisplay.Text;
+                edit.Status = this.statusDisplay.Text;
+                edit.Religion = this.religionDisplay.Text;
+                edit.BirthPlace = this.birthplaceDisplay.Text;
+                edit.PhoneNumber = this.phoneDisplay.Text;
+                edit.Address = this.addressDisplay.Text;
+                edit.identification = this.typeDisplay.Text;
+                edit.idNumber = this.idNumDisplay.Text;
+                edit.Email = this.emailDisplay.Text;
+                edit.reference = this.displayRef.Text;
 
-            edit.Lastname = this.lastnameDisplay.Text;
-            edit.Firstname = this.firstnameDisplay.Text;
-            edit.MIDdlename = this.middlenameDisplay.Text;
-            edit.BirthM = this.birthmonthDisplay.Text;
-            edit.BirthD = this.birthdayDisplay.Text;
-            edit.BirthYear = this.birthyearDisplay.Text;
-            edit.Age = this.ageDisplay.Text;
-            edit.Sex = this.sexDisplay.Text;
-            edit.Status = this.statusDisplay.Text;
-            edit.Religion = this.religionDisplay.Text;
-            edit.BirthPlace = this.birthplaceDisplay.Text;
-            edit.PhoneNumber = this.phoneDisplay.Text;
-            edit.Address = this.addressDisplay.Text;
-            edit.identification = this.typeDisplay.Text;
-            edit.idNumber = this.idNumDisplay.Text;
-            edit.Email = this.emailDisplay.Text;
-            edit.reference = this.displayRef.Text;
+                this.editUser1.Visible = true;
+            }
+            catch (Exception)
+            {
 
-            edit.Show();
-         
+            }
+
 
         }
 
@@ -171,6 +179,43 @@ namespace AppsDev
             print.Show();
         }
 
+        private void editUser1_VisibleChanged(object sender, EventArgs e)
+        {
+            if(editUser1.Visible == false)
+            {
+                this.Visible = false;
+            }
+            try
+            {
+                var person = this.Parent as Records;
 
+                this.lastnameDisplay.Text = person.Lastname;
+                this.firstnameDisplay.Text = person.Firstname;
+                this.middlenameDisplay.Text = person.MIDdlename;
+                this.birthmonthDisplay.Text = person.BirthM;
+                this.birthdayDisplay.Text = person.BirthD;
+                this.birthyearDisplay.Text = person.BirthYear;
+                this.ageDisplay.Text = person.Age;
+                this.sexDisplay.Text = person.Sex;
+                this.statusDisplay.Text = person.Status;
+                this.religionDisplay.Text = person.Religion;
+                this.birthplaceDisplay.Text = person.BirthPlace;
+                this.phoneDisplay.Text = person.PhoneNumber;
+                this.addressDisplay.Text = person.Address;
+                this.typeDisplay.Text = person.identification;
+                this.idNumDisplay.Text = person.idNumber;
+                this.emailDisplay.Text = person.Email;
+                this.displayRef.Text = person.reference;
+
+
+
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
 }

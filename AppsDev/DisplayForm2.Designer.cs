@@ -67,6 +67,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            editUser1 = new EditUser();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -513,10 +514,37 @@
             label1.TabIndex = 91;
             label1.Text = "LAST NAME";
             // 
+            // editUser1
+            // 
+            editUser1.Address = "";
+            editUser1.Age = "";
+            editUser1.BackColor = Color.FromArgb(16, 120, 116);
+            editUser1.BirthD = "";
+            editUser1.BirthM = "";
+            editUser1.BirthPlace = "";
+            editUser1.BirthYear = "";
+            editUser1.Email = "";
+            editUser1.Firstname = "";
+            editUser1.identification = "";
+            editUser1.idNumber = "";
+            editUser1.Lastname = "";
+            editUser1.Location = new Point(0, 0);
+            editUser1.MIDdlename = "";
+            editUser1.Name = "editUser1";
+            editUser1.PhoneNumber = "";
+            editUser1.reference = "";
+            editUser1.Religion = "";
+            editUser1.Sex = "";
+            editUser1.Size = new Size(816, 390);
+            editUser1.Status = "";
+            editUser1.TabIndex = 114;
+            editUser1.VisibleChanged += editUser1_VisibleChanged;
+            // 
             // DisplayForm2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(editUser1);
             Controls.Add(printButton);
             Controls.Add(deleteButton);
             Controls.Add(editButton);
@@ -573,5 +601,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private EditUser editUser1;
     }
 }
