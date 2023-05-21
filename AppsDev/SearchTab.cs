@@ -190,7 +190,7 @@ namespace AppsDev
 
         private void SearchTab_VisibleChanged(object sender, EventArgs e)
         {
-
+            this.textBox1.Text = "";
         }
 
         private void panel1_MouseHover(object sender, EventArgs e)

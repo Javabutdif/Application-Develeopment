@@ -101,18 +101,18 @@ namespace AppsDev
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Confirm Password");
+                        MessageBox.Show("Invalid Confirm Password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Username already exist!");
+                    MessageBox.Show("Username already exist!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Must contain username and password");
+                MessageBox.Show("Must contain username and password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }

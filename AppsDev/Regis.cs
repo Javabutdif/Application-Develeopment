@@ -99,7 +99,7 @@ namespace AppsDev
 
             if (ln.Equals(string.Empty) || fn.Equals(string.Empty) || mn.Equals(string.Empty) || email.Equals(string.Empty) || bm.Equals(string.Empty) || bd.Equals(string.Empty) || by.Equals(string.Empty) || age.Equals(string.Empty) || sex.Equals(string.Empty) || status.Equals(string.Empty) || r.Equals(string.Empty) || bp.Equals(string.Empty) || pn.Equals(string.Empty) || add.Equals(string.Empty) || type.Equals(string.Empty) || idN.Equals(string.Empty))
             {
-                MessageBox.Show("Please complete necessary Information!");
+                MessageBox.Show("Please complete necessary information to proceed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else {
                

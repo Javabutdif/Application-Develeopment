@@ -32,6 +32,7 @@ namespace AppsDev
             this.panel1.ForeColor = Color.White;
             this.clearAll.BackColor = color.lighterDark();
             this.clearAll.ForeColor = Color.White;
+          
 
         }
         Civil c = new Civil();
@@ -97,7 +98,7 @@ namespace AppsDev
 
         private void Records_VisibleChanged(object sender, EventArgs e)
         {
-
+            this.displayForm2.Visible = false;
         }
         public string data = "";
         private void listBox1_MouseClick(object sender, MouseEventArgs e)

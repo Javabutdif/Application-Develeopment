@@ -71,7 +71,7 @@ namespace AppsDev
             }
             else
             {
-                MessageBox.Show("Must complete the account");
+                MessageBox.Show("Must complete the account","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             
