@@ -89,12 +89,12 @@
             listBox1.ForeColor = Color.White;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(3, 50);
+            listBox1.Location = new Point(3, 75);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(742, 250);
+            listBox1.RightToLeft = RightToLeft.No;
+            listBox1.Size = new Size(742, 225);
             listBox1.Sorted = true;
             listBox1.TabIndex = 2;
-            listBox1.MouseClick += listBox1_MouseClick;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             listBox1.VisibleChanged += listView1_VisibleChanged;
             listBox1.MouseDoubleClick += listBox1_MouseClick;

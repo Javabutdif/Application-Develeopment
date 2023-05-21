@@ -125,6 +125,8 @@
             panel1.Size = new Size(416, 29);
             panel1.TabIndex = 18;
             panel1.Click += panel1_Click;
+            panel1.MouseLeave += panel1_MouseLeave;
+            panel1.MouseHover += panel1_MouseHover;
             // 
             // refCode
             // 
@@ -137,6 +139,8 @@
             refCode.TabIndex = 1;
             refCode.Text = "Ref";
             refCode.Click += displayName_Click;
+            refCode.MouseLeave += displayName_MouseLeave;
+            refCode.MouseHover += displayName_MouseHover;
             // 
             // displayName
             // 
@@ -149,6 +153,8 @@
             displayName.TabIndex = 0;
             displayName.Text = "NAME";
             displayName.Click += displayName_Click;
+            displayName.MouseLeave += displayName_MouseLeave;
+            displayName.MouseHover += displayName_MouseHover;
             // 
             // displayForm1
             // 

@@ -30,3 +30,4 @@ C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\win-x64\AppsDev.pdb
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\win-x64\AppsDev.genruntimeconfig.cache
 C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\win-x64\ref\AppsDev.dll
+C:\Users\james\Desktop\Barangay Registration\AppsDev\obj\Release\net7.0-windows\win-x64\AppsDev.EditUser.resources

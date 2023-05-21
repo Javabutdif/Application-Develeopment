@@ -161,7 +161,7 @@ namespace AppsDev
         private void displayForm2_VisibleChanged(object sender, EventArgs e)
         {
             EditUser edit = new EditUser();
-            if(displayForm2.Visible == false && edit.Visible == false)
+            if (displayForm2.Visible == false && edit.Visible == false)
             {
                 displayForm2.Visible = true;
             }
@@ -186,6 +186,8 @@ namespace AppsDev
 
 
         }
+
+
 
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }

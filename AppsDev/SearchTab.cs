@@ -193,6 +193,26 @@ namespace AppsDev
 
         }
 
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            this.panel1.BackColor = color.darker();
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            this.panel1.BackColor = color.lighterDark();
+        }
+
+        private void displayName_MouseHover(object sender, EventArgs e)
+        {
+            this.panel1.BackColor = color.darker();
+        }
+
+        private void displayName_MouseLeave(object sender, EventArgs e)
+        {
+            this.panel1.BackColor = color.lighterDark();
+        }
+
         public string Lastname { get { return this.lastname; } set { this.lastname = value; } }
         public string Firstname { get { return this.firstname; } set { this.firstname = value; } }
         public string MIDdlename { get { return this.middlename; } set { this.middlename = value; } }
